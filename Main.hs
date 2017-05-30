@@ -5,7 +5,7 @@ module Main where
 import Yesod
 import Yesod.Static
 import Foundation
-import Front
+import Application
 import Control.Monad.Logger (runStdoutLoggingT)
 import Control.Applicative
 import Data.Text

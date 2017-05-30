@@ -1,1 +1,0 @@
-Hello: Eu odeio PHP e amo JAVA!

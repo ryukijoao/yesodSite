@@ -10,7 +10,47 @@ import Data.Text
 import Handlers
 import Database.Persist.Postgresql
 
-mkYesodDispatch "Sitio" resourcesSitio
+-- Sempre devemos usar o defaultLayout
+-- pois hamlets, lucius, cassius e julius sao
+-- da Monad Widget. A funcao defaultLayout
+-- transforma Widgets em Handlers
+getPag4R :: Handler Html
+getPag4R = defaultLayout $ do
+    [whamlet|
+        <div id="alvo">
+           ^{widget1}
+    |]
+
+widget1 :: Widget
+widget1 = [whamlet|
+    <p>
+        Parágrafo dentro da div
+|]
+
+getHomeR :: Handler Html
+getHomeR = defaultLayout $ do
+    setTitle "Minha página"
+    addStylesheet $ StaticR teste_css
+    toWidgetHead [hamlet|
+        <meta name="keywords" content="Teste, Haskell">
+    |]
+    toWidgetHead [julius|
+        function ola(){
+            alert("Ola mundo!");
+        }
+    |]
+    [whamlet|
+        <h1>
+            _{MsgHello}
+        <a href=@{Pag1R}> _{MsgMenu1}
+        <p>
+            Uma parágrafo
+        <button onclick="ola()">
+            Clique!
+        <br>
+        <img src=@{StaticR haskell_jpg}>
+    |]
+
 
 -- PARA USAR AS IMAGENS, EH NECESSARIO stack clean
 -- E DEPOIS stack build para o Yesod criar as funcoes

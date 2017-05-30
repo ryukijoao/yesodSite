@@ -35,10 +35,6 @@ getHelloR = defaultLayout [whamlet|
      <h1> _{MsgHello}
 |]
 
--- FUNCAO PARA GERAR FORMULARIOS DE UMA MANEIRA GENERICA
-widgetForm :: Route Sitio -> Enctype -> Widget -> Text -> Widget
-widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
-
 getCadastroR :: Handler Html
 getCadastroR = do
              (widget, enctype) <- generateFormPost formPessoa

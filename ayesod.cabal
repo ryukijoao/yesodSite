@@ -39,6 +39,8 @@ executable         ayesod
                  , monad-logger
                  , shakespeare
     
-    other-modules: Foundation,
-                   Handlers,
+    other-modules: Application
+                   Foundation
+                   Usuario
+                   Handlers
                    Front
