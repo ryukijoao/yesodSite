@@ -49,6 +49,8 @@ getHomeR = defaultLayout $ do
             Clique!
         <br>
         <img src=@{StaticR haskell_jpg}>
+        <form action=@{LogoutR} method=post>
+            <input type="submit" value="submit">
     |]
 
 

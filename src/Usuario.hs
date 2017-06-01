@@ -26,7 +26,7 @@ getUsuarioR = do
             (widget, enctype) <- generateFormPost formUsu
             defaultLayout $ widgetForm UsuarioR enctype widget "Cadastro de Usuários"
 
--- para contrar duplicagem de email, procurar getBy
+-- para controlar duplicagem de email, procurar getBy
 postUsuarioR :: Handler Html
 postUsuarioR = do
                 ((result, _), _) <- runFormPost formUsu
@@ -41,24 +41,43 @@ postUsuarioR = do
 getLoginR :: Handler Html
 getLoginR = do
             (widget, enctype) <- generateFormPost formLogin
-            defaultLayout $ widgetForm LoginR enctype widget "Login page"
+            msgComMaybe <- getMessage
+            defaultLayout $ do 
+                [whamlet|
+                    $maybe msg <- msgComMaybe 
+                        <h2>
+                            #{msg}
+                |]
+                widgetForm LoginR enctype widget "Login page"
 
 
 postLoginR :: Handler Html
 postLoginR = do
                 ((result, _), _) <- runFormPost formLogin
                 case result of
+                    FormSuccess ("root@root.com","root2") -> do
+                        setSession "_USER" "admin"
+                        redirect AdminR
                     FormSuccess (email,senha) -> do
                        temUsu <- runDB $ selectFirst [UsuarioEmail ==. email,UsuarioSenha ==. senha] []
                        case temUsu of
-                           Nothing -> redirect LoginR
+                           Nothing -> do
+                               setMessage [shamlet| <p> Usuário ou senha inválido |]
+                               redirect LoginR
                            Just _ -> do
                                setSession "_USER" email
                                defaultLayout [whamlet| Usuário autenticado!|]
                     _ -> redirect UsuarioR
 
-getLogoutR :: Handler Html
-getLogoutR = do
+getAdminR :: Handler Html
+getAdminR = defaultLayout $ do
+    [whamlet|
+        <h1>
+            Bem-vindo Rei dos Reis!!!!!!
+    |]
+
+postLogoutR :: Handler Html
+postLogoutR = do
     deleteSession "_USER"
     redirect LoginR
 

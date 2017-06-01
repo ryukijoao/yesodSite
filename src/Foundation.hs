@@ -45,17 +45,19 @@ instance YesodPersist Sitio where
        runSqlPool f pool
 
 instance Yesod Sitio where
-    authRoute _ = Just $ LoginR
+    authRoute _ = Just LoginR
     isAuthorized LoginR _ = return Authorized
     isAuthorized HomeR _ = return Authorized
+    isAuthorized UsuarioR _ = isAdmin
+    isAuthorized AdminR _ = isAdmin
     isAuthorized _ _ = isUser
 
---isAdmin = do
---    mu <- lookupSession "_ID"
---    return $ case mu of
---        Nothing -> AuthenticationRequired
---        Just "admin" -> Authorized
---        Just _ -> Unauthorized "Soh o admin acessa aqui!"
+isAdmin = do
+    mu <- lookupSession "_USER"
+    return $ case mu of
+        Nothing -> AuthenticationRequired
+        Just "admin" -> Authorized
+        Just _ -> Unauthorized "Soh o admin acessa aqui!"
 
 isUser = do
     mu <- lookupSession "_USER"

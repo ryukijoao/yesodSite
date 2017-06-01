@@ -11,7 +11,8 @@
 /pag3             Pag3R      GET
 /pag4             Pag4R      GET
 /hello            HelloR     GET
+/admin            AdminR     GET
 
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST
-/logout           LogoutR    GET
+/logout           LogoutR    POST
