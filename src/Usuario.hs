@@ -26,16 +26,17 @@ getUsuarioR = do
             (widget, enctype) <- generateFormPost formUsu
             defaultLayout $ widgetForm UsuarioR enctype widget "Cadastro de Usuários"
 
--- para controlar duplicagem de email, procurar getBy
 postUsuarioR :: Handler Html
 postUsuarioR = do
                 ((result, _), _) <- runFormPost formUsu
                 case result of
                     FormSuccess usu -> do
-                       runDB $ insert usu
-                       defaultLayout [whamlet|
-                           <h1> #{usuarioNome usu} Inseridx com sucesso. 
-                       |]
+                       usuLR <- runDB $ insertBy usu
+                       case usuLR of
+                           Left _ -> redirect UsuarioR
+                           Right _ -> defaultLayout [whamlet|
+                                          <h1> #{usuarioNome usu} Inseridx com sucesso. 
+                                      |]
                     _ -> redirect UsuarioR
                     
 getLoginR :: Handler Html

@@ -31,6 +31,7 @@ getHomeR :: Handler Html
 getHomeR = defaultLayout $ do
     setTitle "Minha página"
     addStylesheet $ StaticR teste_css
+    sess <- lookupSession "_USER"
     toWidgetHead [hamlet|
         <meta name="keywords" content="Teste, Haskell">
     |]
@@ -48,9 +49,9 @@ getHomeR = defaultLayout $ do
         <button onclick="ola()">
             Clique!
         <br>
-        <img src=@{StaticR haskell_jpg}>
-        <form action=@{LogoutR} method=post>
-            <input type="submit" value="submit">
+        $maybe sess' <- sess
+            <form action=@{LogoutR} method=post>
+                <input type="submit" value="Logout">
     |]
 
 
