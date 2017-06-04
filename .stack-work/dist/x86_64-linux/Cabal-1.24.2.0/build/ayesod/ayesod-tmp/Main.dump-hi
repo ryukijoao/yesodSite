@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-01 23:40:11.618514 UTC
+2017-06-04 18:25:14.697539 UTC
 
 interface main@main:Main 8002
-  interface hash: 855b0e632c052214aed44c97b15e8249
-  ABI hash: ca69e25355513f7d8e44caaa226ac99b
-  export-list hash: 281946757575a451a09f88b8c03aacbf
+  interface hash: 766f2cd1411bccd6d300c88ec712c852
+  ABI hash: e23cf3330f42fea2b5044d5c3e47a254
+  export-list hash: 3a57cd589f3f4c6c556bf8db705bd1b0
   orphan hash: b3800a9dc0dfa8d51aa55715fd5423fd
   flag hash: f38b3acf32bddb09ccea3e806f631cb7
   sig of: Nothing
@@ -246,11 +246,11 @@ import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  Application ad0f0770d320c0450294c5eff603f34a
-  exports: 7cb74ef2839eace24b030ba5fb0c06b6
-import  -/  Foundation c30c680602c2e1bb9990b960794311ff
-  exports: b110a8fd7c641709ec0ede9d9c834f78
-  Sitio bfc6577e3745f08aa76112be8d7b1c85
+import  -/  Application 787f0559e6bc65f45a318d2eece3690e
+  exports: 8575e3270b5c25a4e4681bfae8d93698
+import  -/  Foundation 1cbddc045a67ee21f54a61f431bc4ab3
+  exports: a973128de65b74362cca61581f30bec3
+  Sitio df0c3ddef2b9aa00f927173d0afa2dec
   migrateAll e72de080066d97e17a98bfa7e731a103
 import  -/  monad-logger-0.3.22@monad-logger-0.3.22-Ff8c9txl6qcL0x0EY6ih77:Control.Monad.Logger c186132138b23c0e4c9839f4d7247bee
 import  -/  persistent-2.6.1@persistent-2.6.1-GN6JgXR46m4BfSXz1mIhIy:Database.Persist.Sql.Migration 8936d439b3ab237a92eaf3f5f90fdca5
@@ -260,7 +260,7 @@ import  -/  text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text 9ba4693a1
 import  -/  yesod-1.4.5@yesod-1.4.5-Gjjcx4wipmk9Grx3eCz8hV:Yesod 9b32a342acc9baee13df0be07e3d39c5
 import  -/  yesod-core-1.4.33@yesod-core-1.4.33-8AMCPxWRGte91vFglpHrX8:Yesod.Core.Dispatch 80f9a7d4d8273f000716701c4691dc21
 import  -/  yesod-static-1.5.2@yesod-static-1.5.2-5JxqasNDKv61u38MfmOKcf:Yesod.Static 99fc726ce5d6f253cbe3d4692952415e
-addDependentFile "/home/ubuntu/.stack/programs/x86_64-linux/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
+addDependentFile "/home/user/.stack/programs/x86_64-linux/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
 addDependentFile ".stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
 addDependentFile "/usr/include/stdc-predef.h"
 b844cde00d4ecd3f52cc900dc007e588
@@ -937,18 +937,18 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-2a01514b62a1e3a5df6fd433d9020a50
+22dea3876ef89b85e86e2b2785c7111c
   connStr :: Data.String.IsString t => t
   {- Arity: 1, Strictness: <C(S),1*C1(U)>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ t ($dIsString :: Data.String.IsString t) ->
                  $dIsString `cast` (Data.String.N:IsString[0] <t>_N)
                    Main.connStr1) -}
-5b6fbef7198f305570cd49abe1da97de
+213faff3b7217c5b36ead081eb615158
   connStr1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
-                   "dbname=dd9en8l5q4hh2a host=ec2-107-21-219-201.compute-1.amazonaws.com user=kpuwtbqndoeyqb password=aCROh525uugAWF1l7kahlNN3E0 port=5432"#) -}
-73c1af7c9c96488baefb78c7640a341e
+                   "dbname=d8gvpk56lm77g4 host=ec2-54-83-49-44.compute-1.amazonaws.com user=gmzzrpxkugxpzg password=7a7d5b9d667fe212382a0da7d282088f42d1c86f2dcaee29dcd875fb4d05603f port=5432"#) -}
+173da6aa3c595d9743d3560e4186dd7a
   main :: GHC.Types.IO ()
   {- Unfolding: ((Main.main9
                     Main.main8
@@ -973,7 +973,7 @@ d6831ef04cb9301b090dfae6f7bb7ec7
                     ->_R <Control.Monad.Logger.LogLevel>_R
                     ->_R <System.Log.FastLogger.LogStr.LogStr>_R
                     ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
-a2a116d42ef5988fc36bfd43ab93ec1d
+1f858d5bb577ef871a94300a993f915a
   main1 ::
     Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
     -> (Language.Haskell.TH.Syntax.Loc
@@ -1052,7 +1052,7 @@ a2a116d42ef5988fc36bfd43ab93ec1d
                       (Sym (Yesod.Static.N:Static[0]))
                       pool)
                    ipv2 } }) -}
-041dcb257b9e192d3332cc9cbdb2e249
+ab2e836f44764125ca5cb6b973c06089
   main10 :: Database.Persist.Postgresql.ConnectionString
   {- Unfolding: (case GHC.List.$wlenAcc
                         @ GHC.Types.Char
@@ -1061,15 +1061,15 @@ a2a116d42ef5988fc36bfd43ab93ec1d
                  Data.ByteString.Internal.$wunsafePackLenChars
                    ww2
                    Main.connStr1 }) -}
-a6e278a3b72f9f620657cc10ef7efabd
+52c37927faa4a58c307a95bfaab5bb7f
   main11 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1 @ () Main.main) -}
-8ce7f0083875b4a7a2b7ca4be78c6d11
+0ea801972488dd19d6d215c00be0ee0b
   main2 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8080#) -}
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3000#) -}
 2a06ff8605ef383b9ee93ee9ba7be6b5
   main3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "static"#) -}
@@ -1161,7 +1161,7 @@ c242418641ba560a41e32f60948e91ca
 e230f369fda110776fdd0aaf5615a281
   main8 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10#) -}
-dab02b94b0f9c7860bb163cc7c672d1d
+96f3ed7430d55e53a6b9f2efea9fbb7c
   main9 ::
     GHC.Types.Int
     -> (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend

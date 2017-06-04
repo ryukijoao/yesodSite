@@ -2,6 +2,7 @@
              TemplateHaskell #-}
  
 module Usuario where
+
 import Yesod
 import Foundation
 import Control.Monad.Logger (runStdoutLoggingT)
@@ -18,8 +19,8 @@ formUsu = renderDivs $ Usuario <$>
 
 formLogin :: Form (Text, Text)
 formLogin = renderDivs $ (,) <$>
-             areq emailField "E-mail" Nothing <*>
-             areq passwordField "Senha" Nothing 
+             areq emailField "E-mail: " Nothing <*>
+             areq passwordField "Senha: " Nothing 
 
 getUsuarioR :: Handler Html
 getUsuarioR = do
@@ -43,13 +44,14 @@ getLoginR :: Handler Html
 getLoginR = do
             (widget, enctype) <- generateFormPost formLogin
             msgComMaybe <- getMessage
-            defaultLayout $ do 
-                [whamlet|
+            defaultLayout $ do
+            addStylesheet $ StaticR login_css
+            [whamlet|
                     $maybe msg <- msgComMaybe 
                         <h2>
                             #{msg}
-                |]
-                widgetForm LoginR enctype widget "Login page"
+            |]
+            widgetFormLogin LoginR enctype widget "Página de Login"
 
 
 postLoginR :: Handler Html

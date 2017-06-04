@@ -12,6 +12,53 @@ import Database.Persist.Postgresql
 data Sitio = Sitio {getStatic :: Static, connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+
+Usuario
+   nome Text
+   email Text
+   senha Text
+   UniqueEmail email
+
+Artistas
+    nome Text sqltype=varchar(100)
+    deriving Show
+
+Vertentes
+    nome Text sqltype=varchar(100)
+    vertenteMae VertentesId
+    deriving Show
+
+Musicas
+    nome Text sqltype=varchar(200)
+    artistaPrincipalId ArtistasId
+    deriving Show
+
+MusicasArtistas
+    musica MusicasId
+    artista ArtistasId
+
+MusicasVertentes
+    musica MusicasId
+    vertente ArtistasId
+
+Albuns
+    nome Text sqltype=varchar(100)
+    artistaMae ArtistasId
+    deriving Show
+
+AlbunsArtistas
+    descricao Text sqltype=varchar(300)
+    album AlbunsId
+    artista ArtistasId
+    deriving Show
+    
+AlbunsMusicas
+    albumId AlbunsId
+    musicaId MusicasId
+    disco Int default=1
+    deriving Show
+    
+    
 Departamento
    nome Text
    sigla Text sqltype=varchar(3)
@@ -23,12 +70,7 @@ Pessoa
    salario Double
    deptoid DepartamentoId
    deriving Show
-  
-Usuario
-   nome Text
-   email Text
-   senha Text
-   UniqueEmail email
+
 |]
 
 staticFiles "static"
@@ -72,3 +114,6 @@ instance RenderMessage Sitio FormMessage where
 
 widgetForm :: Route Sitio -> Enctype -> Widget -> Text -> Widget
 widgetForm x enctype widget y = $(whamletFile "templates/form.hamlet")
+
+widgetFormLogin :: Route Sitio -> Enctype -> Widget -> Text -> Widget
+widgetFormLogin x enctype widget y = $(whamletFile "templates/login.hamlet")

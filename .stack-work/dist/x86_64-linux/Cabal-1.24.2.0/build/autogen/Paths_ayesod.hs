@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/ubuntu/workspace/ayesod/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/bin"
-libdir     = "/home/ubuntu/workspace/ayesod/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/lib/x86_64-linux-ghc-8.0.2/ayesod-0.0.0"
-dynlibdir  = "/home/ubuntu/workspace/ayesod/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/lib/x86_64-linux-ghc-8.0.2"
-datadir    = "/home/ubuntu/workspace/ayesod/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/share/x86_64-linux-ghc-8.0.2/ayesod-0.0.0"
-libexecdir = "/home/ubuntu/workspace/ayesod/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/libexec"
-sysconfdir = "/home/ubuntu/workspace/ayesod/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/etc"
+bindir     = "/projects/yesodSite/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/bin"
+libdir     = "/projects/yesodSite/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/lib/x86_64-linux-ghc-8.0.2/ayesod-0.0.0"
+dynlibdir  = "/projects/yesodSite/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/lib/x86_64-linux-ghc-8.0.2"
+datadir    = "/projects/yesodSite/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/share/x86_64-linux-ghc-8.0.2/ayesod-0.0.0"
+libexecdir = "/projects/yesodSite/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/libexec"
+sysconfdir = "/projects/yesodSite/.stack-work/install/x86_64-linux/lts-8.12/8.0.2/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "ayesod_bindir") (\_ -> return bindir)

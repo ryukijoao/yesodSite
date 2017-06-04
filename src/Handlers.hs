@@ -39,7 +39,7 @@ getCadastroR :: Handler Html
 getCadastroR = do
              (widget, enctype) <- generateFormPost formPessoa
              defaultLayout $ do 
-                 addStylesheet $ StaticR teste_css
+                 --addStylesheet $ StaticR teste_css
                  widgetForm CadastroR enctype widget "Pessoas"
 
 getPessoaR :: PessoaId -> Handler Html

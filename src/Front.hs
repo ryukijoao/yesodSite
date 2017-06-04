@@ -30,7 +30,7 @@ widget1 = [whamlet|
 getHomeR :: Handler Html
 getHomeR = defaultLayout $ do
     setTitle "Minha página"
-    addStylesheet $ StaticR teste_css
+    --addStylesheet $ StaticR teste_css
     sess <- lookupSession "_USER"
     toWidgetHead [hamlet|
         <meta name="keywords" content="Teste, Haskell">
@@ -65,7 +65,7 @@ getHomeR = defaultLayout $ do
 getTesteR :: Handler Html
 getTesteR = do 
     defaultLayout $ do
-        addStylesheet (StaticR teste_css)
+        --addStylesheet (StaticR teste_css)
         toWidgetHead [julius|
             function ola(){
                 alert("Ola mundo!");
@@ -95,7 +95,7 @@ getTesteR = do
                 UM PARAGRAFO!
             <button onclick="ola()">
                 Click
-            <img src=@{StaticR haskell_jpg}>
+            <img src=@{StaticR teste_jpg}>
         |]
 
 getPag1R :: Handler Html

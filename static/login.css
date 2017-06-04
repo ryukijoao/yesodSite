@@ -1,0 +1,20 @@
+body
+{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    background-image: url('/static/music_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.container
+{
+    width: 500px;
+    height: 400px;
+    text_align: center;
+    background-color: rgba(109, 68, 170, 0.5);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
