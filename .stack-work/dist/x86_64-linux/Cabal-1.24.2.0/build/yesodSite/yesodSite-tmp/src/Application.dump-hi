@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-04 21:34:24.987051 UTC
+2017-06-04 22:56:06.516499 UTC
 
 interface main@main:Application [orphan module] 8002
-  interface hash: 60860697521f1f490c27a59a71bfbe25
+  interface hash: a6702b8e95e3b4db16dd4fe73a6a72fb
   ABI hash: 8e2910416642d76b84fbe60e4608844e
   export-list hash: 7ff45046ab5a32d9e48e1a088aee303f
   orphan hash: 6235415bbe206dd37add05f22cfa6894
@@ -241,8 +241,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HhuV3U7exg79Uml
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  Foundation 45b582b05ef9fb499e13ede7dbd1beee
-  exports: 80dd1586dcbbc8471df75f57edde9b20
+import  -/  Foundation 99f99c75e6862771965b2181c8134ef5
+  exports: 586d7b7eb97f027e2571f55d4579ed1c
   AdminR d6cc7e5383b9bff4baf2ca192a0eec1c
   CadastroR 8ea0a6a6080d96a8b835367cb4e714ca
   DeptoR 8e9a158e9694982abfc2fb9859210dfa
@@ -280,10 +280,10 @@ import  -/  Handlers 9a92a7a4fed2327c2ce00d763c2d65a0
   postCadastroR 1ca7879492f46080ca464353374d8b0d
   postDeptoR 156fbbe0ab8e2cf864a453b6dc55f3cf
   postPessoaR 738ff26b60127d5d83309e71a82d9e3d
-import  -/  Usuario 607402f45ea5b6fb794a6ee71dfcb080
+import  -/  Usuario 1cabe97e0ec9272d231a93f268d14549
   exports: b9fd227eb8d367c4c8e017c8d33a7cc9
   getAdminR 93c00ee5247d1307fb46604d72ba5502
-  getLoginR 9ddfb223f0e10d7341ba1933b16cebe1
+  getLoginR db2addbc42b6718b7efb7c241d8afded
   getUsuarioR 3090499bdc5eb812f965ddaed38cc7fd
   postLoginR 71d6ac52e678ab967cb1511995c67584
   postLogoutR 5f7c253f364db0641eb010d82a3dbc5a

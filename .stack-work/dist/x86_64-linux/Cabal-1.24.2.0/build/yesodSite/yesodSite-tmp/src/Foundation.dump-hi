@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-04 21:34:13.891474 UTC
+2017-06-04 22:55:51.597575 UTC
 
 interface main@main:Foundation [family instance module] 8002
-  interface hash: d9739a3fdc837de35aedc3aeb6c9bc49
-  ABI hash: 45b582b05ef9fb499e13ede7dbd1beee
-  export-list hash: 80dd1586dcbbc8471df75f57edde9b20
+  interface hash: f0a5541f6a6b5d9b6a8f3a441361adf4
+  ABI hash: 99f99c75e6862771965b2181c8134ef5
+  export-list hash: 586d7b7eb97f027e2571f55d4579ed1c
   orphan hash: 78448369c29214ea947fad2dbf7f46af
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
@@ -18,6 +18,7 @@ exports:
   Foundation.isUser
   Foundation.login_css
   Foundation.migrateAll
+  Foundation.music_background3_jpg
   Foundation.music_background_jpg
   Foundation.resourcesSitio
   Foundation.teste_css
@@ -24504,20 +24505,20 @@ f0e4fe2eca75f6896579b8abf1b450f9
                       (case mu of wild {
                          GHC.Base.Nothing -> Yesod.Core.Types.AuthenticationRequired
                          GHC.Base.Just ds -> Yesod.Core.Types.Authorized }))) -}
-4a9ac6232c742d5dd7b425c8524a4797
+fb38dde79fd1f7854f54cb21a117ab3e
   login_css :: Yesod.Static.StaticRoute
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Foundation.login_css1
                   `cast`
                 (Sym (Yesod.Static.D:R:RouteStatic0[0])) -}
-1de460cac4d5b37098928acbe469e0f8
+dff49e2049f299950f2feb9e4ae3542a
   login_css1 :: Yesod.Static.R:RouteStatic
   {- Strictness: m,
      Unfolding: (Yesod.Static.StaticRoute
                    Foundation.login_css5
                    Foundation.login_css2) -}
-b5e7d35fccd573a96a665e932ad729ea
+26a82bd8efc96c6a59d6c25d5891f336
   login_css2 :: [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -24525,14 +24526,14 @@ b5e7d35fccd573a96a665e932ad729ea
                    Foundation.login_css3
                    (GHC.Types.[]
                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-87d42bd3e2209f2d7750f36efe0d7d2b
+93dd434dc6835fc480f7f0d0a0025022
   login_css3 :: (Data.Text.Internal.Text, Data.Text.Internal.Text)
   {- Strictness: m,
      Unfolding: ((Foundation._Lady_music_png5,
                   Foundation.login_css4)) -}
-edbb2d3e7fa55d41d6acab2c0c1f0ec4
+723820c42debd08331fd907debe260ba
   login_css4 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "CwFSnYzx"#) -}
+  {- Unfolding: (Data.Text.Show.unpackCString# "dJRmfM5P"#) -}
 3fdc847d9f412b494d7d3f1962f7f488
   login_css5 :: [Data.Text.Internal.Text]
   {- Strictness: m2,
@@ -24627,6 +24628,83 @@ e72de080066d97e17a98bfa7e731a103
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w of ww { Database.Persist.Sql.Types.Internal.SqlBackend ww2 ww3 ww4 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ->
                  Foundation.$wmigrateAll ww2 ww7 ww9 w1 }) -}
+bfe9782127adb1e9ab3a3894f4f1c73b
+  music_background3_jpg :: Yesod.Static.StaticRoute
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Foundation.music_background3_jpg1
+                  `cast`
+                (Sym (Yesod.Static.D:R:RouteStatic0[0])) -}
+9dd9aed415508a3cb20045643eb80fb5
+  music_background3_jpg1 :: Yesod.Static.R:RouteStatic
+  {- Strictness: m,
+     Unfolding: (Yesod.Static.StaticRoute
+                   Foundation.music_background3_jpg5
+                   Foundation.music_background3_jpg2) -}
+ef7f78d5d62c2fd6a7f160543f5aa444
+  music_background3_jpg2 ::
+    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                   Foundation.music_background3_jpg3
+                   (GHC.Types.[]
+                      @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
+8f125fc7de93c9f5c0af738ed6461ef4
+  music_background3_jpg3 ::
+    (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Strictness: m,
+     Unfolding: ((Foundation._Lady_music_png5,
+                  Foundation.music_background3_jpg4)) -}
+231c1de8b4f7c8ec096765d60076202a
+  music_background3_jpg4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "HISa85Qf"#) -}
+cdc862130ed181e903a92dcbfa09e8bd
+  music_background3_jpg5 :: [Data.Text.Internal.Text]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   Foundation.music_background3_jpg6
+                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
+0147c8b3ea93289b0637c2d8c5c2377d
+  music_background3_jpg6 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Foundation.music_background3_jpg7 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+c9b432d47aabee249d4325edfcaf0dee
+  music_background3_jpg7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Foundation.music_background3_jpg_$s$wouter
+                   ipv
+                   0#
+                   Foundation.music_background3_jpg8
+                   4#
+                   ipv1 }) -}
+41a4e04c8979a422ed2f2a8feadd577c
+  music_background3_jpg8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "music_background3.jpg"#) -}
+8b8c6fe07cbe0056b4f36eebf94b0e9e
+  music_background3_jpg_$s$wouter ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.MutableByteArray# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <S,U><S,U><S,1*U><L,U><L,U> -}
 1471cd8ce9215a6f42df6df82ecbef7a
   music_background_jpg :: Yesod.Static.StaticRoute
   {- Strictness: m,

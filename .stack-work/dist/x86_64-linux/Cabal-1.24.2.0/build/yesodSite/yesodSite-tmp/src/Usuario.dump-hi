@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-04 21:34:23.190571 UTC
+2017-06-04 22:56:04.573884 UTC
 
 interface main@main:Usuario 8002
-  interface hash: 2283dac2c7448c5ad21ccc748ed63460
-  ABI hash: 607402f45ea5b6fb794a6ee71dfcb080
+  interface hash: 4dc31cb756f0fab265c682a556c2127a
+  ABI hash: 1cabe97e0ec9272d231a93f268d14549
   export-list hash: b9fd227eb8d367c4c8e017c8d33a7cc9
   orphan hash: 088e95363c742890a6c60944f028902b
   flag hash: cea58010d6f822e09f76168887728323
@@ -254,8 +254,8 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 45b582b05ef9fb499e13ede7dbd1beee
-  exports: 80dd1586dcbbc8471df75f57edde9b20
+import  -/  Foundation 99f99c75e6862771965b2181c8134ef5
+  exports: 586d7b7eb97f027e2571f55d4579ed1c
   AdminR d6cc7e5383b9bff4baf2ca192a0eec1c
   Form b3f1bc0723e83700093db50ad6a4f634
   Handler 85d8e699020072c87fbee864ba4be0d2
@@ -266,7 +266,7 @@ import  -/  Foundation 45b582b05ef9fb499e13ede7dbd1beee
   UsuarioEmail 780015e62ab985e486e3a619386945d9
   UsuarioR d94eec4f6149afc66e09f7eb31a35026
   UsuarioSenha e9dff5fe65357ba3865f860088b45736
-  login_css 4a9ac6232c742d5dd7b425c8524a4797
+  login_css fb38dde79fd1f7854f54cb21a117ab3e
   usuarioNome 28a7b225e54e93715e517887433484ec
   widgetForm 131a0832caf139344194e431882fd392
   widgetFormLogin 444ed0e49449fb1bc50df9bd9e71f537
@@ -1249,7 +1249,7 @@ d8db2c439cda4a846f8dd4fd3da809b6
   {- Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Usuario.getAdminR5) -}
-9ddfb223f0e10d7341ba1933b16cebe1
+db2addbc42b6718b7efb7c241d8afded
   getLoginR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -1263,7 +1263,7 @@ d8db2c439cda4a846f8dd4fd3da809b6
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-4be20febbc1b8ee58fb0721fdbca8c76
+3702c9c679570eeb09d4758cca377e51
   getLoginR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -1773,7 +1773,7 @@ f5e4f638afc4135455393f89dc4a03e2
                     (GHC.Tuple.(),
                      Yesod.Core.Types.$fApplicativeWidgetT_$cmempty
                        @ (Yesod.Routes.Class.Route Foundation.Sitio)) #)) -}
-ce7686d1f42b98ba00fbb48c268a13bd
+2448243b6f68c2a5ec574734f6ec9687
   getLoginR2 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -1833,7 +1833,7 @@ a7096eebbd7d038b5250629fc9fe670d
                                                   <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-f9dabdf82e2e423a30c084b177ce021f
+251303b3343b4bc36cf9767d5114552c
   getLoginR3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,

@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-04 21:34:22.453821 UTC
+2017-06-04 22:56:03.788691 UTC
 
 interface main@main:Front 8002
-  interface hash: d0167d3c49ed0ee44b95c8f53d6277cc
+  interface hash: e482b274ba2f0248c22cf3624f215040
   ABI hash: 38eda5478ca59149d074ba2c14061398
   export-list hash: 948124af48f0b905329b76d4d3a5873a
   orphan hash: 476ecbc8a9e4b422e8e2007eda4aea0d
@@ -252,8 +252,8 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 45b582b05ef9fb499e13ede7dbd1beee
-  exports: 80dd1586dcbbc8471df75f57edde9b20
+import  -/  Foundation 99f99c75e6862771965b2181c8134ef5
+  exports: 586d7b7eb97f027e2571f55d4579ed1c
   Handler 85d8e699020072c87fbee864ba4be0d2
   LogoutR 78ff26242e58efbf81c3c95e504259c3
   MsgHello 56b62de683c484b0d5893a6cc524ca72
