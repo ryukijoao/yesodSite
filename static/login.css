@@ -52,3 +52,23 @@ label{
     line-height: 20px;
     padding-left:1px;
 }
+
+.logar{
+    color: #fff;
+    background-color: rgb(68, 171, 68);
+    border:none;
+    padding: 1px 1px;
+    width:200px;
+    border-radius:6px;
+    cursor: pointer;
+    border-bottom: 4px solid #347f34
+}
+
+.logar:hover{
+    background-color: #3e8e41
+}
+
+.logar:active{
+    background-color: #3e8e41;    
+    transform: translateY(4px);
+}
