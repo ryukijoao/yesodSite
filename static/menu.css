@@ -1,5 +1,13 @@
+html
+{
+    width: 100%;
+    height: 100%;
+}
+
 body
 {
+    width: 100%;
+    height: 100%;
     margin: 0;
     background-image: url('music_background4.jpg');
     background-repeat: no-repeat;

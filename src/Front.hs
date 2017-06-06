@@ -13,9 +13,14 @@ import Database.Persist.Postgresql
 
 getMenuR :: Handler Html
 getMenuR = defaultLayout $ do
-
+    setTitle "Menu"
+    addStylesheet $ StaticR menu_css
+    sess <- lookupSession "_USER"
     [whamlet|
 <html>
+    <head>
+        <title>
+            Music Library (Versão Inicial)
 <body>
 <header>
     <div class="nav">

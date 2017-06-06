@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-06 00:19:23.431754 UTC
+2017-06-06 03:02:19.707316 UTC
 
 interface main@main:Handlers 8002
-  interface hash: b10afb155a690f5d0729c74b2263205f
+  interface hash: 321abf44685c6c33e0e3f86547272e0e
   ABI hash: 07e1bfd02cc43aaafba261477d7ccf8b
   export-list hash: 87932e32b20832141552779fe5a33929
   orphan hash: 2853a8ee6549a93643226f7937cf7c13
@@ -257,8 +257,8 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation d3cac6a4229665d726322138d2a916f6
-  exports: 64eecb9e050f6d86960462c8953a68c9
+import  -/  Foundation a2c9e73ce1a6e65b23f7e2011c9ad666
+  exports: 86389359be748d806e41ca0ac435da38
   CadastroR 4bf5a8a83988fc2858bdd5c0c80fdd48
   Departamento cab331b413f1f8bdf4dcc3a44c719bd5
   Departamento 1f643bd4ff006fb0ea448fb6a542b1d2
