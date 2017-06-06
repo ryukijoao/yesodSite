@@ -91,7 +91,8 @@ getHomeR = defaultLayout $ do
         <br>
         $maybe sess' <- sess
             <form action=@{LogoutR} method=post>
-                <input type="submit" value="Logout">
+                ite
+                
     |]
 
 

@@ -1,6 +1,85 @@
 body
 {
-    background-image: url('satatic/Deep Space.jpg');
+    margin: 0;
+    background-image: url('music_background4.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    font-family: Arial;
+}
+
+.nav
+{
+    width: 90%;
+    margin: 0 auto;
+}
+.welcome
+{
+    display: inline-block;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+ul
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul li
+{
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: #bec0c4;
+    text-align:center;
+    line-height: 40px;
+    font-size: 20px;
+    opacity: .8;
+    margin-right: 2px;
+}
+ul li a
+{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+ul li a:hover
+{
+    font-weight: bold;
+    background-color: #47ef5b;
+    cursor: pointer;
+}
+ul li ul li
+{
+    display: none;
+}
+ul li:hover ul li
+{
+    display: block;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #bec0c4;
+  text-align: left;
+}
+
+.logar{
+    font-family: Arial;
+    color: #fff;
+    background-color: Transparent;
+    border:none;
+    cursor: pointer;
+    float: bottom;
+    font-size: 20px;
+}
+
+.logar:hover{
+    font-weight: bold;
 }
