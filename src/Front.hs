@@ -13,41 +13,57 @@ import Database.Persist.Postgresql
 
 getMenuR :: Handler Html
 getMenuR = defaultLayout $ do
+
     [whamlet|
-        <html>
+<html>
+<body>
+<header>
+    <div class="nav">
+        <nav>
             <ul>
-                <li>
-                    <a>Home
-        
-                <li>
-                    <a>Organize
+                <li><a>Home
+                
+                <li><a>Organize
                     <ul>
-                        <li>Nova lista
-                        <li>Exibir listas
-        
-                <li>
-                    <a>Músicas
+                        <li><a>Nova lista
+                        <li><a>Exibir listas
+                
+                <li><a>Músicas
                     <ul>
-                        <li>Nova música
-                        <li>Exibir músicas
-        
-                <li>
-                    <a>Artistas
+                        <li><a>Nova música
+                        <li><a>Exibir músicas
+                
+                <li><a>Artistas
                     <ul>
-                        <li>Novo artista
-                        <li>Exibir artistas
-        
-                <li>
-                    <a>Álbuns
+                        <li><a>Novo artista
+                        <li><a>Exibir artistas
+                
+                <li><a>Álbuns</a>
                     <ul>
-                        <li>Novo álbum
-                        <li>Exibir álbuns
-            
-                <li>
-                    <a>Vertentes
+                        <li><a>Novo álbum
+                        <li><a>Exibir álbuns
+                    
+                <li><a>Vertentes
                     <ul>
-                        <li>Nova vertente
-                        <li>Exibir vertentes
+                        <li><a>Nova vertente
+                        <li><a>Exibir vertentes
+    <div class="welcome">
+        <h1>
+            Bem vindo<br><br>
+            Atualmente o site/app dispões das seguintes funcionalidades:
+            <li>Cadastro de artistas
+            <li>Cadastro de músicas
+            <li>Cadastro de vertentes
+            <li>Cadastro de álbuns
+            <li>Organização de listas
+            <br><br>
+            Em desenvolvimento:
+            <li>Layout
+            <li>Importação de dados via biblioteca online
+            <li>Pré-cadastro de músicas, artistas, vertentes e álbuns
+<footer class="footer">
+    <div class="rodape">
+        <input class="logar" type="submit" value="Logout">
     |]
 
 -- Sempre devemos usar o defaultLayout
