@@ -46,11 +46,6 @@ getLoginR = do
             msgComMaybe <- getMessage
             defaultLayout $ do
             addStylesheet $ StaticR login_css
-            [whamlet|
-                    $maybe msg <- msgComMaybe 
-                        <h2>
-                            #{msg}
-            |]
             widgetFormLogin LoginR enctype widget "Página de Login"
 
 
@@ -60,7 +55,7 @@ postLoginR = do
                 case result of
                     FormSuccess ("root@root.com","root2") -> do
                         setSession "_USER" "admin"
-                        redirect AdminR
+                        redirect MenuR
                     FormSuccess (email,senha) -> do
                        temUsu <- runDB $ selectFirst [UsuarioEmail ==. email,UsuarioSenha ==. senha] []
                        case temUsu of

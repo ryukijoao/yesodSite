@@ -10,6 +10,46 @@ import Data.Text
 import Handlers
 import Database.Persist.Postgresql
 
+
+getMenuR :: Handler Html
+getMenuR = defaultLayout $ do
+    [whamlet|
+        <html>
+            <ul>
+                <li>
+                    <a>Home
+        
+                <li>
+                    <a>Organize
+                    <ul>
+                        <li>Nova lista
+                        <li>Exibir listas
+        
+                <li>
+                    <a>Músicas
+                    <ul>
+                        <li>Nova música
+                        <li>Exibir músicas
+        
+                <li>
+                    <a>Artistas
+                    <ul>
+                        <li>Novo artista
+                        <li>Exibir artistas
+        
+                <li>
+                    <a>Álbuns
+                    <ul>
+                        <li>Novo álbum
+                        <li>Exibir álbuns
+            
+                <li>
+                    <a>Vertentes
+                    <ul>
+                        <li>Nova vertente
+                        <li>Exibir vertentes
+    |]
+
 -- Sempre devemos usar o defaultLayout
 -- pois hamlets, lucius, cassius e julius sao
 -- da Monad Widget. A funcao defaultLayout

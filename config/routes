@@ -16,3 +16,4 @@
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST
 /logout           LogoutR    POST
+/menu             MenuR      GET
