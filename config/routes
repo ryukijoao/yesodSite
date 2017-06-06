@@ -13,6 +13,8 @@
 /hello            HelloR     GET
 /admin            AdminR     GET
 
+/vertentes        VertenteR  GET POST
+
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST
 /logout           LogoutR    POST

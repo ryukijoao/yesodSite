@@ -10,6 +10,16 @@ import Data.Text
 
 import Database.Persist.Postgresql
 
+vts = do
+    entidades <- runDB $ selectList [] [Asc VertentesNome] 
+    optionsPairs $ fmap (\ent -> (vertentesNome $ entityVal ent, entityKey ent)) entidades
+
+formVertentes :: Form Vertentes
+formVertentes = renderDivs $ Vertentes <$>
+                areq textField "Nome" Nothing  <*>
+                areq (selectField vts) "X"  Nothing
+
+
 formDepto :: Form Departamento
 formDepto = renderDivs $ Departamento <$>
             areq textField "Nome" Nothing <*>
@@ -34,6 +44,12 @@ getHelloR :: Handler Html
 getHelloR = defaultLayout [whamlet|
      <h1> _{MsgHello}
 |]
+
+getVertenteR :: Handler Html
+getVertenteR = do
+             (widget, enctype) <- generateFormPost formVertentes
+             defaultLayout $ widgetFormVertente VertenteR enctype widget "Vertentes"
+
 
 getCadastroR :: Handler Html
 getCadastroR = do
@@ -84,6 +100,10 @@ getDeptoR :: Handler Html
 getDeptoR = do
              (widget, enctype) <- generateFormPost formDepto
              defaultLayout $ widgetForm DeptoR enctype widget "Departamentos"
+
+postVertenteR :: Handler Html
+postVertenteR = do
+    undefined
 
 postDeptoR :: Handler Html
 postDeptoR = do

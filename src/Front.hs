@@ -30,28 +30,28 @@ getMenuR = defaultLayout $ do
                 
                 <li><a>Organize
                     <ul>
-                        <li><a>Nova lista
-                        <li><a>Exibir listas
+                        <li><a href="">Nova lista
+                        <li><a href="">Exibir listas
                 
                 <li><a>Músicas
                     <ul>
-                        <li><a>Nova música
-                        <li><a>Exibir músicas
+                        <li><a href="">Nova música
+                        <li><a href="">Exibir músicas
                 
                 <li><a>Artistas
                     <ul>
-                        <li><a>Novo artista
-                        <li><a>Exibir artistas
+                        <li><a href="">Novo artista
+                        <li><a href="">Exibir artistas
                 
                 <li><a>Álbuns</a>
                     <ul>
-                        <li><a>Novo álbum
-                        <li><a>Exibir álbuns
+                        <li><a href="">Novo álbum
+                        <li><a href="">Exibir álbuns
                     
                 <li><a>Vertentes
                     <ul>
-                        <li><a>Nova vertente
-                        <li><a>Exibir vertentes
+                        <li><a href=@{VertenteR}>Nova vertente
+                        <li><a href="">Exibir vertentes
     <div class="welcome">
         <h1>
             Bem vindo<br><br>

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-06 03:02:23.105442 UTC
+2017-06-06 04:03:42.622573 UTC
 
 interface main@main:Application [orphan module] 8002
-  interface hash: 7524a1a1d637b81b8559e5094c60f2d3
-  ABI hash: 7372d785b5f7798a702ff8c201a2b5b2
-  export-list hash: 64f18e62936b4cfd77bf9d0d806c7c5c
-  orphan hash: 182eece4df073ef8232f37ca295f5087
+  interface hash: 7cb7fdfe7362c70125ceb3b3b6d27e42
+  ABI hash: 32c919b5b37429a928bcc70f1d934aef
+  export-list hash: 6893f65d2b42e95ed30531096ac72b86
+  orphan hash: a770dbde1c4d41cecb77070b05c925a4
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
   used TH splices: True
@@ -241,55 +241,58 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HhuV3U7exg79Uml
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  Foundation a2c9e73ce1a6e65b23f7e2011c9ad666
-  exports: 86389359be748d806e41ca0ac435da38
-  AdminR 6ef5b292da9cf1229daeb953ecbc0da7
-  CadastroR 4bf5a8a83988fc2858bdd5c0c80fdd48
-  DeptoR 7bbeb85fdd4c8cde1b095b91099474ea
-  HelloR 15881701f5260a7edea690c467f1b9a5
-  HomeR 0b38541e8924478ad217e97b31f8453b
-  ListarR de133db3767da79e4b5818162f1e722b
-  LoginR cbd71bf5c21d01f598dec1be718429d5
-  LogoutR 8c13e5f23f5e767957e1b87a3b2c85aa
-  MenuR dcd1dc341b6e1afe4cf830a3a6c3cf87
-  Pag1R 106e9992b3ba2ca61e446c96d83dae9e
-  Pag2R 50b7e4dd6708276781f5edbf2b2b131d
-  Pag3R ad60d06c629c64d0f9641b7b7db2a573
-  Pag4R c5fbd62b7d875b99bd6e6b40892dae47
-  PessoaR 16a31e2c061995de5db15eab663f9e24
-  Sitio 1732f901c9c5663349d7cc1729c829a4
-  StaticR 1e94ec9956301985e6380de93acd2051
-  TesteR fd079876ddee0f31ede05a58ab9a4d92
-  UsuarioR 3ca7461c8de68849ef825127551f2db9
-  getStatic 37fb7489aa7dfaa3907362c912affec3
-  resourcesSitio 309b06563aeb0b74840ac97daaf37448
-import  -/  Front 411553bef07d46da5ed6ed0e9f27826c
+import  -/  Foundation 659dbd7011fc3bcbc8a5783da022315a
+  exports: a8fe1c9bb7aa59d95882f900e48913ba
+  AdminR 9125cfc9a154458a77c61ea15858dec2
+  CadastroR 6af63b18c5538bd2f435d925bff799c5
+  DeptoR 1d662f53114f42c469abd5fe712578a7
+  HelloR 1ed6aff255ee37abad363ff28ffebde5
+  HomeR ff800417a119d96eabf5a53b0c0ef14f
+  ListarR 8a01486c15eb26a26b8548ec09c54577
+  LoginR 08ef4325044d5b09d67e7fabea49e425
+  LogoutR 0eb58d6adeba2770690c78c98d6a199c
+  MenuR 8290cdfce6a07a40f7db805f65095064
+  Pag1R 4bfc31af47683221fb0c8de2f22481b5
+  Pag2R 8e146e2c1e45b101e40deb687e062876
+  Pag3R 9db7a9ecf4afcad2b8495535ac9a596f
+  Pag4R 228f8d445fb81e619a09ae53a07ad784
+  PessoaR 1f07955c18f79a1eb23afb4659cee022
+  Sitio 69cfbcf72c4f22e3583552e8eb454ee2
+  StaticR f8513dde1a33166d8683c1c3a5ae6f77
+  TesteR b25b4b7a7dba05a180f797d31475855c
+  UsuarioR b9175f7f8b3dbf42cfde8afdcb738c58
+  VertenteR 0a7d3858cc42b3a11d2d8cfdfcafbdbf
+  getStatic 6270ed644f1db0508aa2fa188ff0332d
+  resourcesSitio eb07fa0a058759978d14b7a9a41bef9f
+import  -/  Front a7169d049d8f7fb2d0a099d0dc3ed87e
   exports: 1c910ed9e61e5180cd0d65bd47380aee
-  getHomeR 63cd4931406b86ab2d1bded3096cbe0f
-  getMenuR 2ae6e8346821dfffc019edd4b0569ea2
-  getPag1R d903075579a18d5fb04dfc47db5af0ff
-  getPag2R 9347fb8fb6ab4e0763e2de93335ec503
-  getPag3R 6e9fbfa3feed4027ffe8760860b95297
-  getPag4R 9494f321e73c8b4132ca327c61ea966a
-  getTesteR 5ad28fedca393649202da8e45978348c
-import  -/  Handlers 07e1bfd02cc43aaafba261477d7ccf8b
-  exports: 87932e32b20832141552779fe5a33929
-  getCadastroR 6572d10bbcf92ad93779e464f3aea664
-  getDeptoR 45d7fff4b863df5cd4107c18a25f8ea6
-  getHelloR abd31b6755a2ab9b826eda94693e9607
-  getListarR 14319f93578cb5502435d6adc104a4a1
-  getPessoaR 0ce22605169ecddc17b622816e8fa60c
-  postCadastroR 383ed28edb35a350309d05037794811f
-  postDeptoR 2c64df70b96badca26a9aead78fe8a03
-  postPessoaR c9e6517e8b542ddfd9d7beee5c99487b
-import  -/  Usuario 108210543accfe4c9142c5dc3ae12c5b
-  exports: 8d8fb436d584cdaf2c35fc7921973762
-  getAdminR f642de39e8c2e5b1a1bddec2c9859fa5
-  getLoginR d507d86e1581e82c59513b6d58ea1f49
-  getUsuarioR c6af5241b18a29d912a5f92af5c784b3
-  postLoginR d4310106b25f85d3c8cdffb36ea2d830
-  postLogoutR b4fdf1d32bb1033ca7852cb2fcb45b19
-  postUsuarioR b21a6c36c97acccf7954c49818222abf
+  getHomeR 27aa1efcad968504b74bba45bd56249d
+  getMenuR d759411081156dac4a5ee5d7b679993d
+  getPag1R 85d5d3f7da15664c2d7a0e4397e20efe
+  getPag2R df65aa3b7b08f485e65be3a6f783fcf2
+  getPag3R 91362e6dac5fa002bd2eb7c3cdb6568c
+  getPag4R d1b2158a92692274d1e1f0bf4499b3ff
+  getTesteR aad7772a186533be507f3b6923fb2400
+import  -/  Handlers c2a6466818e378e6fb53d3ea2ab6ea50
+  exports: c15f9a8013ea4b80920996d3fa42f46b
+  getCadastroR a0a5ec5adc1c6e982fa51aac6cb91de2
+  getDeptoR 1a41056a97223e00cae8a01c31147134
+  getHelloR 07c6d4b6580859f698a86737e46660b6
+  getListarR 521ac9395852d66937013e33d2c8d715
+  getPessoaR bb97cad99c96f21fb8b720a173e5a048
+  getVertenteR 3429162a3c4959ba2ff3a0408a0f5b94
+  postCadastroR c34747291196069e91afd483a4ee6c05
+  postDeptoR ab8cf84f86d23b454c51b85744d02ee6
+  postPessoaR cf3ef530a29ad8762589bff15d9b0836
+  postVertenteR 8cbd3df30111c9343caac1abb40d860b
+import  -/  Usuario ed9d927f5eadf912568724f562ae47ef
+  exports: dfa6c6a121659dc10342d5f48a0108d0
+  getAdminR 0d26e406e8eea2f7dd8e7bf34560ac56
+  getLoginR feccb8137352399e3d88e4b1b9bfaef3
+  getUsuarioR 88ae9bbb45706af33d6474a928dcb288
+  postLoginR dcb75d409c54442d45f217f267d5d7e1
+  postLogoutR 8716f9e8721b10003f93ab6ddf6c782c
+  postUsuarioR fb461e755df142b5374803ab2318cd5e
 import  -/  path-pieces-0.2.1@path-pieces-0.2.1-7jYjtDsNHN0JfYriIYgB3j:Web.PathPieces 0123255d6212c65b166a375593692cdb
 import  -/  wai-3.2.1.1@wai-3.2.1.1-H6cJdoNnPqk1Ch333qtaPo:Network.Wai.Internal 597f41c5e3aba63b73bc45fb957a23c6
 import  -/  yesod-1.4.5@yesod-1.4.5-Gjjcx4wipmk9Grx3eCz8hV:Yesod 9b32a342acc9baee13df0be07e3d39c5
@@ -301,7 +304,7 @@ import  -/  yesod-core-1.4.33@yesod-core-1.4.33-8AMCPxWRGte91vFglpHrX8:Yesod.Cor
 addDependentFile "/home/user/.stack/programs/x86_64-linux/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
 addDependentFile ".stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
 addDependentFile "/usr/include/stdc-predef.h"
-82ee4a4842645b4303044d14f12e4b37
+09edee2f11063b27ba3dd4e9e882b28e
   $fYesodDispatchSitio ::
     Yesod.Core.Class.Dispatch.YesodDispatch Foundation.Sitio
   DFunId
@@ -310,7 +313,7 @@ addDependentFile "/usr/include/stdc-predef.h"
                   @ Foundation.Sitio
                   Foundation.$fYesodSitio
                   Application.$fYesodDispatchSitio_$cyesodDispatch -}
-e73e7157d2fe9d2b1ee2bff19de53e03
+cf6f279e6772fead9b1d4fd6ce08fc91
   $fYesodDispatchSitio_$cyesodDispatch ::
     Yesod.Core.Types.YesodRunnerEnv Foundation.Sitio
     -> Network.Wai.Application
@@ -376,7 +379,7 @@ f3c93ad02316e1c7fc42c61eae963c85
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-04a65fadefa233631d2f68b2940ce822
+fe1d23d790f14da5f94f86b15153163c
   $w$cyesodDispatch ::
     Yesod.Core.Types.YesodRunnerEnv Foundation.Sitio
     -> Network.HTTP.Types.Method.Method
