@@ -66,13 +66,24 @@ getHelloR = defaultLayout [whamlet|
 getVertenteR :: Handler Html
 getVertenteR = do
              (widget, enctype) <- generateFormPost formVertentes
-             defaultLayout $ widgetFormVertente VertenteR enctype widget "Vertentes"
+             defaultLayout $ widgetFormCadastroSimples VertenteR enctype widget "Vertentes"
 
 
 getArtistaR :: Handler Html
 getArtistaR = do
              (widget, enctype) <- generateFormPost formArtistas
-             defaultLayout $ widgetFormArtista ArtistaR enctype widget "Artistas"
+             defaultLayout $ widgetFormCadastroSimples ArtistaR enctype widget "Artistas"
+
+getMusicaR :: Handler Html
+getMusicaR = do
+             (widget, enctype) <- generateFormPost formMusicas
+             defaultLayout $ widgetFormCadastroSimples MusicaR enctype widget "Musicas"
+             
+
+getAlbumR :: Handler Html
+getAlbumR = do
+             (widget, enctype) <- generateFormPost formAlbuns
+             defaultLayout $ widgetFormCadastroSimples AlbumR enctype widget "Albuns"
 
 
 getCadastroR :: Handler Html
@@ -138,7 +149,26 @@ postVertenteR = do
 
 postArtistaR :: Handler Html
 postArtistaR = do
-    undefined
+                ((result, _), _) <- runFormPost formArtistas
+                case result of
+                    FormSuccess vertente -> do
+                       runDB $ insert vertente
+                       defaultLayout [whamlet|
+                           <h1> #{vertentesNome vertente} Inserido com sucesso. 
+                       |]
+                    _ -> redirect VertenteR
+
+
+postArtistaR :: Handler Html
+postArtistaR = do
+                ((result, _), _) <- runFormPost formVertentes
+                case result of
+                    FormSuccess vertente -> do
+                       runDB $ insert vertente
+                       defaultLayout [whamlet|
+                           <h1> #{vertentesNome vertente} Inserido com sucesso. 
+                       |]
+                    _ -> redirect VertenteR
 
 postDeptoR :: Handler Html
 postDeptoR = do

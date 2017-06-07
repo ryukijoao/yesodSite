@@ -28,14 +28,14 @@ getMenuR = defaultLayout $ do
             <ul>
                 <li><a>Home
                 
-                <li><a>Organize
+                <li><a>Biblioteca
                     <ul>
                         <li><a href=@{ArtistaR}>Nova lista
                         <li><a href=@{ArtistaR}>Exibir listas
                 
                 <li><a>Músicas
                     <ul>
-                        <li><a href=@{ArtistaR}>Nova música
+                        <li><a href=@{MusicaR}>Nova música
                         <li><a href=@{ArtistaR}>Exibir músicas
                 
                 <li><a>Artistas
@@ -45,7 +45,7 @@ getMenuR = defaultLayout $ do
                 
                 <li><a>Álbuns</a>
                     <ul>
-                        <li><a href=@{ArtistaR}>Novo álbum
+                        <li><a href=@{AlbumR}>Novo álbum
                         <li><a href=@{ArtistaR}>Exibir álbuns
                     
                 <li><a>Vertentes

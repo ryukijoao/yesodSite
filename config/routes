@@ -15,6 +15,8 @@
 
 /vertentes        VertenteR  GET POST
 /artistas         ArtistaR   GET POST
+/albuns           AlbumR     GET POST
+/musicas          MusicaR    GET POST
 
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST
