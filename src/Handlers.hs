@@ -151,24 +151,35 @@ postArtistaR :: Handler Html
 postArtistaR = do
                 ((result, _), _) <- runFormPost formArtistas
                 case result of
-                    FormSuccess vertente -> do
-                       runDB $ insert vertente
+                    FormSuccess artista -> do
+                       runDB $ insert artista
                        defaultLayout [whamlet|
-                           <h1> #{vertentesNome vertente} Inserido com sucesso. 
+                           <h1> #{artistasNome artista} Inserido com sucesso. 
                        |]
-                    _ -> redirect VertenteR
+                    _ -> redirect ArtistaR
 
 
-postArtistaR :: Handler Html
-postArtistaR = do
-                ((result, _), _) <- runFormPost formVertentes
+postMusicaR :: Handler Html
+postMusicaR = do
+                ((result, _), _) <- runFormPost formMusicas
                 case result of
-                    FormSuccess vertente -> do
-                       runDB $ insert vertente
+                    FormSuccess musica -> do
+                       runDB $ insert musica
                        defaultLayout [whamlet|
-                           <h1> #{vertentesNome vertente} Inserido com sucesso. 
+                           <h1> #{musicasNome musica} Inserido com sucesso. 
                        |]
-                    _ -> redirect VertenteR
+                    _ -> redirect MusicaR
+
+postAlbumR :: Handler Html
+postAlbumR = do
+                ((result, _), _) <- runFormPost formAlbuns
+                case result of
+                    FormSuccess album -> do
+                       runDB $ insert album
+                       defaultLayout [whamlet|
+                           <h1> #{albunsNome album} Inserido com sucesso. 
+                       |]
+                    _ -> redirect AlbumR
 
 postDeptoR :: Handler Html
 postDeptoR = do
