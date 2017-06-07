@@ -69,6 +69,12 @@ getVertenteR = do
              defaultLayout $ widgetFormVertente VertenteR enctype widget "Vertentes"
 
 
+getArtistaR :: Handler Html
+getArtistaR = do
+             (widget, enctype) <- generateFormPost formArtistas
+             defaultLayout $ widgetFormArtista ArtistaR enctype widget "Artistas"
+
+
 getCadastroR :: Handler Html
 getCadastroR = do
              (widget, enctype) <- generateFormPost formPessoa
@@ -121,6 +127,17 @@ getDeptoR = do
 
 postVertenteR :: Handler Html
 postVertenteR = do
+                ((result, _), _) <- runFormPost formVertentes
+                case result of
+                    FormSuccess vertente -> do
+                       runDB $ insert vertente
+                       defaultLayout [whamlet|
+                           <h1> #{vertentesNome vertente} Inserido com sucesso. 
+                       |]
+                    _ -> redirect VertenteR
+
+postArtistaR :: Handler Html
+postArtistaR = do
     undefined
 
 postDeptoR :: Handler Html

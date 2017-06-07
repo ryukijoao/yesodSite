@@ -14,6 +14,7 @@
 /admin            AdminR     GET
 
 /vertentes        VertenteR  GET POST
+/artistas         ArtistaR    GET POST
 
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST
