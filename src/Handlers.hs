@@ -19,6 +19,42 @@ formVertentes = renderDivs $ Vertentes <$>
                 areq textField "Nome" Nothing  <*>
                 areq (selectField vts) "X"  Nothing
 
+art = do
+    entidades <- runDB $ selectList [] [Asc ArtistasNome] 
+    optionsPairs $ fmap (\ent -> (artistasNome $ entityVal ent, entityKey ent)) entidades
+
+formArtistas :: Form Artistas
+formArtistas = renderDivs $ Artistas <$>
+                areq textField "Nome" Nothing  <*>
+                areq (selectField art) "X"  Nothing
+
+mus = do
+    entidades <- runDB $ selectList [] [Asc MusicasNome] 
+    optionsPairs $ fmap (\ent -> (musicasNome $ entityVal ent, entityKey ent)) entidades
+
+formMusicas :: Form Musicas
+formMusicas = renderDivs $ Vertentes <$>
+                areq textField "Nome" Nothing  <*>
+                areq (selectField mus) "X"  Nothing
+
+mus = do
+    entidades <- runDB $ selectList [] [Asc MusicasNome] 
+    optionsPairs $ fmap (\ent -> (musicasNome $ entityVal ent, entityKey ent)) entidades
+
+formMusicas :: Form Musicas
+formMusicas = renderDivs $ Musicas <$>
+                areq textField "Nome" Nothing  <*>
+                areq (selectField mus) "X"  Nothing
+
+alb = do
+    entidades <- runDB $ selectList [] [Asc AlbunsNome] 
+    optionsPairs $ fmap (\ent -> (albunsNome $ entityVal ent, entityKey ent)) entidades
+
+formAlbuns :: Form Albuns
+formAlbuns = renderDivs $ Albuns <$>
+                areq textField "Nome" Nothing  <*>
+                areq (selectField alb) "X"  Nothing
+            
 
 formDepto :: Form Departamento
 formDepto = renderDivs $ Departamento <$>
