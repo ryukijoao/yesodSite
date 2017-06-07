@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-06 03:52:03.507985 UTC
+2017-06-07 00:29:52.685696 UTC
 
 interface main@main:Main 8002
-  interface hash: 5b91980bd699da6013d19a621698fb04
-  ABI hash: 965ddf06b32869e2a39a2f7e0d626ae1
+  interface hash: 3f32fc84730122c604822029d6491167
+  ABI hash: 8c2bc190585a15d06033b341fb2ed556
   export-list hash: 47f252d36c1b9b0d1bac3356fcea79c0
   orphan hash: b3800a9dc0dfa8d51aa55715fd5423fd
   flag hash: cee3d0fe388fb05012cfb1adb941b55c
@@ -937,18 +937,18 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-22dea3876ef89b85e86e2b2785c7111c
+02689798a5e02b1aed395efd8122ecd4
   connStr :: Data.String.IsString t => t
   {- Arity: 1, Strictness: <C(S),1*C1(U)>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ t ($dIsString :: Data.String.IsString t) ->
                  $dIsString `cast` (Data.String.N:IsString[0] <t>_N)
                    Main.connStr1) -}
-213faff3b7217c5b36ead081eb615158
+4031a2c6b071ad079e698aa9f4d1dab0
   connStr1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
-                   "dbname=d8gvpk56lm77g4 host=ec2-54-83-49-44.compute-1.amazonaws.com user=gmzzrpxkugxpzg password=7a7d5b9d667fe212382a0da7d282088f42d1c86f2dcaee29dcd875fb4d05603f port=5432"#) -}
-675a727453a37588f75b85775c286662
+                   "dbname=d4grpv8th4igam host=ec2-54-227-237-223.compute-1.amazonaws.com user=pdtfvtgliuyxfi password=75c1324323c93253692db7091cb6e2610f70117dfd3524469af5b535d0ea7bc2 port=5432"#) -}
+f9bfea70990c688b468556e81153126a
   main :: GHC.Types.IO ()
   {- Unfolding: ((Main.main9
                     Main.main8
@@ -1052,7 +1052,7 @@ d6831ef04cb9301b090dfae6f7bb7ec7
                       (Sym (Yesod.Static.N:Static[0]))
                       pool)
                    ipv2 } }) -}
-ab2e836f44764125ca5cb6b973c06089
+b202907f4f264832b6b472c20e9f6572
   main10 :: Database.Persist.Postgresql.ConnectionString
   {- Unfolding: (case GHC.List.$wlenAcc
                         @ GHC.Types.Char
@@ -1061,7 +1061,7 @@ ab2e836f44764125ca5cb6b973c06089
                  Data.ByteString.Internal.$wunsafePackLenChars
                    ww2
                    Main.connStr1 }) -}
-0541ed5ef1bc167b6b9ad54f4965a725
+0f0d9d7451d4a42df5c22e25ed1f67c6
   main11 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1161,7 +1161,7 @@ c242418641ba560a41e32f60948e91ca
 e230f369fda110776fdd0aaf5615a281
   main8 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10#) -}
-96f3ed7430d55e53a6b9f2efea9fbb7c
+0172b0f4d809f02db922fd17faad64a7
   main9 ::
     GHC.Types.Int
     -> (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
