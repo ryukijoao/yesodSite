@@ -1,19 +1,23 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-07 00:29:48.385755 UTC
+2017-06-07 01:20:19.006839 UTC
 
 interface main@main:Handlers 8002
-  interface hash: 74f4daac06d084542f162a8bdda1f688
-  ABI hash: c2a6466818e378e6fb53d3ea2ab6ea50
-  export-list hash: c15f9a8013ea4b80920996d3fa42f46b
+  interface hash: c3828f313d89bb532ac2bd6f15eac2ab
+  ABI hash: a14d8a756b1590f017cdc52a58f1e1fe
+  export-list hash: 0f7dd83d492be042647c4d0724385191
   orphan hash: a18a0cff71e33257c587c3a18679c732
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
   used TH splices: True
   where
 exports:
+  Handlers.art
   Handlers.dptos
+  Handlers.formAlbuns
+  Handlers.formArtistas
   Handlers.formDepto
+  Handlers.formMusicas
   Handlers.formPessoa
   Handlers.formVertentes
   Handlers.getCadastroR
@@ -264,6 +268,11 @@ import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Bl
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
 import  -/  Foundation 659dbd7011fc3bcbc8a5783da022315a
   exports: a8fe1c9bb7aa59d95882f900e48913ba
+  Albuns b0000fe329035d1326e088119fece002
+  Albuns 1550ce2ba72d60f11ba7e30e9d21f50e
+  Artistas a623c407255cb556d07a2abb25303641
+  Artistas 7028c63682a369c8d1005b4be4bc5024
+  ArtistasNome a01dc1e9b4f75dae61f172ddc13a836c
   CadastroR 6af63b18c5538bd2f435d925bff799c5
   Departamento cab331b413f1f8bdf4dcc3a44c719bd5
   Departamento 1f643bd4ff006fb0ea448fb6a542b1d2
@@ -273,6 +282,8 @@ import  -/  Foundation 659dbd7011fc3bcbc8a5783da022315a
   Handler e12733d661be04a3ea2477451038fced
   ListarR 8a01486c15eb26a26b8548ec09c54577
   MsgHello 56b62de683c484b0d5893a6cc524ca72
+  Musicas 31ade3738f2c3b29fb29311696a31303
+  Musicas 894a0655e8be8debcf1a38438b7be316
   Pessoa 27ec7dec9df08e641310e1f38d0235a1
   Pessoa eefeeff98179c4803437641b291f8edb
   PessoaId 47b4e94ce1054257f19d2e9e5535059d
@@ -282,6 +293,7 @@ import  -/  Foundation 659dbd7011fc3bcbc8a5783da022315a
   Vertentes 04163c216405d05470751ced3f22ceef
   Vertentes 4c607bc65487903389164c2f0c7dab2d
   VertentesNome 582a837b3231d1b49371c1e0bb89e14b
+  artistasNome 46ffdf6c3dd8efbc2ccd427e011712a0
   departamentoNome 897c551716fee51b76e4748c2a34ac63
   departamentoSigla f612561c92775c6417ab72e0189104dd
   pessoaDeptoid 7ede54ea369172f25ddb6f7264a363dc
@@ -310,8 +322,8 @@ import  -/  yesod-persistent-1.4.2@yesod-persistent-1.4.2-FOVEW0FUJLsHmVFGlu8EFf
 addDependentFile "/home/user/.stack/programs/x86_64-linux/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
 addDependentFile ".stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
 addDependentFile "/usr/include/stdc-predef.h"
-6b43194686a4cb024bd20ba5e3a464c7
-  $s$WDepartamentoNome_$d~~ ::
+865b28a74bb1ede86db4e9128b13173a
+  $s$WArtistasNome_$d~~ ::
     Data.Text.Internal.Text GHC.Types.~~ Data.Text.Internal.Text
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Eq#
@@ -717,7 +729,421 @@ ceb9374a275b5be835fffdbec8f828ce
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-4d427ed649f620e84140599b5ffa763b
+8ec9f616fd72089718cacc7275d7b5f9
+  art ::
+    (Database.Persist.Class.PersistStore.BaseBackend
+       (Yesod.Persist.Core.YesodPersistBackend site)
+     GHC.Prim.~# Database.Persist.Sql.Types.Internal.SqlBackend,
+     Yesod.Persist.Core.YesodPersist site,
+     Database.Persist.Class.PersistQuery.PersistQueryRead
+       (Yesod.Persist.Core.YesodPersistBackend site)) =>
+    Yesod.Core.Types.HandlerT
+      site
+      GHC.Types.IO
+      (Yesod.Form.Fields.OptionList
+         (Database.Persist.Class.PersistEntity.Key Foundation.Artistas))
+  {- Arity: 3,
+     Strictness: <L,U><L,1*U(A,1*C1(U))><L,1*U(A,A,1*C1(C1(C1(C1(C1(U))))),A,A,A)>,
+     Unfolding: (\ @ site
+                   (cobox0 :: Database.Persist.Class.PersistStore.BaseBackend
+                                (Yesod.Persist.Core.YesodPersistBackend site)
+                              GHC.Prim.~# Database.Persist.Sql.Types.Internal.SqlBackend)
+                   ($dYesodPersist :: Yesod.Persist.Core.YesodPersist site)
+                   ($dPersistQueryRead :: Database.Persist.Class.PersistQuery.PersistQueryRead
+                                            (Yesod.Persist.Core.YesodPersistBackend site)) ->
+                 let {
+                   ds :: Yesod.Core.Types.HandlerT
+                           site
+                           GHC.Types.IO
+                           [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
+                   = Yesod.Persist.Core.runDB
+                       @ site
+                       $dYesodPersist
+                       @ [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
+                       (Database.Persist.Class.PersistQuery.selectList
+                          @ (Yesod.Core.Types.HandlerT site GHC.Types.IO)
+                          @ (Yesod.Persist.Core.YesodPersistBackend site)
+                          @ Foundation.Artistas
+                          (Handlers.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
+                             @ site)
+                          $dPersistQueryRead
+                          (Foundation.$fPersistEntityArtistas,
+                           (GHC.Types.Eq#
+                              @ *
+                              @ *
+                              @ Database.Persist.Sql.Types.Internal.SqlBackend
+                              @ (Database.Persist.Class.PersistStore.BaseBackend
+                                   (Yesod.Persist.Core.YesodPersistBackend site))
+                              @~ (Sym cobox0))
+                             `cast`
+                           (Sym (Data.Type.Equality.N:~[0]
+                                     <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Class.PersistStore.BaseBackend
+                                                                                                  (Yesod.Persist.Core.YesodPersistBackend
+                                                                                                     site)>_N))
+                            `cast`
+                          (GHC.Classes.(%,%)
+                             <Database.Persist.Class.PersistEntity.PersistEntity
+                                Foundation.Artistas>_N
+                             ((Data.Type.Equality.~)
+                                <*>_N
+                                (Sym (Foundation.D:R:PersistEntityBackendArtistas[0]))
+                                <Database.Persist.Class.PersistStore.BaseBackend
+                                   (Yesod.Persist.Core.YesodPersistBackend site)>_N)_N)_R
+                          (GHC.Types.[]
+                             @ (Database.Persist.Class.PersistEntity.Filter
+                                  Foundation.Artistas))
+                          Handlers.art11)
+                 } in
+                 (\ (r :: Yesod.Core.Types.HandlerData
+                            site (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case (ds
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <site>_N
+                             <GHC.Types.IO>_N
+                             <[Database.Persist.Class.PersistEntity.Entity
+                                 Foundation.Artistas]>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <[Database.Persist.Class.PersistEntity.Entity
+                                Foundation.Artistas]>_R)
+                         s of ds4 { (#,#) ipv ipv1 ->
+                  ((Yesod.Form.Fields.optionsPairs
+                      @ (Yesod.Core.Types.HandlerT site GHC.Types.IO)
+                      @ Data.Text.Internal.Text
+                      @ (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+                      (Handlers.$s$fMonadHandlerHandlerT @ site)
+                      (Text.Shakespeare.I18N.$fIsStringSomeMessage_$crenderMessage
+                         @ site)
+                        `cast`
+                      (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                                (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                     <GHC.Types.IO>_N <site>_N)
+                                <Data.Text.Internal.Text>_N))
+                      (GHC.Base.map
+                         @ (Database.Persist.Class.PersistEntity.Entity Foundation.Artistas)
+                         @ (Data.Text.Internal.Text,
+                            Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+                         Handlers.art2
+                         ipv1))
+                     `cast`
+                   (Yesod.Core.Types.N:HandlerT[0]
+                        <site>_N
+                        <GHC.Types.IO>_N
+                        <Yesod.Form.Fields.OptionList
+                           (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)>_N)
+                     r)
+                    `cast`
+                  (GHC.Types.N:IO[0]
+                       <Yesod.Form.Fields.OptionList
+                          (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)>_R)
+                    ipv })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          site (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <Yesod.Form.Fields.OptionList
+                                        (Database.Persist.Class.PersistEntity.Key
+                                           Foundation.Artistas)>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <site>_N
+                                <GHC.Types.IO>_N
+                                <Yesod.Form.Fields.OptionList
+                                   (Database.Persist.Class.PersistEntity.Key
+                                      Foundation.Artistas)>_N)))) -}
+0048065175fd29dd998eee0db1c22baa
+  art1 ::
+    Yesod.Core.Types.HandlerData
+      Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Yesod.Form.Fields.OptionList
+            (Database.Persist.Class.PersistEntity.Key Foundation.Artistas) #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
+                           Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Foundation.$fYesodPersistSitio1
+                        @ [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
+                        Handlers.art3
+                          `cast`
+                        (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                  <*>_N
+                                  <Yesod.Persist.Core.YesodPersistBackend Foundation.Sitio>_R
+                                  <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                                  <[Database.Persist.Class.PersistEntity.Entity
+                                      Foundation.Artistas]>_N))
+                        r
+                        s of ds4 { (#,#) ipv ipv1 ->
+                 ((Yesod.Form.Fields.optionsPairs
+                     @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                     @ Data.Text.Internal.Text
+                     @ (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+                     (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                     (Text.Shakespeare.I18N.$fIsStringSomeMessage_$crenderMessage
+                        @ Foundation.Sitio)
+                       `cast`
+                     (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                               (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                    <GHC.Types.IO>_N <Foundation.Sitio>_N)
+                               <Data.Text.Internal.Text>_N))
+                     (GHC.Base.map
+                        @ (Database.Persist.Class.PersistEntity.Entity Foundation.Artistas)
+                        @ (Data.Text.Internal.Text,
+                           Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+                        Handlers.art2
+                        ipv1))
+                    `cast`
+                  (Yesod.Core.Types.N:HandlerT[0]
+                       <Foundation.Sitio>_N
+                       <GHC.Types.IO>_N
+                       <Yesod.Form.Fields.OptionList
+                          (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)>_N)
+                    r)
+                   `cast`
+                 (GHC.Types.N:IO[0]
+                      <Yesod.Form.Fields.OptionList
+                         (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)>_R)
+                   ipv }) -}
+08ff45c049ad9058b5529e7522edf122
+  art10 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    GHC.Types.~~ Database.Persist.Class.PersistStore.BaseBackend
+                   (Yesod.Persist.Core.YesodPersistBackend Foundation.Sitio)
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ (Database.Persist.Class.PersistStore.BaseBackend
+                        (Yesod.Persist.Core.YesodPersistBackend Foundation.Sitio))
+                   @~ (Trans
+                           (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
+                           (Database.Persist.Class.PersistStore.BaseBackend
+                              (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))_N)) -}
+1c4894416f18843acfae0887fe6aee92
+  art11 ::
+    [Database.Persist.Class.PersistEntity.SelectOpt
+       Foundation.Artistas]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Database.Persist.Class.PersistEntity.SelectOpt
+                        Foundation.Artistas)
+                   Handlers.art12
+                   (GHC.Types.[]
+                      @ (Database.Persist.Class.PersistEntity.SelectOpt
+                           Foundation.Artistas))) -}
+744e8306abb24d57da9bde62560efe47
+  art12 ::
+    Database.Persist.Class.PersistEntity.SelectOpt Foundation.Artistas
+  {- HasNoCafRefs,
+     Unfolding: (Database.Persist.Class.PersistEntity.Asc
+                   @ Foundation.Artistas
+                   @ Data.Text.Internal.Text
+                   Handlers.art13
+                     `cast`
+                   (Sym (Foundation.D:R:EntityFieldArtistastyp0[0]) <Data.Text.Internal.Text>_N)) -}
+b39b89aab7226083a83c34640b9bea20
+  art13 ::
+    Foundation.R:EntityFieldArtistastyp Data.Text.Internal.Text
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Foundation.ArtistasNome
+                   @ Data.Text.Internal.Text
+                   Handlers.$s$WArtistasNome_$d~~
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
+ea77c6c9856f6b57ac5a27bd364892a5
+  art2 ::
+    Database.Persist.Class.PersistEntity.Entity Foundation.Artistas
+    -> (Data.Text.Internal.Text,
+        Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(A,1*U,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ent :: Database.Persist.Class.PersistEntity.Entity
+                             Foundation.Artistas) ->
+                 (case ent of wild { Database.Persist.Class.PersistEntity.Entity $dPersistEntity ds4 ds5 ->
+                  case ds5 of wild1 { Foundation.Artistas ds6 -> ds6 } },
+                  Database.Persist.Class.PersistEntity.entityKey
+                    @ Foundation.Artistas
+                    ent)) -}
+c63e33f9577786cbd6f61447cd6d373c
+  art3 ::
+    Yesod.Persist.Core.YesodPersistBackend Foundation.Sitio
+    -> Yesod.Core.Types.HandlerT
+         Foundation.Sitio
+         GHC.Types.IO
+         [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (r1 :: Yesod.Persist.Core.YesodPersistBackend
+                            Foundation.Sitio) ->
+                 let {
+                   ds :: Yesod.Core.Types.HandlerT
+                           Foundation.Sitio
+                           GHC.Types.IO
+                           (Data.Acquire.Internal.Acquire
+                              (Data.Conduit.Internal.Conduit.Source
+                                 GHC.Types.IO
+                                 (Database.Persist.Class.PersistEntity.Entity Foundation.Artistas)))
+                   = Handlers.art4
+                       `cast`
+                     (Control.Monad.Trans.Reader.N:ReaderT[0]
+                          <*>_N
+                          (Sub (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))
+                          <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                          <Data.Acquire.Internal.Acquire
+                             (Data.Conduit.Internal.Conduit.Source
+                                GHC.Types.IO
+                                (Database.Persist.Class.PersistEntity.Entity
+                                   Foundation.Artistas))>_N)
+                       r1
+                 } in
+                 (\ (r :: Yesod.Core.Types.HandlerData
+                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case (ds
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <Foundation.Sitio>_N
+                             <GHC.Types.IO>_N
+                             <Data.Acquire.Internal.Acquire
+                                (Data.Conduit.Internal.Conduit.Source
+                                   GHC.Types.IO
+                                   (Database.Persist.Class.PersistEntity.Entity
+                                      Foundation.Artistas))>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <Data.Acquire.Internal.Acquire
+                               (Data.Conduit.Internal.Conduit.Source
+                                  GHC.Types.IO
+                                  (Database.Persist.Class.PersistEntity.Entity
+                                     Foundation.Artistas))>_R)
+                         s of ds4 { (#,#) ipv ipv1 ->
+                  (Data.Acquire.Internal.with
+                     @ GHC.Types.IO
+                     @ (Data.Conduit.Internal.Conduit.Source
+                          GHC.Types.IO
+                          (Database.Persist.Class.PersistEntity.Entity Foundation.Artistas))
+                     @ [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
+                     Control.Monad.Trans.Control.$fMonadBaseControlIOIO
+                     ipv1
+                     (Database.Persist.Class.PersistQuery.selectList1
+                        @ Foundation.Artistas)
+                       `cast`
+                     (<Data.Conduit.Internal.Conduit.Source
+                         GHC.Types.IO
+                         (Database.Persist.Class.PersistEntity.Entity
+                            Foundation.Artistas)>_R
+                      ->_R Sym (GHC.Types.N:IO[0]
+                                    <[Database.Persist.Class.PersistEntity.Entity
+                                        Foundation.Artistas]>_R)))
+                    `cast`
+                  (GHC.Types.N:IO[0]
+                       <[Database.Persist.Class.PersistEntity.Entity
+                           Foundation.Artistas]>_R)
+                    ipv })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <[Database.Persist.Class.PersistEntity.Entity
+                                         Foundation.Artistas]>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <[Database.Persist.Class.PersistEntity.Entity
+                                    Foundation.Artistas]>_N)))) -}
+3a99cc4e5b84bbd4b843fc6f17afb682
+  art4 ::
+    Control.Monad.Trans.Reader.ReaderT
+      Database.Persist.Sql.Types.Internal.SqlBackend
+      (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+      (Data.Acquire.Internal.Acquire
+         (Data.Conduit.Internal.Conduit.Source
+            GHC.Types.IO
+            (Database.Persist.Class.PersistEntity.Entity Foundation.Artistas)))
+  {- Unfolding: (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend_$cselectSourceRes
+                   @ Foundation.Artistas
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ GHC.Types.IO
+                   Handlers.art9
+                     `cast`
+                   (GHC.Classes.(%,%)
+                      <Database.Persist.Class.PersistEntity.PersistEntity
+                         Foundation.Artistas>_N
+                      ((Data.Type.Equality.~)
+                         <*>_N
+                         (Sym (Foundation.D:R:PersistEntityBackendArtistas[0]))
+                         (Database.Persist.Class.PersistStore.BaseBackend
+                            (Foundation.D:R:YesodPersistBackendSitio[0]))_N)_N)_R
+                   (Handlers.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
+                      @ Foundation.Sitio)
+                   Control.Monad.IO.Class.$fMonadIOIO
+                   (GHC.Types.[]
+                      @ (Database.Persist.Class.PersistEntity.Filter
+                           Foundation.Artistas))
+                   Handlers.art5) -}
+30a4fd8c9052e048d39d26f901cbff71
+  art5 ::
+    [Database.Persist.Class.PersistEntity.SelectOpt
+       Foundation.Artistas]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ (Database.Persist.Class.PersistEntity.SelectOpt
+                        Foundation.Artistas)
+                   Handlers.art6
+                   (GHC.Types.[]
+                      @ (Database.Persist.Class.PersistEntity.SelectOpt
+                           Foundation.Artistas))) -}
+ba2019905fe1d1d0f4941ffc488d6151
+  art6 ::
+    Database.Persist.Class.PersistEntity.SelectOpt Foundation.Artistas
+  {- HasNoCafRefs,
+     Unfolding: (Database.Persist.Class.PersistEntity.Asc
+                   @ Foundation.Artistas
+                   @ Data.Text.Internal.Text
+                   Handlers.art7
+                     `cast`
+                   (Sym (Foundation.D:R:EntityFieldArtistastyp0[0]) <Data.Text.Internal.Text>_N)) -}
+6fe1b1b061c8562182eef416790d1f12
+  art7 :: Foundation.R:EntityFieldArtistastyp Data.Text.Internal.Text
+  {- HasNoCafRefs,
+     Unfolding: (Foundation.ArtistasNome
+                   @ Data.Text.Internal.Text
+                   Handlers.art8
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
+eff68bb55b5f0b1a539b849b1c3fd99b
+  art8 ::
+    Data.Text.Internal.Text GHC.Types.~~ Data.Text.Internal.Text
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Data.Text.Internal.Text
+                   @ Data.Text.Internal.Text
+                   @~ <Data.Text.Internal.Text>_N) -}
+d2dc1df6d29f41976f40cff1dbc45344
+  art9 ::
+    (Database.Persist.Class.PersistEntity.PersistEntity
+       Foundation.Artistas,
+     Database.Persist.Sql.Types.Internal.SqlBackend
+     Data.Type.Equality.~ Database.Persist.Class.PersistStore.BaseBackend
+                            (Yesod.Persist.Core.YesodPersistBackend Foundation.Sitio))
+  {- Unfolding: ((Foundation.$fPersistEntityArtistas,
+                  Handlers.art10
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Class.PersistStore.BaseBackend
+                                                                                         (Yesod.Persist.Core.YesodPersistBackend
+                                                                                            Foundation.Sitio)>_N))) -}
+7d237f51e86a17d34b619a139f3ab1af
   dptos ::
     (Database.Persist.Class.PersistStore.BaseBackend
        (Yesod.Persist.Core.YesodPersistBackend site)
@@ -924,7 +1350,7 @@ ceb9374a275b5be835fffdbec8f828ce
                            (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0]))
                            (Database.Persist.Class.PersistStore.BaseBackend
                               (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))_N)) -}
-2f0f44571757940405a525f00347b984
+f21a70d388abc5dd0be26d2baabe3ef6
   dptos11 ::
     [Database.Persist.Class.PersistEntity.SelectOpt
        Foundation.Departamento]
@@ -936,7 +1362,7 @@ ceb9374a275b5be835fffdbec8f828ce
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.SelectOpt
                            Foundation.Departamento))) -}
-1e69c38f7bad2a380bc7f8cb3b793229
+559c97ccc445f5c4b2fd1e96cbd3acf4
   dptos12 ::
     Database.Persist.Class.PersistEntity.SelectOpt
       Foundation.Departamento
@@ -947,13 +1373,13 @@ ceb9374a275b5be835fffdbec8f828ce
                    Handlers.dptos13
                      `cast`
                    (Sym (Foundation.D:R:EntityFieldDepartamentotyp0[0]) <Data.Text.Internal.Text>_N)) -}
-d17352ddae81b1120cac608acd813f6b
+8f922a10bbfad04483d02928410b86dc
   dptos13 ::
     Foundation.R:EntityFieldDepartamentotyp Data.Text.Internal.Text
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Foundation.DepartamentoNome
                    @ Data.Text.Internal.Text
-                   Handlers.$s$WDepartamentoNome_$d~~
+                   Handlers.$s$WArtistasNome_$d~~
                      `cast`
                    (Sym (Data.Type.Equality.N:~[0]
                              <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
@@ -1151,6 +1577,600 @@ d26b5bc910a517969628cae6ea4b2603
                             <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Class.PersistStore.BaseBackend
                                                                                          (Yesod.Persist.Core.YesodPersistBackend
                                                                                             Foundation.Sitio)>_N))) -}
+19d9ca01634a827c800604823f6a58f2
+  formAlbuns :: Foundation.Form Foundation.Albuns
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Handlers.formAlbuns1
+                  `cast`
+                (<Text.Blaze.Html.Html>_R
+                 ->_R Sym (Control.Monad.Trans.RWS.Lazy.N:RWST[0]
+                               <(GHC.Base.Maybe (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+                                 Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                                 [Text.Shakespeare.I18N.Lang])>_R
+                               <Yesod.Form.Types.Enctype>_N
+                               <Yesod.Form.Types.Ints>_N
+                               <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                               ((,)
+                                  <Yesod.Form.Types.FormResult Foundation.Albuns>_N
+                                  (Yesod.Core.Types.WidgetT
+                                     (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                               <GHC.Types.IO>_N <Foundation.Sitio>_N))
+                                     <GHC.Types.IO>_N
+                                     <()>_N)_N)_N)) -}
+f99068e89e70892d510e008269f778f4
+  formAlbuns1 ::
+    Text.Blaze.Internal.Markup
+    -> (GHC.Base.Maybe
+          (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+        Yesod.Core.Class.Handler.HandlerSite
+          (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+        [Text.Shakespeare.I18N.Lang])
+    -> Yesod.Form.Types.Ints
+    -> Yesod.Core.Types.HandlerT
+         Foundation.Sitio
+         GHC.Types.IO
+         ((Yesod.Form.Types.FormResult Foundation.Albuns,
+           Yesod.Core.Types.WidgetT
+             (Yesod.Core.Class.Handler.HandlerSite
+                (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))
+             GHC.Types.IO
+             ()),
+          Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (eta105 :: Text.Blaze.Internal.Markup)
+                   (eta106 :: (GHC.Base.Maybe
+                                 (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+                               Yesod.Core.Class.Handler.HandlerSite
+                                 (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                               [Text.Shakespeare.I18N.Lang]))
+                   (eta107 :: Yesod.Form.Types.Ints) ->
+                 Yesod.Form.Functions.renderDivs2
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ Foundation.Albuns
+                   (Handlers.$s$fFunctorAForm_$s$fMonadHandlerT @ Foundation.Sitio)
+                   GHC.Types.True
+                   Handlers.formAlbuns2
+                     `cast`
+                   (Sym (Yesod.Form.Types.N:AForm[0]
+                             <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                             <Foundation.Albuns>_N))
+                   eta105
+                   eta106
+                   eta107) -}
+c36e4bea7a46753589ce3f319da4e469
+  formAlbuns10 :: Text.Shakespeare.I18N.SomeMessage Foundation.Sitio
+  {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
+                   @ Foundation.Sitio
+                   @ Data.Text.Internal.Text
+                   (Text.Shakespeare.I18N.$fIsStringSomeMessage_$crenderMessage
+                      @ Foundation.Sitio)
+                     `cast`
+                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                             <Foundation.Sitio>_N <Data.Text.Internal.Text>_N))
+                   Handlers.formAlbuns11) -}
+15010617ec6a49a1c18822d5ca3bc2d6
+  formAlbuns11 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Handlers.formAlbuns12 of ds4 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+58a962b35a5046b23fbd319d63c59bce
+  formAlbuns12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds4 { (#,#) ipv ipv1 ->
+                 Text.Shakespeare.I18N.$wouter
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Text.Shakespeare.I18N.$fIsStringSomeMessage1
+                   Handlers.formAlbuns13
+                   0#
+                   ipv }) -}
+0fac9a0de273da1541fb1db3f42ef536
+  formAlbuns13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Nome: "#) -}
+3acfd4f66932677523d8ee046c61a919
+  formAlbuns2 ::
+    (Yesod.Core.Class.Handler.HandlerSite
+       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+     [Data.Text.Internal.Text])
+    -> GHC.Base.Maybe (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv)
+    -> Yesod.Form.Types.Ints
+    -> Yesod.Core.Types.HandlerT
+         Foundation.Sitio
+         GHC.Types.IO
+         (Yesod.Form.Types.FormResult Foundation.Albuns,
+          [Yesod.Form.Types.FieldView
+             (Yesod.Core.Class.Handler.HandlerSite
+                (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+          -> [Yesod.Form.Types.FieldView
+                (Yesod.Core.Class.Handler.HandlerSite
+                   (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+          Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: (\ (mr :: (Yesod.Core.Class.Handler.HandlerSite
+                             (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                           [Data.Text.Internal.Text]))
+                   (env :: GHC.Base.Maybe
+                             (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv))
+                   (ints :: Yesod.Form.Types.Ints) ->
+                 let {
+                   ds :: Yesod.Core.Types.HandlerT
+                           Foundation.Sitio
+                           GHC.Types.IO
+                           (Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                            [Yesod.Form.Types.FieldView
+                               (Yesod.Core.Class.Handler.HandlerSite
+                                  (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                            -> [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                            Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+                   = Handlers.formAlbuns_ds
+                       `cast`
+                     (Yesod.Form.Types.N:AForm[0]
+                          <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                          <Data.Text.Internal.Text>_N)
+                       mr
+                       env
+                       ints
+                 } in
+                 (\ (r :: Yesod.Core.Types.HandlerData
+                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case (ds
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <Foundation.Sitio>_N
+                             <GHC.Types.IO>_N
+                             <(Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                               [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                               -> [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                               Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                              [Yesod.Form.Types.FieldView
+                                 (Yesod.Core.Class.Handler.HandlerSite
+                                    (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                              -> [Yesod.Form.Types.FieldView
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                              Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R)
+                         s of ds4 { (#,#) ipv ipv1 ->
+                  case ipv1 of wild { (,,,) w x7 y z ->
+                  case ((Handlers.formAlbuns_ds1
+                           `cast`
+                         (Yesod.Form.Types.N:AForm[0]
+                              <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                              <Database.Persist.Class.PersistEntity.Key Foundation.Artistas>_N)
+                           mr
+                           env
+                           y)
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <Foundation.Sitio>_N
+                             <GHC.Types.IO>_N
+                             <(Yesod.Form.Types.FormResult
+                                 (Database.Persist.Class.PersistEntity.Key Foundation.Artistas),
+                               [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                               -> [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                               Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Yesod.Form.Types.FormResult
+                                (Database.Persist.Class.PersistEntity.Key Foundation.Artistas),
+                              [Yesod.Form.Types.FieldView
+                                 (Yesod.Core.Class.Handler.HandlerSite
+                                    (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                              -> [Yesod.Form.Types.FieldView
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                              Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R)
+                         ipv of ds5 { (#,#) ipv2 ipv3 ->
+                  case ipv3 of wild1 { (,,,) x8 y1 ints'' z1 ->
+                  (# ipv2,
+                     (case w of wild2 {
+                        Yesod.Form.Types.FormMissing
+                        -> case x8 of wild3 {
+                             DEFAULT -> Yesod.Form.Types.FormMissing @ Foundation.Albuns
+                             Yesod.Form.Types.FormFailure y2
+                             -> Yesod.Form.Types.FormFailure @ Foundation.Albuns y2 }
+                        Yesod.Form.Types.FormFailure errs
+                        -> case x8 of wild3 {
+                             DEFAULT -> Yesod.Form.Types.FormFailure @ Foundation.Albuns errs
+                             Yesod.Form.Types.FormFailure y2
+                             -> Yesod.Form.Types.FormFailure
+                                  @ Foundation.Albuns
+                                  (GHC.Base.++ @ Data.Text.Internal.Text errs y2) }
+                        Yesod.Form.Types.FormSuccess a1
+                        -> case x8 of wild3 {
+                             Yesod.Form.Types.FormMissing
+                             -> Yesod.Form.Types.FormMissing @ Foundation.Albuns
+                             Yesod.Form.Types.FormFailure y2
+                             -> Yesod.Form.Types.FormFailure @ Foundation.Albuns y2
+                             Yesod.Form.Types.FormSuccess g
+                             -> Yesod.Form.Types.FormSuccess
+                                  @ Foundation.Albuns
+                                  (Foundation.$WAlbuns a1 g) } },
+                      \ (x9 :: [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]) ->
+                      x7 (y1 x9),
+                      ints'',
+                      case z of wild2 {
+                        Yesod.Form.Types.UrlEncoded -> z1
+                        Yesod.Form.Types.Multipart
+                        -> Yesod.Form.Types.Multipart }) #) } } } })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <(Yesod.Form.Types.FormResult Foundation.Albuns,
+                                       [Yesod.Form.Types.FieldView
+                                          (Yesod.Core.Class.Handler.HandlerSite
+                                             (Yesod.Core.Types.HandlerT
+                                                Foundation.Sitio GHC.Types.IO))]
+                                       -> [Yesod.Form.Types.FieldView
+                                             (Yesod.Core.Class.Handler.HandlerSite
+                                                (Yesod.Core.Types.HandlerT
+                                                   Foundation.Sitio GHC.Types.IO))],
+                                       Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <(Yesod.Form.Types.FormResult Foundation.Albuns,
+                                  [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                                  -> [Yesod.Form.Types.FieldView
+                                        (Yesod.Core.Class.Handler.HandlerSite
+                                           (Yesod.Core.Types.HandlerT
+                                              Foundation.Sitio GHC.Types.IO))],
+                                  Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)))) -}
+2d25206ed8561452f4dffc439064c82f
+  formAlbuns3 :: Yesod.Form.Types.FieldSettings Foundation.Sitio
+  {- Unfolding: (Yesod.Form.Types.FieldSettings
+                   @ Foundation.Sitio
+                   Handlers.formAlbuns4
+                   (GHC.Base.Nothing
+                      @ (Text.Shakespeare.I18N.SomeMessage Foundation.Sitio))
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   (GHC.Types.[]
+                      @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
+41b6270178e4c8fb2df22b2892d9437f
+  formAlbuns4 :: Text.Shakespeare.I18N.SomeMessage Foundation.Sitio
+  {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
+                   @ Foundation.Sitio
+                   @ Data.Text.Internal.Text
+                   (Text.Shakespeare.I18N.$fIsStringSomeMessage_$crenderMessage
+                      @ Foundation.Sitio)
+                     `cast`
+                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                             <Foundation.Sitio>_N <Data.Text.Internal.Text>_N))
+                   Handlers.formAlbuns5) -}
+f7ba166bbbaac8e0fd2c785f7cf144c2
+  formAlbuns5 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.newByteArray#
+                                @ GHC.Prim.RealWorld
+                                8#
+                                s1 of ds4 { (#,#) ipv ipv1 ->
+                         Text.Shakespeare.I18N.$wouter
+                           (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                           Text.Shakespeare.I18N.$fIsStringSomeMessage1
+                           Handlers.formAlbuns6
+                           0#
+                           ipv }) of ds4 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+088b25c894a2a9d610fb1ea5af3ead95
+  formAlbuns6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Artista principal: "#) -}
+a4f1ddfb05e40ce3c08a921f57d40b82
+  formAlbuns7 ::
+    Yesod.Form.Types.Field
+      (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+      (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+  {- Unfolding: (Handlers.formAlbuns8
+                   Handlers.art1
+                     `cast`
+                   (Trans
+                        (<Yesod.Core.Types.HandlerData
+                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <Yesod.Form.Fields.OptionList
+                                          (Database.Persist.Class.PersistEntity.Key
+                                             Foundation.Artistas)>_R))
+                        (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                  <Foundation.Sitio>_N
+                                  <GHC.Types.IO>_N
+                                  <Yesod.Form.Fields.OptionList
+                                     (Database.Persist.Class.PersistEntity.Key
+                                        Foundation.Artistas)>_N)))) -}
+77d8dc770405e67013bf6f1e519cb856
+  formAlbuns8 ::
+    Yesod.Core.Types.HandlerT
+      Foundation.Sitio
+      GHC.Types.IO
+      (Yesod.Form.Fields.OptionList
+         (Database.Persist.Class.PersistEntity.Key Foundation.Artistas))
+    -> Yesod.Form.Types.Field
+         (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+         (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+  {- Unfolding: (Yesod.Form.Fields.selectField
+                   @ (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+                   @ Foundation.Sitio
+                   Foundation.$fEqKey8
+                   Foundation.$fRenderMessageSitioFormMessage_$crenderMessage
+                     `cast`
+                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                             <Foundation.Sitio>_N <Yesod.Form.Types.FormMessage>_N))) -}
+7cc6636992d9a806727f1987dcc44be0
+  formAlbuns9 :: Yesod.Form.Types.FieldSettings Foundation.Sitio
+  {- Unfolding: (Yesod.Form.Types.FieldSettings
+                   @ Foundation.Sitio
+                   Handlers.formAlbuns10
+                   (GHC.Base.Nothing
+                      @ (Text.Shakespeare.I18N.SomeMessage Foundation.Sitio))
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   (GHC.Types.[]
+                      @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
+04fe3f167f8b0f70b1e271d6e488f423
+  formAlbuns_ds ::
+    Yesod.Form.Types.AForm
+      (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+      Data.Text.Internal.Text
+  {- Unfolding: (Yesod.Form.Functions.areq
+                   @ Foundation.Sitio
+                   @ Foundation.Handler
+                   @ Data.Text.Internal.Text
+                   Foundation.$fRenderMessageSitioFormMessage_$crenderMessage
+                     `cast`
+                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                             <Foundation.Sitio>_N <Yesod.Form.Types.FormMessage>_N))
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ Foundation.Sitio
+                      @ Foundation.Sitio
+                      @~ <Foundation.Sitio>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                              <GHC.Types.IO>_N
+                                              <Foundation.Sitio>_N)) <Foundation.Sitio>_N)
+                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                   Handlers.$stextField
+                   Handlers.formAlbuns9
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)) -}
+c56073f25d605544367355b0e5ddf8e0
+  formAlbuns_ds1 ::
+    Yesod.Form.Types.AForm
+      (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+      (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+  {- Unfolding: (Yesod.Form.Functions.areq
+                   @ Foundation.Sitio
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ (Database.Persist.Class.PersistEntity.Key Foundation.Artistas)
+                   Foundation.$fRenderMessageSitioFormMessage_$crenderMessage
+                     `cast`
+                   (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
+                             <Foundation.Sitio>_N <Yesod.Form.Types.FormMessage>_N))
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ Foundation.Sitio
+                      @ Foundation.Sitio
+                      @~ <Foundation.Sitio>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                              <GHC.Types.IO>_N
+                                              <Foundation.Sitio>_N)) <Foundation.Sitio>_N)
+                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                   Handlers.formAlbuns7
+                   Handlers.formAlbuns3
+                   (GHC.Base.Nothing
+                      @ (Database.Persist.Class.PersistEntity.Key
+                           Foundation.Artistas))) -}
+1023dea848a52efc4aa2d3e94bae806a
+  formArtistas :: Foundation.Form Foundation.Artistas
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Handlers.formArtistas1
+                  `cast`
+                (<Text.Blaze.Html.Html>_R
+                 ->_R Sym (Control.Monad.Trans.RWS.Lazy.N:RWST[0]
+                               <(GHC.Base.Maybe (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+                                 Yesod.Core.Class.Handler.HandlerSite Foundation.Handler,
+                                 [Text.Shakespeare.I18N.Lang])>_R
+                               <Yesod.Form.Types.Enctype>_N
+                               <Yesod.Form.Types.Ints>_N
+                               <Foundation.Handler>_R
+                               ((,)
+                                  <Yesod.Form.Types.FormResult Foundation.Artistas>_N
+                                  (Yesod.Core.Types.WidgetT
+                                     (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                               <GHC.Types.IO>_N <Foundation.Sitio>_N))
+                                     <GHC.Types.IO>_N
+                                     <()>_N)_N)_N)) -}
+e418f5b59dd3beb2f19a2e3b01ce9610
+  formArtistas1 ::
+    Text.Blaze.Internal.Markup
+    -> (GHC.Base.Maybe
+          (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+        Yesod.Core.Class.Handler.HandlerSite Foundation.Handler,
+        [Text.Shakespeare.I18N.Lang])
+    -> Yesod.Form.Types.Ints
+    -> Foundation.Handler
+         ((Yesod.Form.Types.FormResult Foundation.Artistas,
+           Yesod.Core.Types.WidgetT
+             (Yesod.Core.Class.Handler.HandlerSite Foundation.Handler)
+             GHC.Types.IO
+             ()),
+          Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (eta105 :: Text.Blaze.Internal.Markup)
+                   (eta106 :: (GHC.Base.Maybe
+                                 (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+                               Yesod.Core.Class.Handler.HandlerSite Foundation.Handler,
+                               [Text.Shakespeare.I18N.Lang]))
+                   (eta107 :: Yesod.Form.Types.Ints) ->
+                 Yesod.Form.Functions.renderDivs2
+                   @ Foundation.Handler
+                   @ Foundation.Artistas
+                   (Handlers.$s$fFunctorAForm_$s$fMonadHandlerT @ Foundation.Sitio)
+                   GHC.Types.True
+                   Handlers.formArtistas2
+                     `cast`
+                   (Sym (Yesod.Form.Types.N:AForm[0]
+                             <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                             <Foundation.Artistas>_N))
+                   eta105
+                   eta106
+                   eta107) -}
+f0d0b7a988efb060020aff6640f16e55
+  formArtistas2 ::
+    (Yesod.Core.Class.Handler.HandlerSite
+       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+     [Data.Text.Internal.Text])
+    -> GHC.Base.Maybe (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv)
+    -> Yesod.Form.Types.Ints
+    -> Yesod.Core.Types.HandlerT
+         Foundation.Sitio
+         GHC.Types.IO
+         (Yesod.Form.Types.FormResult Foundation.Artistas,
+          [Yesod.Form.Types.FieldView
+             (Yesod.Core.Class.Handler.HandlerSite
+                (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+          -> [Yesod.Form.Types.FieldView
+                (Yesod.Core.Class.Handler.HandlerSite
+                   (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+          Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: (\ (eta36 :: (Yesod.Core.Class.Handler.HandlerSite
+                                (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                              [Data.Text.Internal.Text]))
+                   (eta37 :: GHC.Base.Maybe
+                               (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv))
+                   (eta38 :: Yesod.Form.Types.Ints) ->
+                 let {
+                   ds :: Yesod.Core.Types.HandlerT
+                           Foundation.Sitio
+                           GHC.Types.IO
+                           (Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                            [Yesod.Form.Types.FieldView
+                               (Yesod.Core.Class.Handler.HandlerSite
+                                  (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                            -> [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                            Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+                   = Handlers.formAlbuns_ds
+                       `cast`
+                     (Yesod.Form.Types.N:AForm[0]
+                          <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                          <Data.Text.Internal.Text>_N)
+                       eta36
+                       eta37
+                       eta38
+                 } in
+                 (\ (r :: Yesod.Core.Types.HandlerData
+                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case (ds
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <Foundation.Sitio>_N
+                             <GHC.Types.IO>_N
+                             <(Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                               [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                               -> [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                               Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                              [Yesod.Form.Types.FieldView
+                                 (Yesod.Core.Class.Handler.HandlerSite
+                                    (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                              -> [Yesod.Form.Types.FieldView
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                              Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R)
+                         s of ds4 { (#,#) ipv ipv1 ->
+                  (# ipv,
+                     case ipv1 of wild { (,,,) w x7 y z ->
+                     (case w of wild1 {
+                        Yesod.Form.Types.FormMissing
+                        -> Yesod.Form.Types.FormMissing @ Foundation.Artistas
+                        Yesod.Form.Types.FormFailure errs
+                        -> Yesod.Form.Types.FormFailure @ Foundation.Artistas errs
+                        Yesod.Form.Types.FormSuccess a1
+                        -> Yesod.Form.Types.FormSuccess
+                             @ Foundation.Artistas
+                             (case a1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
+                              Foundation.Artistas dt }) },
+                      x7, y, z) } #) })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <(Yesod.Form.Types.FormResult Foundation.Artistas,
+                                       [Yesod.Form.Types.FieldView
+                                          (Yesod.Core.Class.Handler.HandlerSite
+                                             (Yesod.Core.Types.HandlerT
+                                                Foundation.Sitio GHC.Types.IO))]
+                                       -> [Yesod.Form.Types.FieldView
+                                             (Yesod.Core.Class.Handler.HandlerSite
+                                                (Yesod.Core.Types.HandlerT
+                                                   Foundation.Sitio GHC.Types.IO))],
+                                       Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <(Yesod.Form.Types.FormResult Foundation.Artistas,
+                                  [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                                  -> [Yesod.Form.Types.FieldView
+                                        (Yesod.Core.Class.Handler.HandlerSite
+                                           (Yesod.Core.Types.HandlerT
+                                              Foundation.Sitio GHC.Types.IO))],
+                                  Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)))) -}
 dad3e771b1d8310b2f10b832865fb10c
   formDepto :: Foundation.Form Foundation.Departamento
   {- Arity: 3, Strictness: <L,U><L,U><L,U>,
@@ -1548,6 +2568,239 @@ ebf659680d4848d410a351ba3d95e5ad
                    Handlers.$stextField
                    Handlers.formDepto3
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)) -}
+bb56ab921969bdf55a10b86baa13c027
+  formMusicas :: Foundation.Form Foundation.Musicas
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Handlers.formMusicas1
+                  `cast`
+                (<Text.Blaze.Html.Html>_R
+                 ->_R Sym (Control.Monad.Trans.RWS.Lazy.N:RWST[0]
+                               <(GHC.Base.Maybe (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+                                 Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                                 [Text.Shakespeare.I18N.Lang])>_R
+                               <Yesod.Form.Types.Enctype>_N
+                               <Yesod.Form.Types.Ints>_N
+                               <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                               ((,)
+                                  <Yesod.Form.Types.FormResult Foundation.Musicas>_N
+                                  (Yesod.Core.Types.WidgetT
+                                     (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                               <GHC.Types.IO>_N <Foundation.Sitio>_N))
+                                     <GHC.Types.IO>_N
+                                     <()>_N)_N)_N)) -}
+317fd4a8a487e25193fd23b19ebe47f9
+  formMusicas1 ::
+    Text.Blaze.Internal.Markup
+    -> (GHC.Base.Maybe
+          (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+        Yesod.Core.Class.Handler.HandlerSite
+          (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+        [Text.Shakespeare.I18N.Lang])
+    -> Yesod.Form.Types.Ints
+    -> Yesod.Core.Types.HandlerT
+         Foundation.Sitio
+         GHC.Types.IO
+         ((Yesod.Form.Types.FormResult Foundation.Musicas,
+           Yesod.Core.Types.WidgetT
+             (Yesod.Core.Class.Handler.HandlerSite
+                (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))
+             GHC.Types.IO
+             ()),
+          Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (eta105 :: Text.Blaze.Internal.Markup)
+                   (eta106 :: (GHC.Base.Maybe
+                                 (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv),
+                               Yesod.Core.Class.Handler.HandlerSite
+                                 (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                               [Text.Shakespeare.I18N.Lang]))
+                   (eta107 :: Yesod.Form.Types.Ints) ->
+                 Yesod.Form.Functions.renderDivs2
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ Foundation.Musicas
+                   (Handlers.$s$fFunctorAForm_$s$fMonadHandlerT @ Foundation.Sitio)
+                   GHC.Types.True
+                   Handlers.formMusicas2
+                     `cast`
+                   (Sym (Yesod.Form.Types.N:AForm[0]
+                             <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                             <Foundation.Musicas>_N))
+                   eta105
+                   eta106
+                   eta107) -}
+669bc6a42e4ce524b3120c68d37790b4
+  formMusicas2 ::
+    (Yesod.Core.Class.Handler.HandlerSite
+       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+     [Data.Text.Internal.Text])
+    -> GHC.Base.Maybe (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv)
+    -> Yesod.Form.Types.Ints
+    -> Yesod.Core.Types.HandlerT
+         Foundation.Sitio
+         GHC.Types.IO
+         (Yesod.Form.Types.FormResult Foundation.Musicas,
+          [Yesod.Form.Types.FieldView
+             (Yesod.Core.Class.Handler.HandlerSite
+                (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+          -> [Yesod.Form.Types.FieldView
+                (Yesod.Core.Class.Handler.HandlerSite
+                   (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+          Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: (\ (mr :: (Yesod.Core.Class.Handler.HandlerSite
+                             (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
+                           [Data.Text.Internal.Text]))
+                   (env :: GHC.Base.Maybe
+                             (Yesod.Form.Types.Env, Yesod.Form.Types.FileEnv))
+                   (ints :: Yesod.Form.Types.Ints) ->
+                 let {
+                   ds :: Yesod.Core.Types.HandlerT
+                           Foundation.Sitio
+                           GHC.Types.IO
+                           (Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                            [Yesod.Form.Types.FieldView
+                               (Yesod.Core.Class.Handler.HandlerSite
+                                  (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                            -> [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                            Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
+                   = Handlers.formAlbuns_ds
+                       `cast`
+                     (Yesod.Form.Types.N:AForm[0]
+                          <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                          <Data.Text.Internal.Text>_N)
+                       mr
+                       env
+                       ints
+                 } in
+                 (\ (r :: Yesod.Core.Types.HandlerData
+                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case (ds
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <Foundation.Sitio>_N
+                             <GHC.Types.IO>_N
+                             <(Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                               [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                               -> [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                               Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Yesod.Form.Types.FormResult Data.Text.Internal.Text,
+                              [Yesod.Form.Types.FieldView
+                                 (Yesod.Core.Class.Handler.HandlerSite
+                                    (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                              -> [Yesod.Form.Types.FieldView
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                              Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R)
+                         s of ds4 { (#,#) ipv ipv1 ->
+                  case ipv1 of wild { (,,,) w x7 y z ->
+                  case ((Handlers.formAlbuns_ds1
+                           `cast`
+                         (Yesod.Form.Types.N:AForm[0]
+                              <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
+                              <Database.Persist.Class.PersistEntity.Key Foundation.Artistas>_N)
+                           mr
+                           env
+                           y)
+                          `cast`
+                        (Yesod.Core.Types.N:HandlerT[0]
+                             <Foundation.Sitio>_N
+                             <GHC.Types.IO>_N
+                             <(Yesod.Form.Types.FormResult
+                                 (Database.Persist.Class.PersistEntity.Key Foundation.Artistas),
+                               [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                               -> [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                               Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)
+                          r)
+                         `cast`
+                       (GHC.Types.N:IO[0]
+                            <(Yesod.Form.Types.FormResult
+                                (Database.Persist.Class.PersistEntity.Key Foundation.Artistas),
+                              [Yesod.Form.Types.FieldView
+                                 (Yesod.Core.Class.Handler.HandlerSite
+                                    (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                              -> [Yesod.Form.Types.FieldView
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
+                              Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R)
+                         ipv of ds5 { (#,#) ipv2 ipv3 ->
+                  case ipv3 of wild1 { (,,,) x8 y1 ints'' z1 ->
+                  (# ipv2,
+                     (case w of wild2 {
+                        Yesod.Form.Types.FormMissing
+                        -> case x8 of wild3 {
+                             DEFAULT -> Yesod.Form.Types.FormMissing @ Foundation.Musicas
+                             Yesod.Form.Types.FormFailure y2
+                             -> Yesod.Form.Types.FormFailure @ Foundation.Musicas y2 }
+                        Yesod.Form.Types.FormFailure errs
+                        -> case x8 of wild3 {
+                             DEFAULT -> Yesod.Form.Types.FormFailure @ Foundation.Musicas errs
+                             Yesod.Form.Types.FormFailure y2
+                             -> Yesod.Form.Types.FormFailure
+                                  @ Foundation.Musicas
+                                  (GHC.Base.++ @ Data.Text.Internal.Text errs y2) }
+                        Yesod.Form.Types.FormSuccess a1
+                        -> case x8 of wild3 {
+                             Yesod.Form.Types.FormMissing
+                             -> Yesod.Form.Types.FormMissing @ Foundation.Musicas
+                             Yesod.Form.Types.FormFailure y2
+                             -> Yesod.Form.Types.FormFailure @ Foundation.Musicas y2
+                             Yesod.Form.Types.FormSuccess g
+                             -> Yesod.Form.Types.FormSuccess
+                                  @ Foundation.Musicas
+                                  (Foundation.$WMusicas a1 g) } },
+                      \ (x9 :: [Yesod.Form.Types.FieldView
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]) ->
+                      x7 (y1 x9),
+                      ints'',
+                      case z of wild2 {
+                        Yesod.Form.Types.UrlEncoded -> z1
+                        Yesod.Form.Types.Multipart
+                        -> Yesod.Form.Types.Multipart }) #) } } } })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0]
+                                     <(Yesod.Form.Types.FormResult Foundation.Musicas,
+                                       [Yesod.Form.Types.FieldView
+                                          (Yesod.Core.Class.Handler.HandlerSite
+                                             (Yesod.Core.Types.HandlerT
+                                                Foundation.Sitio GHC.Types.IO))]
+                                       -> [Yesod.Form.Types.FieldView
+                                             (Yesod.Core.Class.Handler.HandlerSite
+                                                (Yesod.Core.Types.HandlerT
+                                                   Foundation.Sitio GHC.Types.IO))],
+                                       Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <(Yesod.Form.Types.FormResult Foundation.Musicas,
+                                  [Yesod.Form.Types.FieldView
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))]
+                                  -> [Yesod.Form.Types.FieldView
+                                        (Yesod.Core.Class.Handler.HandlerSite
+                                           (Yesod.Core.Types.HandlerT
+                                              Foundation.Sitio GHC.Types.IO))],
+                                  Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)))) -}
 ef37416869f4714645b2ed6ead491dd8
   formPessoa :: Foundation.Form Foundation.Pessoa
   {- Arity: 3, Strictness: <L,U><L,U><L,U>,
@@ -1630,7 +2883,7 @@ dd469193fca6ea2ac9609095e981eb1a
                    (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
           Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
   {- Arity: 3, Strictness: <L,U><L,U><L,U> -}
-9701497621434e324b679f5a2b62c8ef
+bb208fe5dd3b2ca53037505838de7b2a
   formVertentes :: Foundation.Form Foundation.Vertentes
   {- Arity: 3, Strictness: <L,U><L,U><L,U>,
      Unfolding: InlineRule (0, True, True)
@@ -1652,7 +2905,7 @@ dd469193fca6ea2ac9609095e981eb1a
                                                <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                      <GHC.Types.IO>_N
                                      <()>_N)_N)_N)) -}
-9fd650afbd36132a34d1d44a0c8f3d43
+142e81438baeeda41c27aaee9f774f14
   formVertentes1 ::
     Text.Blaze.Internal.Markup
     -> (GHC.Base.Maybe
@@ -1904,7 +3157,7 @@ e668b8195408bc62a0c256ddf67e9b80
                      `cast`
                    (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
                              <Foundation.Sitio>_N <Yesod.Form.Types.FormMessage>_N))) -}
-6ec52cc490c3e61e932324d275ffffb9
+dca1d804a8d6060a67e6788415305a8b
   formVertentes2 ::
     (Yesod.Core.Class.Handler.HandlerSite
        (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO),
@@ -1941,7 +3194,7 @@ e668b8195408bc62a0c256ddf67e9b80
                                   (Yesod.Core.Class.Handler.HandlerSite
                                      (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO))],
                             Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)
-                   = Handlers.formDepto_ds
+                   = Handlers.formAlbuns_ds
                        `cast`
                      (Yesod.Form.Types.N:AForm[0]
                           <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_N
@@ -2074,7 +3327,7 @@ e668b8195408bc62a0c256ddf67e9b80
                                            (Yesod.Core.Types.HandlerT
                                               Foundation.Sitio GHC.Types.IO))],
                                   Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)))) -}
-e21f00670082802020b071c1c34e0940
+0ded5c5ee21771dfbc7861408c83a0f5
   formVertentes3 :: Yesod.Form.Types.FieldSettings Foundation.Sitio
   {- Unfolding: (Yesod.Form.Types.FieldSettings
                    @ Foundation.Sitio
@@ -2085,7 +3338,7 @@ e21f00670082802020b071c1c34e0940
                    (GHC.Base.Nothing @ Data.Text.Internal.Text)
                    (GHC.Types.[]
                       @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
-d1589b9ec722219107d11eb380199c5c
+1ec5b0cc165c3db8f31b0596f616b671
   formVertentes4 ::
     Text.Shakespeare.I18N.SomeMessage Foundation.Sitio
   {- Unfolding: (Text.Shakespeare.I18N.SomeMessage
@@ -2097,7 +3350,7 @@ d1589b9ec722219107d11eb380199c5c
                    (Sym (Text.Shakespeare.I18N.N:RenderMessage[0]
                              <Foundation.Sitio>_N <Data.Text.Internal.Text>_N))
                    Handlers.formVertentes5) -}
-720fd935ad419f8081befe7b16f477f1
+d23421f07ab4126f824c713a03068587
   formVertentes5 :: Data.Text.Internal.Text
   {- Unfolding: (case GHC.Magic.runRW#
                         @ 'GHC.Types.PtrRepLifted
@@ -2114,9 +3367,10 @@ d1589b9ec722219107d11eb380199c5c
                            0#
                            ipv }) of ds4 { (#,#) ipv ipv1 ->
                  ipv1 }) -}
-eebea18cf1373f8162f55e158341cf49
+c1cf6f5eb25357f0587bc92ed165710d
   formVertentes6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "X"#) -}
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   "Vertente M\\195\\163e: "#) -}
 bc5794f0da58b0d69acaa73645d2f480
   formVertentes7 ::
     Yesod.Form.Types.Field
@@ -2208,7 +3462,7 @@ cd32c0fdb276fb6efc2f9e06ceb72c13
                   Database.Persist.Class.PersistEntity.entityKey
                     @ Foundation.Vertentes
                     ent)) -}
-b99b1dba879834c5d7f2befec1361aeb
+7fa2d5d31844bb77e852c884a7fe24c5
   formVertentes_ds1 ::
     Yesod.Form.Types.AForm
       (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
@@ -3739,7 +4993,7 @@ bb97cad99c96f21fb8b720a173e5a048
   getPessoaR ::
     Foundation.PessoaId -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,U> -}
-3429162a3c4959ba2ff3a0408a0f5b94
+3f9151480fe175607ee8ddfeb9cf5f50
   getVertenteR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -3753,7 +5007,7 @@ bb97cad99c96f21fb8b720a173e5a048
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-fb0d082740a972ef4ec7f9e212a6ed0b
+a0dda0f9e2ef7d845c56e9ba5098c7a2
   getVertenteR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -3794,7 +5048,7 @@ fb0d082740a972ef4ec7f9e212a6ed0b
 172c85640a27ec54cc8023ee1f0970a8
   getVertenteR2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "Vertentes"#) -}
-78ae915608868390519e4a23212f5729
+523ba6bef8acb9b058e44b88e0ba950b
   getVertenteR3 ::
     Foundation.Handler (Foundation.Widget, Yesod.Form.Types.Enctype)
   {- Unfolding: (Yesod.Form.Functions.generateFormPost
@@ -4793,7 +6047,7 @@ cf3ef530a29ad8762589bff15d9b0836
 8cbd3df30111c9343caac1abb40d860b
   postVertenteR :: Foundation.Handler Text.Blaze.Html.Html
   {- Strictness: x -}
-0677a15ecbfa2e70e81c63d7f369fc4d
+c1c08c18935a21a4bd14a517684e3c4e
   vts ::
     (Database.Persist.Class.PersistStore.BaseBackend
        (Yesod.Persist.Core.YesodPersistBackend site)
@@ -4920,7 +6174,7 @@ cf3ef530a29ad8762589bff15d9b0836
                                 <Yesod.Form.Fields.OptionList
                                    (Database.Persist.Class.PersistEntity.Key
                                       Foundation.Vertentes)>_N)))) -}
-60ec45303a13acb1f2919af35bfbc58b
+cf929c849776341c7d24bbb467759411
   vts1 ::
     [Database.Persist.Class.PersistEntity.SelectOpt
        Foundation.Vertentes]
@@ -4932,7 +6186,7 @@ cf3ef530a29ad8762589bff15d9b0836
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.SelectOpt
                            Foundation.Vertentes))) -}
-ac94132fbcc5fd87310d0ebdb4f36a58
+f0b337a482c2948e3cec6c75a978d8d0
   vts2 ::
     Database.Persist.Class.PersistEntity.SelectOpt Foundation.Vertentes
   {- HasNoCafRefs,
@@ -4942,13 +6196,13 @@ ac94132fbcc5fd87310d0ebdb4f36a58
                    Handlers.vts3
                      `cast`
                    (Sym (Foundation.D:R:EntityFieldVertentestyp0[0]) <Data.Text.Internal.Text>_N)) -}
-d3e19ed788d7eec50713900f2b1fcd99
+f065adb70bc7cb040140e92a7e5ca4d0
   vts3 ::
     Foundation.R:EntityFieldVertentestyp Data.Text.Internal.Text
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Foundation.VertentesNome
                    @ Data.Text.Internal.Text
-                   Handlers.$s$WDepartamentoNome_$d~~
+                   Handlers.$s$WArtistasNome_$d~~
                      `cast`
                    (Sym (Data.Type.Equality.N:~[0]
                              <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
