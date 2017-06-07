@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-07 01:55:08.135815 UTC
+2017-06-07 02:05:55.785977 UTC
 
 interface main@main:Foundation [family instance module] 8002
-  interface hash: 3c941cefc4f1aa1cb561634c113d8442
+  interface hash: ec8992cfab4ba3cd606add0e441805cd
   ABI hash: 219e48e30eb3244c1e86079a5140c1c7
   export-list hash: 90e1a1737e3474f58b146a86dcb7ea53
   orphan hash: aaff9a97a0f7b25855433f0d0926c3d6

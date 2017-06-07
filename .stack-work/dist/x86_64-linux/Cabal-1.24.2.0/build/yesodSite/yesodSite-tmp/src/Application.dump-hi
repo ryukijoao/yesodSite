@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-07 01:55:19.423841 UTC
+2017-06-07 02:06:05.364273 UTC
 
 interface main@main:Application [orphan module] 8002
-  interface hash: d77d8450973651f63d90c81cccf1b088
+  interface hash: 3b5706834a0328dc24a7b08bf277a36a
   ABI hash: bdadc5e81a23e67a0243628ca34c8859
   export-list hash: c9041e290d3748fa12e457948a6e4722
   orphan hash: ba5c6a290e22884717d53c7259bf9129
@@ -265,15 +265,15 @@ import  -/  Foundation 219e48e30eb3244c1e86079a5140c1c7
   VertenteR 2fb97617c428723062f2e0202aad93e1
   getStatic ffb285220d72bade4b78b8e71540e8ed
   resourcesSitio d7e637b70a739421243af6e9d8685b3d
-import  -/  Front e1bfa26e73dd2583ad8e8cb455233d22
+import  -/  Front 2c0dd00d7c85b34f73c1db21e9e3c351
   exports: 1c910ed9e61e5180cd0d65bd47380aee
-  getHomeR 71d4795a7e265c6e74c9b72264f5eef5
-  getMenuR bef1ccd9233eedbb6e998845c257c4c3
-  getPag1R f01434b0f5a600b74b0dfcd6f3c8dc7b
-  getPag2R f9e90ea09b8d4a116e1198ffe0749dcc
-  getPag3R e40e7e8d086f9c567de043f51eb0a868
+  getHomeR ba91ab9b7fdf2e3aa7a90b979b9c0991
+  getMenuR ac9c9ebcad324bab0829a2fd0e9ef512
+  getPag1R afe52c2a3fad6b702ea2b0de3efe07ff
+  getPag2R c12d9dec90818aea071fd217e07fb2d7
+  getPag3R 3165cef21c906f5d53e7b251c53c8612
   getPag4R 52388e3253fee87fe42e5f3b5e5428c6
-  getTesteR dbf778d646a4f9919ac13b9896295576
+  getTesteR 989eca8e0252a1e7697cfa1a431847b2
 import  -/  Handlers 6d7c0dc673245123eda241efedaa12ac
   exports: df163549742754855ba72092b2ab1ca9
   getArtistaR b61fcfcc57013111516184071bad3fc5
