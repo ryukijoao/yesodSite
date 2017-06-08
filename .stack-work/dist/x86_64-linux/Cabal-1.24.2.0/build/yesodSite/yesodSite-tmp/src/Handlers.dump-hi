@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 21:28:56.800257 UTC
+2017-06-08 21:53:39.769503 UTC
 
 interface main@main:Handlers 8002
-  interface hash: d696c5f3113719630fed9b0277fe7a4b
-  ABI hash: afad3eec24c770b0bde8170f065dca90
-  export-list hash: e76faf18a2d96e9415c0b566036f2f7b
+  interface hash: 2cb4819ec82521da1060d993dff2c32a
+  ABI hash: f5416174f74ed07444822263e9e2c6b7
+  export-list hash: 6115c01cc91744a895826233247afa9e
   orphan hash: f8fd44062b3d38e9f0d4a626f63d01f5
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
@@ -48,6 +48,7 @@ exports:
   Handlers.postArtistaR
   Handlers.postCadastroR
   Handlers.postDeptoR
+  Handlers.postMusicaIdR
   Handlers.postMusicaR
   Handlers.postPessoaR
   Handlers.postVertenteIdR
@@ -11376,7 +11377,81 @@ f13684763e4a413961196fc953b41d43
                                                   <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-b198900bfa2824b13ae1eba0eb1a619e
+a6fbfc118f99d258196d7f81d01222ef
+  postMusicaIdR ::
+    Foundation.MusicasId -> Foundation.Handler Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (mid :: Foundation.MusicasId) ->
+                 let {
+                   m2 :: Control.Monad.Trans.Reader.ReaderT
+                           Database.Persist.Sql.Types.Internal.SqlBackend
+                           (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                           ()
+                   = Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cdelete
+                       @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                       @ Foundation.Musicas
+                       (Handlers.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
+                          @ Foundation.Sitio)
+                       Handlers.getMusicaIdR7
+                         `cast`
+                       (GHC.Classes.(%,%)
+                          <Database.Persist.Class.PersistEntity.PersistEntity
+                             Foundation.Musicas>_N
+                          ((Data.Type.Equality.~)
+                             <*>_N
+                             (Sym (Foundation.D:R:PersistEntityBackendMusicas[0]))
+                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                       mid
+                 } in
+                 (\ (eta36 :: Yesod.Core.Types.HandlerData
+                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case Foundation.$fYesodPersistSitio1
+                         @ ()
+                         m2
+                           `cast`
+                         (Control.Monad.Trans.Reader.ReaderT
+                            <*>_N
+                            (Sub (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))
+                            <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                            <()>_N)_R
+                         eta36
+                         s of ds8 { (#,#) ipv ipv1 ->
+                  (Handlers.postMusicaIdR1
+                     `cast`
+                   (Yesod.Core.Types.N:HandlerT[0]
+                        <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
+                     eta36)
+                    `cast`
+                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
+                    ipv })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <Text.Blaze.Html.Html>_N)))) -}
+4a74901774a908c98d8516e431f54af5
+  postMusicaIdR1 ::
+    Yesod.Core.Types.HandlerT
+      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
+  {- Unfolding: (Yesod.Core.Handler.redirect
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
+                   @ Text.Blaze.Html.Html
+                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
+                      @ Foundation.Sitio)
+                     `cast`
+                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
+                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
+                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
+                   Foundation.MusicaR `cast` (Sym (Foundation.D:R:RouteSitio0[0]))) -}
+2dbdaddeeddc8aafc2c1dfef2b5913ae
   postMusicaR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -11390,7 +11465,7 @@ b198900bfa2824b13ae1eba0eb1a619e
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-306e26e166269828e7d1166f75701bc0
+0882b274c83b55216c5259df63e941fe
   postMusicaR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -11400,7 +11475,7 @@ b198900bfa2824b13ae1eba0eb1a619e
      Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case (Handlers.postMusicaR4
+                 case (Handlers.postMusicaR3
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N
@@ -11419,7 +11494,7 @@ b198900bfa2824b13ae1eba0eb1a619e
                  case ds9 of wild1 { (,) result ds11 ->
                  case result of wild2 {
                    DEFAULT
-                   -> (Handlers.postMusicaR3
+                   -> (Handlers.postMusicaIdR1
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
@@ -11657,25 +11732,8 @@ b198900bfa2824b13ae1eba0eb1a619e
                          <*>_N
                          (Sym (Foundation.D:R:PersistEntityBackendMusicas[0]))
                          (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
-6910967f27e770d36d4200fa9e76fbed
+1bbbd53523ce85ea2e388c3c991567bf
   postMusicaR3 ::
-    Yesod.Core.Types.HandlerT
-      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
-  {- Unfolding: (Yesod.Core.Handler.redirect
-                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
-                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
-                   @ Text.Blaze.Html.Html
-                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
-                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
-                      @ Foundation.Sitio)
-                     `cast`
-                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
-                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
-                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
-                   Foundation.MusicaR `cast` (Sym (Foundation.D:R:RouteSitio0[0]))) -}
-81cf68562734fa534d9dacfecfbf8086
-  postMusicaR4 ::
     Foundation.Handler
       ((Yesod.Form.Types.FormResult Foundation.Musicas,
         Foundation.Widget),

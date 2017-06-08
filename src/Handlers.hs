@@ -344,6 +344,11 @@ postVertenteIdR pid = do
      runDB $ delete pid
      redirect VertenteR
 
+postMusicaIdR :: MusicasId -> Handler Html
+postMusicaIdR mid = do
+     runDB $ delete mid
+     redirect MusicaR
+
 postPessoaR :: PessoaId -> Handler Html
 postPessoaR pid = do
      runDB $ delete pid

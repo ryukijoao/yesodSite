@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 21:28:58.72593 UTC
+2017-06-08 21:53:42.931222 UTC
 
 interface main@main:Front 8002
-  interface hash: 825b96381f10b249ed2b703319f9c0e7
+  interface hash: 6901c9894bfe1b7ce6ec0e6396635272
   ABI hash: 9e872389628dbd7ac8cf6f27dfd0bf33
   export-list hash: 1c910ed9e61e5180cd0d65bd47380aee
   orphan hash: 476ecbc8a9e4b422e8e2007eda4aea0d
@@ -276,8 +276,8 @@ import  -/  Foundation 93ff696c4b632cac39962c04acc8648c
   Widget 8d4de9e614189485cecde953901854b0
   menu_css 0ea37e4f7a45201f23d051f54bd149cd
   teste_jpg 39d69458e41c9378d9b00a70e8674775
-import  -/  Handlers afad3eec24c770b0bde8170f065dca90
-  exports: e76faf18a2d96e9415c0b566036f2f7b
+import  -/  Handlers f5416174f74ed07444822263e9e2c6b7
+  exports: 6115c01cc91744a895826233247afa9e
 import  -/  monad-logger-0.3.22@monad-logger-0.3.22-Ff8c9txl6qcL0x0EY6ih77:Control.Monad.Logger c186132138b23c0e4c9839f4d7247bee
 import  -/  persistent-postgresql-2.6.1@persistent-postgresql-2.6.1-8UEoLIijY1BB8D8YolPhem:Database.Persist.Postgresql 326569900059893a227843896529734d
 import  -/  shakespeare-2.0.13@shakespeare-2.0.13-1UUIku9jrJBLBXC3oDLYXd:Text.Hamlet f1623e2fa6537db057ee72b37a27e00c
