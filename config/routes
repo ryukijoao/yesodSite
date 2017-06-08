@@ -14,14 +14,19 @@
 /admin            AdminR     GET
 
 
-/vertentes              VertenteR   GET POST
-/vertentes/#VertentesId VertenteIdR GET
+/vertentes              VertenteR    GET POST
+/vertentes/#VertentesId VertenteIdR  GET
+/listarvertentes        VertenteLstR GET
 
-/artistas         ArtistaR   GET POST
+/artistas               ArtistaR    GET POST
+/artistas/#ArtistasId   ArtistaIdR  GET
 
-/albuns           AlbumR     GET POST
-/albuns/musicas   AlbumMusR  GET POST
-/musicas          MusicaR    GET POST
+/albuns                 AlbumR      GET POST
+/albuns/#AlbunsId       AlbumIdR    GET
+/albunsmusicas          AlbumMusR   GET POST
+
+/musicas                MusicaR     GET POST
+/musicas/#MusicasId     MusicaIdR   GET
 
 
 /usuario          UsuarioR   GET POST

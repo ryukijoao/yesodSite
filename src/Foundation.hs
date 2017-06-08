@@ -30,15 +30,12 @@ Vertentes
 Musicas
     nome Text sqltype=varchar(200)
     artistaPrincipalId ArtistasId
+    vertente VertentesId
     deriving Show
 
 MusicasArtistas
     musica MusicasId
     artista ArtistasId
-
-MusicasVertentes
-    musica MusicasId
-    vertente ArtistasId
 
 Albuns
     nome Text sqltype=varchar(100)

@@ -37,7 +37,8 @@ formArtistas = renderDivs $ Artistas <$>
 formMusicas :: Form Musicas
 formMusicas = renderDivs $ Musicas <$>
                 areq textField "Nome: " Nothing  <*>
-                areq (selectField art) "Artista principal: "  Nothing
+                areq (selectField art) "Artista principal: "  Nothing <*>
+                areq (selectField vts) "Vertente: "  Nothing
 
 formAlbuns :: Form Albuns
 formAlbuns = renderDivs $ Albuns <$>
@@ -90,6 +91,21 @@ getVertenteIdR vid = do
                  <h1> Vertente #{vertentesNome vertente}
              |]
 
+getVertenteLstR :: Handler Html
+getVertenteLstR = do
+             listaV <- runDB $ selectList [] [Asc VertentesNome]
+             defaultLayout $ do 
+             [whamlet|
+                 <h1> Vertentes cadastradas:
+                 $forall Entity vid vertente <- listaV
+                     <a href=@{VertenteIdR vid}> #{vertentesNome vertente} 
+                     <form method=post action=@{VertenteIdR vid}> 
+                         <input type="submit" value="Deletar"><br>
+             |] 
+             toWidget [lucius|
+                form  { display:inline; }
+                input { background-color: #ecc; border:0;}
+             |]
 
 getArtistaR :: Handler Html
 getArtistaR = do
@@ -98,13 +114,27 @@ getArtistaR = do
              addStylesheet $ StaticR cadastrosimples_css
              widgetFormCadastroSimples ArtistaR enctype widget "Novo artista"
 
+getArtistaIdR :: ArtistasId -> Handler Html
+getArtistaIdR aid = do
+             artista <- runDB $ get404 aid
+             defaultLayout [whamlet| 
+                 <h1> Artista #{artistasNome artista}
+             |]
+
 getMusicaR :: Handler Html
 getMusicaR = do
              (widget, enctype) <- generateFormPost formMusicas
              defaultLayout $ do
              addStylesheet $ StaticR cadastrosimples_css
              widgetFormCadastroSimples MusicaR enctype widget "Nova música"
-             
+
+getMusicaIdR :: MusicasId -> Handler Html
+getMusicaIdR mid = do
+             musica <- runDB $ get404 mid
+             defaultLayout [whamlet| 
+                 <h1> Música #{musicasNome musica}
+             |]             
+
 
 getAlbumR :: Handler Html
 getAlbumR = do
@@ -112,6 +142,13 @@ getAlbumR = do
              defaultLayout $ do
              addStylesheet $ StaticR cadastrosimples_css
              widgetFormCadastroSimples AlbumR enctype widget "Novo álbum"
+
+getAlbumIdR :: AlbunsId -> Handler Html
+getAlbumIdR aid = do
+             album <- runDB $ get404 aid
+             defaultLayout [whamlet| 
+                 <h1> Álbum #{albunsNome album}
+             |]             
 
 getAlbumMusR :: Handler Html
 getAlbumMusR = do

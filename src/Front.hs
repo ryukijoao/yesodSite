@@ -36,12 +36,12 @@ getMenuR = defaultLayout $ do
                 <li><a>Músicas
                     <ul>
                         <li><a href=@{MusicaR}>Nova música
-                        <li><a href=@{ArtistaR}>Exibir músicas
+                        <li><a href=@{MusicaR}>Exibir músicas
                 
                 <li><a>Artistas
                     <ul>
                         <li><a href=@{ArtistaR}>Novo artista
-                        <li><a href="">Exibir artistas
+                        <li><a href=@{ArtistaR}>Exibir artistas
                 
                 <li><a>Álbuns</a>
                     <ul>
@@ -52,7 +52,7 @@ getMenuR = defaultLayout $ do
                 <li><a>Vertentes
                     <ul>
                         <li><a href=@{VertenteR}>Nova vertente
-                        <li><a href=@{VertenteR}>Exibir vertentes
+                        <li><a href=@{VertenteLstR}>Exibir vertentes
     <div class="welcome">
         <h1>
             Bem vindo<br><br>
