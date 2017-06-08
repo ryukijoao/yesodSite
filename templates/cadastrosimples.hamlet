@@ -1,14 +1,8 @@
-<head>
-    <title>
-        Music Library (Versão Inicial)
-
 <body>
-    #{y}
     <div class="container">
-        <img src=@{StaticR _Lady_music_png}>
-        <form id="form_login" method=post action=@{x} enctype=#{enctype}>
+        <img src=@{StaticR music_vector_png}>
+        <form id="form_simples" method=post action=@{x} enctype=#{enctype}>
             <h2>
-                Realize seu login
-                
+                #{y}
             ^{widget}
-            <input type="submit" value="Login" class="logar">
+            <input type="submit" value="Salvar" class="salvar">

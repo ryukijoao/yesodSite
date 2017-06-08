@@ -14,14 +14,22 @@ vts = do
     entidades <- runDB $ selectList [] [Asc VertentesNome] 
     optionsPairs $ fmap (\ent -> (vertentesNome $ entityVal ent, entityKey ent)) entidades
 
+art = do
+    entidades <- runDB $ selectList [] [Asc ArtistasNome] 
+    optionsPairs $ fmap (\ent -> (artistasNome $ entityVal ent, entityKey ent)) entidades
+
+msc = do
+    entidades <- runDB $ selectList [] [Asc MusicasNome] 
+    optionsPairs $ fmap (\ent -> (musicasNome $ entityVal ent, entityKey ent)) entidades
+
+abn = do
+    entidades <- runDB $ selectList [] [Asc AlbunsNome] 
+    optionsPairs $ fmap (\ent -> (albunsNome $ entityVal ent, entityKey ent)) entidades
+
 formVertentes :: Form Vertentes
 formVertentes = renderDivs $ Vertentes <$>
                 areq textField "Nome: " Nothing  <*>
                 areq (selectField vts) "Vertente Mãe: "  Nothing
-
-art = do
-    entidades <- runDB $ selectList [] [Asc ArtistasNome] 
-    optionsPairs $ fmap (\ent -> (artistasNome $ entityVal ent, entityKey ent)) entidades
 
 formArtistas :: Form Artistas
 formArtistas = renderDivs $ Artistas <$>
@@ -36,7 +44,13 @@ formAlbuns :: Form Albuns
 formAlbuns = renderDivs $ Albuns <$>
                 areq textField "Nome: " Nothing  <*>
                 areq (selectField art) "Artista principal: "  Nothing
-            
+
+formAlbunsMusicas :: Form AlbunsMusicas
+formAlbunsMusicas = renderDivs $ AlbunsMusicas <$>
+                areq (selectField abn) "Álbum: "  Nothing <*>
+                areq (selectField msc) "Música: "  Nothing <*>
+                areq intField "Disco: " Nothing
+
 
 formDepto :: Form Departamento
 formDepto = renderDivs $ Departamento <$>
@@ -66,25 +80,39 @@ getHelloR = defaultLayout [whamlet|
 getVertenteR :: Handler Html
 getVertenteR = do
              (widget, enctype) <- generateFormPost formVertentes
-             defaultLayout $ widgetFormCadastroSimples VertenteR enctype widget "Vertentes"
+             defaultLayout $ do
+             addStylesheet $ StaticR cadastrosimples_css
+             widgetFormCadastroSimples VertenteR enctype widget "Nova vertente"
 
 
 getArtistaR :: Handler Html
 getArtistaR = do
              (widget, enctype) <- generateFormPost formArtistas
-             defaultLayout $ widgetFormCadastroSimples ArtistaR enctype widget "Artistas"
+             defaultLayout $ do
+             addStylesheet $ StaticR cadastrosimples_css
+             widgetFormCadastroSimples ArtistaR enctype widget "Novo artista"
 
 getMusicaR :: Handler Html
 getMusicaR = do
              (widget, enctype) <- generateFormPost formMusicas
-             defaultLayout $ widgetFormCadastroSimples MusicaR enctype widget "Musicas"
+             defaultLayout $ do
+             addStylesheet $ StaticR cadastrosimples_css
+             widgetFormCadastroSimples MusicaR enctype widget "Nova música"
              
 
 getAlbumR :: Handler Html
 getAlbumR = do
              (widget, enctype) <- generateFormPost formAlbuns
-             defaultLayout $ widgetFormCadastroSimples AlbumR enctype widget "Albuns"
+             defaultLayout $ do
+             addStylesheet $ StaticR cadastrosimples_css
+             widgetFormCadastroSimples AlbumR enctype widget "Novo álbum"
 
+getAlbumMusR :: Handler Html
+getAlbumMusR = do
+             (widget, enctype) <- generateFormPost formAlbunsMusicas
+             defaultLayout $ do
+             addStylesheet $ StaticR cadastrosimples_css
+             widgetFormCadastroSimples AlbumMusR enctype widget "Novo álbum"
 
 getCadastroR :: Handler Html
 getCadastroR = do
@@ -180,6 +208,17 @@ postAlbumR = do
                            <h1> #{albunsNome album} Inserido com sucesso. 
                        |]
                     _ -> redirect AlbumR
+
+postAlbumR :: Handler Html
+postAlbumR = do
+                ((result, _), _) <- runFormPost formAlbunsMusicas
+                case result of
+                    FormSuccess albummsc -> do
+                       runDB $ insert albummsc
+                       defaultLayout [whamlet|
+                           <h1> Inserido com sucesso. 
+                       |]
+                    _ -> redirect AlbumMusR
 
 postDeptoR :: Handler Html
 postDeptoR = do
