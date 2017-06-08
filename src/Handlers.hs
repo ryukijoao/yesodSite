@@ -28,8 +28,7 @@ abn = do
 
 formVertentes :: Form Vertentes
 formVertentes = renderDivs $ Vertentes <$>
-                areq textField "Nome: " Nothing  <*>
-                areq (selectField vts) "Vertente Mãe: "  Nothing
+                areq textField "Nome: " Nothing
 
 formArtistas :: Form Artistas
 formArtistas = renderDivs $ Artistas <$>
@@ -84,21 +83,13 @@ getVertenteR = do
              addStylesheet $ StaticR cadastrosimples_css
              widgetFormCadastroSimples VertenteR enctype widget "Nova vertente"
 
-getVertenteListarR :: Handler Html
-getVertenteListarR = do
-             listaP <- runDB $ selectList [] [Asc VertentesNome]
-             defaultLayout $ do 
-             [whamlet|
-                 <h1> Vertentes cadastradas:
-                 $forall Entity pid vertente <- listaV
-                     <a href=@{VertenteR pid}> #{vertentesNome vertente} 
-                     <form method=post action=@{VertenteR pid}> 
-                         <input type="submit" value="Deletar"><br>
-             |] 
-             toWidget [lucius|
-                form  { display:inline; }
-                input { background-color: #ecc; border:0;}
+getVertenteIdR :: VertentesId -> Handler Html
+getVertenteIdR vid = do
+             vertente <- runDB $ get404 vid 
+             defaultLayout [whamlet| 
+                 <h1> Vertente #{vertentesNome vertente}
              |]
+
 
 getArtistaR :: Handler Html
 getArtistaR = do

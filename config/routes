@@ -14,8 +14,8 @@
 /admin            AdminR     GET
 
 
-/vertentes        VertenteR       GET POST
-/vertentes/listar VertenteListarR GET
+/vertentes              VertenteR   GET POST
+/vertentes/#VertentesId VertenteIdR GET
 
 /artistas         ArtistaR   GET POST
 

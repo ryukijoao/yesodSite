@@ -25,7 +25,6 @@ Artistas
 
 Vertentes
     nome Text sqltype=varchar(100)
-    vertenteMae VertentesId
     deriving Show
 
 Musicas

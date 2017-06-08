@@ -52,7 +52,7 @@ getMenuR = defaultLayout $ do
                 <li><a>Vertentes
                     <ul>
                         <li><a href=@{VertenteR}>Nova vertente
-                        <li><a href=@{VertentesListarR}>Exibir vertentes
+                        <li><a href=@{VertenteR}>Exibir vertentes
     <div class="welcome">
         <h1>
             Bem vindo<br><br>

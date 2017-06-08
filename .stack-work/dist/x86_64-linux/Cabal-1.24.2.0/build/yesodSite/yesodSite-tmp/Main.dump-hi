@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 02:40:27.021889 UTC
+2017-06-08 04:18:21.039808 UTC
 
 interface main@main:Main 8002
-  interface hash: 6ab03a3dee6bdb894c27247aef549d87
-  ABI hash: 97cfd3cd3f95b651f10d60d8fb1d2b85
-  export-list hash: bb85fe0c6057de720f208abbc46643b9
+  interface hash: 184e0f31d51b4bf5e06cae861654b70b
+  ABI hash: 88d4e14652d875b1a593b1362c1651f0
+  export-list hash: bf6cb530eb72fd27c33172e14379dc60
   orphan hash: b3800a9dc0dfa8d51aa55715fd5423fd
   flag hash: cee3d0fe388fb05012cfb1adb941b55c
   sig of: Nothing
@@ -246,11 +246,11 @@ import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
 import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
-import  -/  Application 56ac022c46ff1b843c0bf84964a170ee
-  exports: 68d715384b867fad3ddb88c39042dfd1
-import  -/  Foundation ca8ea79fef956d4acc4842e380e174ab
-  exports: eb25932664807ba10c6cf4bea92c63ce
-  Sitio f0f2bb729e9d5ef237cf2b041397fa34
+import  -/  Application 9345d6decb1e1bdf95c34c24a26c70a3
+  exports: 8d037962c060a1d6055e488450aab3d5
+import  -/  Foundation 971b28999606c5343bf9d2cfbfee1479
+  exports: 75bd00731d5f3f89f1e0149fa3bcae3a
+  Sitio 0f2dc2b109404185c78d47a1d04eefcc
   migrateAll e72de080066d97e17a98bfa7e731a103
 import  -/  monad-logger-0.3.22@monad-logger-0.3.22-Ff8c9txl6qcL0x0EY6ih77:Control.Monad.Logger c186132138b23c0e4c9839f4d7247bee
 import  -/  persistent-2.6.1@persistent-2.6.1-GN6JgXR46m4BfSXz1mIhIy:Database.Persist.Sql.Migration 8936d439b3ab237a92eaf3f5f90fdca5
@@ -937,18 +937,18 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-02689798a5e02b1aed395efd8122ecd4
+22dea3876ef89b85e86e2b2785c7111c
   connStr :: Data.String.IsString t => t
   {- Arity: 1, Strictness: <C(S),1*C1(U)>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ t ($dIsString :: Data.String.IsString t) ->
                  $dIsString `cast` (Data.String.N:IsString[0] <t>_N)
                    Main.connStr1) -}
-4031a2c6b071ad079e698aa9f4d1dab0
+213faff3b7217c5b36ead081eb615158
   connStr1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
-                   "dbname=d4grpv8th4igam host=ec2-54-227-237-223.compute-1.amazonaws.com user=pdtfvtgliuyxfi password=75c1324323c93253692db7091cb6e2610f70117dfd3524469af5b535d0ea7bc2 port=5432"#) -}
-d4193b5cad79d77875c2f1791640843c
+                   "dbname=d8gvpk56lm77g4 host=ec2-54-83-49-44.compute-1.amazonaws.com user=gmzzrpxkugxpzg password=7a7d5b9d667fe212382a0da7d282088f42d1c86f2dcaee29dcd875fb4d05603f port=5432"#) -}
+5188a0ddda719e05a85e818fd52bae7f
   main :: GHC.Types.IO ()
   {- Unfolding: ((Main.main9
                     Main.main8
@@ -973,7 +973,7 @@ d4193b5cad79d77875c2f1791640843c
                     ->_R <Control.Monad.Logger.LogLevel>_R
                     ->_R <System.Log.FastLogger.LogStr.LogStr>_R
                     ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
-2764258d56be4d849eca4e9a16908679
+bb3eabcd9bd955b3d530c4ebf2acde47
   main1 ::
     Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
     -> (Language.Haskell.TH.Syntax.Loc
@@ -1052,7 +1052,7 @@ d4193b5cad79d77875c2f1791640843c
                       (Sym (Yesod.Static.N:Static[0]))
                       pool)
                    ipv2 } }) -}
-b202907f4f264832b6b472c20e9f6572
+ab2e836f44764125ca5cb6b973c06089
   main10 :: Database.Persist.Postgresql.ConnectionString
   {- Unfolding: (case GHC.List.$wlenAcc
                         @ GHC.Types.Char
@@ -1061,7 +1061,7 @@ b202907f4f264832b6b472c20e9f6572
                  Data.ByteString.Internal.$wunsafePackLenChars
                    ww2
                    Main.connStr1 }) -}
-299c840bb4c8cf6aa9095ee046e0f673
+739c4f019a5605393cdc064a3201a056
   main11 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1161,7 +1161,7 @@ c242418641ba560a41e32f60948e91ca
 e230f369fda110776fdd0aaf5615a281
   main8 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 10#) -}
-0172b0f4d809f02db922fd17faad64a7
+96f3ed7430d55e53a6b9f2efea9fbb7c
   main9 ::
     GHC.Types.Int
     -> (Data.Pool.Pool Database.Persist.Sql.Types.Internal.SqlBackend
