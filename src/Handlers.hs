@@ -120,6 +120,17 @@ getArtistaIdR aid = do
              defaultLayout [whamlet| 
                  <h1> Artista #{artistasNome artista}
              |]
+             
+getArtistaLstR :: Handler Html
+getArtistaLstR = do
+             listaA <- runDB $ selectList [] [Asc ArtistasNome]
+             defaultLayout $ do 
+             [whamlet|
+                 <h1> Artistas cadastrados:
+                 $forall Entity vid vertente <- listaA
+                     <a href=@{AristasIdR vid}> #{artistasNome vertente} 
+                     <form method=post action=@{ArtistaIdR vid}> 
+                         <input type="submit" value="Deletar"><br>
 
 getMusicaR :: Handler Html
 getMusicaR = do

@@ -20,6 +20,7 @@
 
 /artistas               ArtistaR    GET POST
 /artistas/#ArtistasId   ArtistaIdR  GET
+/listarartistas         ArtistaLstR GET
 
 /albuns                 AlbumR      GET POST
 /albuns/#AlbunsId       AlbumIdR    GET
