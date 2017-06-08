@@ -329,6 +329,21 @@ postDeptoR = do
                        |]
                     _ -> redirect DeptoR
 
+postArtistaIdR :: ArtistasId -> Handler Html
+postArtistaIdR pid = do
+     runDB $ delete pid
+     redirect ArtistaR
+
+postAlbumIdR :: AlbunsId -> Handler Html
+postAlbumIdR pid = do
+     runDB $ delete pid
+     redirect AlbumR
+
+postVertenteIdR :: VertentesId -> Handler Html
+postVertenteIdR pid = do
+     runDB $ delete pid
+     redirect VertenteR
+
 postPessoaR :: PessoaId -> Handler Html
 postPessoaR pid = do
      runDB $ delete pid

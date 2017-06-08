@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 19:43:13.141146 UTC
+2017-06-08 21:28:58.72593 UTC
 
 interface main@main:Front 8002
-  interface hash: c17018840a7048cb2a53f473852632ea
+  interface hash: 825b96381f10b249ed2b703319f9c0e7
   ABI hash: 9e872389628dbd7ac8cf6f27dfd0bf33
   export-list hash: 1c910ed9e61e5180cd0d65bd47380aee
   orphan hash: 476ecbc8a9e4b422e8e2007eda4aea0d
@@ -253,7 +253,7 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 587a1df05385bfbdb92794830fd0ee2a
+import  -/  Foundation 93ff696c4b632cac39962c04acc8648c
   exports: 33664001d97ac59c75d2e92d9a467971
   AlbumLstR 8ebc76a45b7f41444f36a0f939bcef61
   AlbumMusR 6239f0b149c26abf9e7875cf4d5e2fe0
@@ -276,8 +276,8 @@ import  -/  Foundation 587a1df05385bfbdb92794830fd0ee2a
   Widget 8d4de9e614189485cecde953901854b0
   menu_css 0ea37e4f7a45201f23d051f54bd149cd
   teste_jpg 39d69458e41c9378d9b00a70e8674775
-import  -/  Handlers 53c4c8ad50b68cddc4d3e4629e614563
-  exports: 5395deff3f9d325fe43394dd35909bcd
+import  -/  Handlers afad3eec24c770b0bde8170f065dca90
+  exports: e76faf18a2d96e9415c0b566036f2f7b
 import  -/  monad-logger-0.3.22@monad-logger-0.3.22-Ff8c9txl6qcL0x0EY6ih77:Control.Monad.Logger c186132138b23c0e4c9839f4d7247bee
 import  -/  persistent-postgresql-2.6.1@persistent-postgresql-2.6.1-8UEoLIijY1BB8D8YolPhem:Database.Persist.Postgresql 326569900059893a227843896529734d
 import  -/  shakespeare-2.0.13@shakespeare-2.0.13-1UUIku9jrJBLBXC3oDLYXd:Text.Hamlet f1623e2fa6537db057ee72b37a27e00c

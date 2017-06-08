@@ -15,15 +15,15 @@
 
 
 /vertentes              VertenteR    GET POST
-/vertentes/#VertentesId VertenteIdR  GET
+/vertentes/#VertentesId VertenteIdR  GET POST
 /listarvertentes        VertenteLstR GET
 
 /artistas               ArtistaR    GET POST
-/artistas/#ArtistasId   ArtistaIdR  GET
+/artistas/#ArtistasId   ArtistaIdR  GET POST
 /listarartistas         ArtistaLstR GET
 
 /albuns                 AlbumR      GET POST
-/albuns/#AlbunsId       AlbumIdR    GET
+/albuns/#AlbunsId       AlbumIdR    GET POST
 /albunsmusicas          AlbumMusR   GET POST
 /listaralbuns           AlbumLstR   GET
 

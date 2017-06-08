@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 19:43:11.319001 UTC
+2017-06-08 21:28:56.800257 UTC
 
 interface main@main:Handlers 8002
-  interface hash: 56722c7cb683a80d46b643d751304db8
-  ABI hash: 53c4c8ad50b68cddc4d3e4629e614563
-  export-list hash: 5395deff3f9d325fe43394dd35909bcd
+  interface hash: d696c5f3113719630fed9b0277fe7a4b
+  ABI hash: afad3eec24c770b0bde8170f065dca90
+  export-list hash: e76faf18a2d96e9415c0b566036f2f7b
   orphan hash: f8fd44062b3d38e9f0d4a626f63d01f5
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
@@ -41,13 +41,16 @@ exports:
   Handlers.getVertenteLstR
   Handlers.getVertenteR
   Handlers.msc
+  Handlers.postAlbumIdR
   Handlers.postAlbumMusR
   Handlers.postAlbumR
+  Handlers.postArtistaIdR
   Handlers.postArtistaR
   Handlers.postCadastroR
   Handlers.postDeptoR
   Handlers.postMusicaR
   Handlers.postPessoaR
+  Handlers.postVertenteIdR
   Handlers.postVertenteR
   Handlers.vts
 module dependencies: Foundation
@@ -284,7 +287,7 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 587a1df05385bfbdb92794830fd0ee2a
+import  -/  Foundation 93ff696c4b632cac39962c04acc8648c
   exports: 33664001d97ac59c75d2e92d9a467971
   AlbumIdR cfb61998ff2b9b533eef42157a10ac4e
   AlbumMusR 6239f0b149c26abf9e7875cf4d5e2fe0
@@ -9421,6 +9424,80 @@ fc379233c00e55ad62f5f0f61f9c02b7
                      `cast`
                    (Sym (Data.Type.Equality.N:~[0]
                              <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
+7ac2b44488030b95a063ecf085e03a6a
+  postAlbumIdR ::
+    Foundation.AlbunsId -> Foundation.Handler Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (pid :: Foundation.AlbunsId) ->
+                 let {
+                   m2 :: Control.Monad.Trans.Reader.ReaderT
+                           Database.Persist.Sql.Types.Internal.SqlBackend
+                           (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                           ()
+                   = Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cdelete
+                       @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                       @ Foundation.Albuns
+                       (Handlers.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
+                          @ Foundation.Sitio)
+                       Handlers.getAlbumIdR14
+                         `cast`
+                       (GHC.Classes.(%,%)
+                          <Database.Persist.Class.PersistEntity.PersistEntity
+                             Foundation.Albuns>_N
+                          ((Data.Type.Equality.~)
+                             <*>_N
+                             (Sym (Foundation.D:R:PersistEntityBackendAlbuns[0]))
+                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                       pid
+                 } in
+                 (\ (eta36 :: Yesod.Core.Types.HandlerData
+                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case Foundation.$fYesodPersistSitio1
+                         @ ()
+                         m2
+                           `cast`
+                         (Control.Monad.Trans.Reader.ReaderT
+                            <*>_N
+                            (Sub (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))
+                            <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                            <()>_N)_R
+                         eta36
+                         s of ds8 { (#,#) ipv ipv1 ->
+                  (Handlers.postAlbumIdR1
+                     `cast`
+                   (Yesod.Core.Types.N:HandlerT[0]
+                        <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
+                     eta36)
+                    `cast`
+                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
+                    ipv })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <Text.Blaze.Html.Html>_N)))) -}
+9468795b533ce6b4d256be7d8c4f63a5
+  postAlbumIdR1 ::
+    Yesod.Core.Types.HandlerT
+      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
+  {- Unfolding: (Yesod.Core.Handler.redirect
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
+                   @ Text.Blaze.Html.Html
+                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
+                      @ Foundation.Sitio)
+                     `cast`
+                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
+                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
+                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
+                   Foundation.AlbumR `cast` (Sym (Foundation.D:R:RouteSitio0[0]))) -}
 9d0ef84c3c2be4dd502ea9f215ccfbe0
   postAlbumMusR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
@@ -9701,7 +9778,7 @@ eadb9dba5d338cd707af4aec747c5ef8
   {- Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.postAlbumMusR7) -}
-a0bc1627798f94af9917177a44134528
+ce468d1220c01092d2b1ae2e76430411
   postAlbumR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -9715,7 +9792,7 @@ a0bc1627798f94af9917177a44134528
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-fcdd7461c18fc173a9f2516e69f17896
+3e6488f105ae8a34144e378890f3c077
   postAlbumR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9725,7 +9802,7 @@ fcdd7461c18fc173a9f2516e69f17896
      Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case (Handlers.postAlbumR11
+                 case (Handlers.postAlbumR10
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N
@@ -9744,7 +9821,7 @@ fcdd7461c18fc173a9f2516e69f17896
                  case ds9 of wild1 { (,) result ds11 ->
                  case result of wild2 {
                    DEFAULT
-                   -> (Handlers.postAlbumR10
+                   -> (Handlers.postAlbumIdR1
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
@@ -9960,25 +10037,8 @@ fcdd7461c18fc173a9f2516e69f17896
                         `cast`
                       (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                         ipv2 } } } } }) -}
-90e824b12b1163252b07bc76f485f3e6
+dbe765174dfdd868e9c210e9cfa83e44
   postAlbumR10 ::
-    Yesod.Core.Types.HandlerT
-      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
-  {- Unfolding: (Yesod.Core.Handler.redirect
-                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
-                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
-                   @ Text.Blaze.Html.Html
-                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
-                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
-                      @ Foundation.Sitio)
-                     `cast`
-                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
-                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
-                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
-                   Foundation.AlbumR `cast` (Sym (Foundation.D:R:RouteSitio0[0]))) -}
-f6ba221335ba7cfaae4001dcd29670f3
-  postAlbumR11 ::
     Foundation.Handler
       ((Yesod.Form.Types.FormResult Foundation.Albuns,
         Foundation.Widget),
@@ -10138,7 +10198,83 @@ c6cb0554b3fbfe41c82a57a5b387c1dd
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.postAlbumR6) -}
-98792fc723c4ea9d617eb2bba8540ce6
+565cc9ade25be8f8f2fc4c27a1729f61
+  postArtistaIdR ::
+    Foundation.ArtistasId -> Foundation.Handler Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (pid :: Foundation.ArtistasId) ->
+                 let {
+                   m2 :: Control.Monad.Trans.Reader.ReaderT
+                           Database.Persist.Sql.Types.Internal.SqlBackend
+                           (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                           ()
+                   = Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cdelete
+                       @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                       @ Foundation.Artistas
+                       (Handlers.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
+                          @ Foundation.Sitio)
+                       Handlers.getArtistaIdR7
+                         `cast`
+                       (GHC.Classes.(%,%)
+                          <Database.Persist.Class.PersistEntity.PersistEntity
+                             Foundation.Artistas>_N
+                          ((Data.Type.Equality.~)
+                             <*>_N
+                             (Sym (Foundation.D:R:PersistEntityBackendArtistas[0]))
+                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                       pid
+                 } in
+                 (\ (eta36 :: Yesod.Core.Types.HandlerData
+                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case Foundation.$fYesodPersistSitio1
+                         @ ()
+                         m2
+                           `cast`
+                         (Control.Monad.Trans.Reader.ReaderT
+                            <*>_N
+                            (Sub (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))
+                            <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                            <()>_N)_R
+                         eta36
+                         s of ds8 { (#,#) ipv ipv1 ->
+                  (Handlers.postArtistaIdR1
+                     `cast`
+                   (Yesod.Core.Types.N:HandlerT[0]
+                        <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
+                     eta36)
+                    `cast`
+                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
+                    ipv })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <Text.Blaze.Html.Html>_N)))) -}
+fc40093b8387cbf1dc09f104c3b3b5e8
+  postArtistaIdR1 ::
+    Yesod.Core.Types.HandlerT
+      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
+  {- Unfolding: (Yesod.Core.Handler.redirect
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
+                   @ Text.Blaze.Html.Html
+                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
+                      @ Foundation.Sitio)
+                     `cast`
+                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
+                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
+                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
+                   Foundation.ArtistaR
+                     `cast`
+                   (Sym (Foundation.D:R:RouteSitio0[0]))) -}
+cf23f4050ecefaaec096b9d6af835fd2
   postArtistaR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -10152,7 +10288,7 @@ c6cb0554b3fbfe41c82a57a5b387c1dd
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-8fa5a944c37694581601eb7d26be9b6e
+664b33fb1111f8bd6f0216c44be74017
   postArtistaR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -10162,7 +10298,7 @@ c6cb0554b3fbfe41c82a57a5b387c1dd
      Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case (Handlers.postArtistaR4
+                 case (Handlers.postArtistaR3
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N
@@ -10181,7 +10317,7 @@ c6cb0554b3fbfe41c82a57a5b387c1dd
                  case ds9 of wild1 { (,) result ds11 ->
                  case result of wild2 {
                    DEFAULT
-                   -> (Handlers.postArtistaR3
+                   -> (Handlers.postArtistaIdR1
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
@@ -10418,27 +10554,8 @@ ecca928666fea25865fb94a699b2994f
                          <*>_N
                          (Sym (Foundation.D:R:PersistEntityBackendArtistas[0]))
                          (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
-802bb87999ed0674fff662e88ed1213b
+30403526fc572fab1a93e6bd57e3799a
   postArtistaR3 ::
-    Yesod.Core.Types.HandlerT
-      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
-  {- Unfolding: (Yesod.Core.Handler.redirect
-                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
-                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
-                   @ Text.Blaze.Html.Html
-                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
-                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
-                      @ Foundation.Sitio)
-                     `cast`
-                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
-                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
-                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
-                   Foundation.ArtistaR
-                     `cast`
-                   (Sym (Foundation.D:R:RouteSitio0[0]))) -}
-37a3c3cd980e65722452d36cbac32f66
-  postArtistaR4 ::
     Foundation.Handler
       ((Yesod.Form.Types.FormResult Foundation.Artistas,
         Foundation.Widget),
@@ -11667,7 +11784,83 @@ d84ea1d65a917433c48dafa35599ad67
                                   <GHC.Types.IO>_N <Foundation.Sitio>_N)
                              <Yesod.Routes.Class.Route Foundation.Sitio>_N))
                    Foundation.ListarR `cast` (Sym (Foundation.D:R:RouteSitio0[0]))) -}
-cbf2d2e94044419d5652d150286d80ce
+caa988a2b79dcae38e548d7223d27e46
+  postVertenteIdR ::
+    Foundation.VertentesId -> Foundation.Handler Text.Blaze.Html.Html
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (pid :: Foundation.VertentesId) ->
+                 let {
+                   m2 :: Control.Monad.Trans.Reader.ReaderT
+                           Database.Persist.Sql.Types.Internal.SqlBackend
+                           (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                           ()
+                   = Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cdelete
+                       @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                       @ Foundation.Vertentes
+                       (Handlers.$s$fMonadHandlerHandlerT_$cp1MonadHandler_$s$fMonadIOHandlerT
+                          @ Foundation.Sitio)
+                       Handlers.getVertenteIdR7
+                         `cast`
+                       (GHC.Classes.(%,%)
+                          <Database.Persist.Class.PersistEntity.PersistEntity
+                             Foundation.Vertentes>_N
+                          ((Data.Type.Equality.~)
+                             <*>_N
+                             (Sym (Foundation.D:R:PersistEntityBackendVertentes[0]))
+                             (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                       pid
+                 } in
+                 (\ (eta36 :: Yesod.Core.Types.HandlerData
+                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                  case Foundation.$fYesodPersistSitio1
+                         @ ()
+                         m2
+                           `cast`
+                         (Control.Monad.Trans.Reader.ReaderT
+                            <*>_N
+                            (Sub (Sym (Foundation.D:R:YesodPersistBackendSitio[0])))
+                            <Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO>_R
+                            <()>_N)_R
+                         eta36
+                         s of ds8 { (#,#) ipv ipv1 ->
+                  (Handlers.postVertenteIdR1
+                     `cast`
+                   (Yesod.Core.Types.N:HandlerT[0]
+                        <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
+                     eta36)
+                    `cast`
+                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
+                    ipv })
+                   `cast`
+                 (Trans
+                      (<Yesod.Core.Types.HandlerData
+                          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                       ->_R Sym (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R))
+                      (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                <Foundation.Sitio>_N
+                                <GHC.Types.IO>_N
+                                <Text.Blaze.Html.Html>_N)))) -}
+1e099a2199c14849062503f4b8ec91a1
+  postVertenteIdR1 ::
+    Yesod.Core.Types.HandlerT
+      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
+  {- Unfolding: (Yesod.Core.Handler.redirect
+                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
+                   @ Text.Blaze.Html.Html
+                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
+                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
+                      @ Foundation.Sitio)
+                     `cast`
+                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
+                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
+                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
+                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
+                   Foundation.VertenteR
+                     `cast`
+                   (Sym (Foundation.D:R:RouteSitio0[0]))) -}
+25b83dada5102ed060c1c45d3b14bb0a
   postVertenteR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -11681,7 +11874,7 @@ cbf2d2e94044419d5652d150286d80ce
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-2cdde42feb396cc38c2b9550dd6a1ef1
+64de2dcf6bc8a425205c1a0b09e5a51a
   postVertenteR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -11691,7 +11884,7 @@ cbf2d2e94044419d5652d150286d80ce
      Unfolding: (\ (r :: Yesod.Core.Types.HandlerData
                            Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case (Handlers.postVertenteR4
+                 case (Handlers.postVertenteR3
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N
@@ -11710,7 +11903,7 @@ cbf2d2e94044419d5652d150286d80ce
                  case ds9 of wild1 { (,) result ds11 ->
                  case result of wild2 {
                    DEFAULT
-                   -> (Handlers.postVertenteR3
+                   -> (Handlers.postVertenteIdR1
                          `cast`
                        (Yesod.Core.Types.N:HandlerT[0]
                             <Foundation.Sitio>_N <GHC.Types.IO>_N <Text.Blaze.Html.Html>_N)
@@ -11948,27 +12141,8 @@ d101aeee80d2965c5d52efb2613fe00d
                          <*>_N
                          (Sym (Foundation.D:R:PersistEntityBackendVertentes[0]))
                          (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R) -}
-871668a8275ce07ad0ce27ecd22233e6
+aedb3317e12fd7209d96e8ead50841f6
   postVertenteR3 ::
-    Yesod.Core.Types.HandlerT
-      Foundation.Sitio GHC.Types.IO Text.Blaze.Html.Html
-  {- Unfolding: (Yesod.Core.Handler.redirect
-                   @ (Yesod.Core.Types.HandlerT Foundation.Sitio GHC.Types.IO)
-                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
-                   @ Text.Blaze.Html.Html
-                   (Handlers.$s$fMonadHandlerHandlerT @ Foundation.Sitio)
-                   (Yesod.Core.Handler.$fRedirectUrlmasterRoute_$ctoTextUrl
-                      @ Foundation.Sitio)
-                     `cast`
-                   (Sym (Yesod.Core.Handler.N:RedirectUrl[0]
-                             (Yesod.Core.Class.Handler.D:R:HandlerSiteHandlerT[0]
-                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)
-                             <Yesod.Routes.Class.Route Foundation.Sitio>_N))
-                   Foundation.VertenteR
-                     `cast`
-                   (Sym (Foundation.D:R:RouteSitio0[0]))) -}
-f9b95ce65ca50a9665af1fcbaecbbdb5
-  postVertenteR4 ::
     Foundation.Handler
       ((Yesod.Form.Types.FormResult Foundation.Vertentes,
         Foundation.Widget),
