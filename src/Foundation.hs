@@ -117,3 +117,6 @@ widgetFormLogin x enctype widget y = $(whamletFile "templates/login.hamlet")
 
 widgetFormCadastroSimples :: Route Sitio -> Enctype -> Widget -> Text -> Widget
 widgetFormCadastroSimples x enctype widget y = $(whamletFile "templates/cadastrosimples.hamlet")
+
+widgetFormCadastroMusica :: Route Sitio -> Enctype -> Widget -> Text -> Widget
+widgetFormCadastroMusica x enctype widget y = $(whamletFile "templates/cadastromusica.hamlet")

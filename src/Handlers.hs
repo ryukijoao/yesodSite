@@ -125,8 +125,8 @@ getMusicaR :: Handler Html
 getMusicaR = do
              (widget, enctype) <- generateFormPost formMusicas
              defaultLayout $ do
-             addStylesheet $ StaticR cadastrosimples_css
-             widgetFormCadastroSimples MusicaR enctype widget "Nova música"
+             addStylesheet $ StaticR cadastromusica_css
+             widgetFormCadastroMusica MusicaR enctype widget "Nova música"
 
 getMusicaIdR :: MusicasId -> Handler Html
 getMusicaIdR mid = do
