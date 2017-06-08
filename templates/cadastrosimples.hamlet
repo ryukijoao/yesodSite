@@ -1,8 +1,12 @@
-<body>
-    <div class="container">
-        <img src=@{StaticR music_vector_png}>
-        <form id="form_simples" method=post action=@{x} enctype=#{enctype}>
-            <h2>
-                #{y}
-            ^{widget}
-            <input type="submit" value="Salvar" class="salvar">
+<html>
+    <body>
+        <div class="container">
+            <img src=@{StaticR music_vector_png}>
+            <form id="form_simples" method=post action=@{x} enctype=#{enctype}>
+                <h2>
+                    #{y}
+                ^{widget}
+                <input type="submit" value="Salvar" class="salvar">
+<footer class="footer">
+    <div class="rodape">
+        <input class="logar" type="submit" value="Logout">

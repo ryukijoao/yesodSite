@@ -13,11 +13,16 @@
 /hello            HelloR     GET
 /admin            AdminR     GET
 
-/vertentes        VertenteR  GET POST
+
+/vertentes        VertenteR       GET POST
+/vertentes/listar VertenteListarR GET
+
 /artistas         ArtistaR   GET POST
+
 /albuns           AlbumR     GET POST
 /albuns/musicas   AlbumMusR  GET POST
 /musicas          MusicaR    GET POST
+
 
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST

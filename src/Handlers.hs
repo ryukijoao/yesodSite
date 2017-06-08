@@ -84,6 +84,21 @@ getVertenteR = do
              addStylesheet $ StaticR cadastrosimples_css
              widgetFormCadastroSimples VertenteR enctype widget "Nova vertente"
 
+getVertenteListarR :: Handler Html
+getVertenteListarR = do
+             listaP <- runDB $ selectList [] [Asc VertentesNome]
+             defaultLayout $ do 
+             [whamlet|
+                 <h1> Vertentes cadastradas:
+                 $forall Entity pid vertente <- listaV
+                     <a href=@{VertenteR pid}> #{vertentesNome vertente} 
+                     <form method=post action=@{VertenteR pid}> 
+                         <input type="submit" value="Deletar"><br>
+             |] 
+             toWidget [lucius|
+                form  { display:inline; }
+                input { background-color: #ecc; border:0;}
+             |]
 
 getArtistaR :: Handler Html
 getArtistaR = do
@@ -209,8 +224,8 @@ postAlbumR = do
                        |]
                     _ -> redirect AlbumR
 
-postAlbumR :: Handler Html
-postAlbumR = do
+postAlbumMusR :: Handler Html
+postAlbumMusR = do
                 ((result, _), _) <- runFormPost formAlbunsMusicas
                 case result of
                     FormSuccess albummsc -> do
