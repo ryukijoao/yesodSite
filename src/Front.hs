@@ -36,7 +36,7 @@ getMenuR = defaultLayout $ do
                 <li><a>Músicas
                     <ul>
                         <li><a href=@{MusicaR}>Nova música
-                        <li><a href=@{MusicaR}>Exibir músicas
+                        <li><a href=@{MusicaLstR}>Exibir músicas
                 
                 <li><a>Artistas
                     <ul>

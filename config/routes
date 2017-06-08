@@ -28,7 +28,7 @@
 
 /musicas                MusicaR     GET POST
 /musicas/#MusicasId     MusicaIdR   GET
-
+/listarmusicas          MusicaLstR  GET
 
 /usuario          UsuarioR   GET POST
 /login            LoginR     GET POST
