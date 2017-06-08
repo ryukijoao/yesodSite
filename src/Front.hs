@@ -30,8 +30,8 @@ getMenuR = defaultLayout $ do
                 
                 <li><a>Biblioteca
                     <ul>
-                        <li><a href=@{ArtistaR}>Nova lista
-                        <li><a href=@{ArtistaR}>Exibir listas
+                        <li><a>Nova lista
+                        <li><a>Exibir listas
                 
                 <li><a>Músicas
                     <ul>
@@ -61,10 +61,12 @@ getMenuR = defaultLayout $ do
             <li>Cadastro de músicas
             <li>Cadastro de vertentes
             <li>Cadastro de álbuns
-            <li>Organização de listas
+            <li>Listagem simples dos cadadstros
+            <li>Deleção dos cadastros
             <br><br>
             Em desenvolvimento:
             <li>Layout
+            <li>Criação da biblioteca
             <li>Importação de dados via biblioteca online
             <li>Pré-cadastro de músicas, artistas, vertentes e álbuns
 <footer class="footer">
