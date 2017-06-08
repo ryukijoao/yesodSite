@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 14:32:15.300409 UTC
+2017-06-08 15:31:34.216089 UTC
 
 interface main@main:Front 8002
-  interface hash: 0860b1cedba68ea02585d56c6441ba1b
+  interface hash: ec210410ae2832555a20803d958ba13a
   ABI hash: 12d78b89ebc7a7da7f481d06b123ff3d
   export-list hash: 1c910ed9e61e5180cd0d65bd47380aee
   orphan hash: 476ecbc8a9e4b422e8e2007eda4aea0d
@@ -253,8 +253,8 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 3991af1eca577e9bc1a22bdbdb5d4197
-  exports: bf870fb13c0d18bd8cfdfbfb240a00a9
+import  -/  Foundation 8650d7f6e01fba3ab482c6bfa633dc94
+  exports: 88c20798dc64900b9debd7912b40c743
   AlbumMusR a5d4c6b2d581c7a5af6389c16f27b218
   AlbumR 00fd84f23d97c7ff880049047929f6c4
   ArtistaR 235cb111b535c0b4cbd207fc7d5dcb10

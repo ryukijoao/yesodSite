@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 14:32:04.907548 UTC
+2017-06-08 15:31:24.70078 UTC
 
 interface main@main:Foundation [family instance module] 8002
-  interface hash: 430cff172ef3776e31279af58ebc4287
-  ABI hash: 3991af1eca577e9bc1a22bdbdb5d4197
-  export-list hash: bf870fb13c0d18bd8cfdfbfb240a00a9
+  interface hash: fdae11e9c18fdc2841b9f5df89e38a30
+  ABI hash: 8650d7f6e01fba3ab482c6bfa633dc94
+  export-list hash: 88c20798dc64900b9debd7912b40c743
   orphan hash: 07fcb459857e44c1292c9929a4db17ad
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
@@ -14,6 +14,7 @@ interface main@main:Foundation [family instance module] 8002
 exports:
   Foundation._Deep_Space_jpg
   Foundation._Lady_music_png
+  Foundation.biblioteca_jpg
   Foundation.cadastromusica_css
   Foundation.cadastrosimples_css
   Foundation.isAdmin
@@ -23877,6 +23878,82 @@ c92880ce039a888b1b370f294146e387
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Foundation.Artistas) ->
                  case ds of wild { Foundation.Artistas ds1 -> ds1 }) -}
+f8344e08a09e49cfe7b7d4be513234f0
+  biblioteca_jpg :: Yesod.Static.StaticRoute
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Foundation.biblioteca_jpg1
+                  `cast`
+                (Sym (Yesod.Static.D:R:RouteStatic0[0])) -}
+a1a4ead6d8c47d9ac27a9e18c4423ea2
+  biblioteca_jpg1 :: Yesod.Static.R:RouteStatic
+  {- Strictness: m,
+     Unfolding: (Yesod.Static.StaticRoute
+                   Foundation.biblioteca_jpg5
+                   Foundation.biblioteca_jpg2) -}
+80152169bf392b0fc04902c195ff5e06
+  biblioteca_jpg2 ::
+    [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Text.Internal.Text, Data.Text.Internal.Text)
+                   Foundation.biblioteca_jpg3
+                   (GHC.Types.[]
+                      @ (Data.Text.Internal.Text, Data.Text.Internal.Text))) -}
+01bef2da2d68279a09183d2c04398deb
+  biblioteca_jpg3 ::
+    (Data.Text.Internal.Text, Data.Text.Internal.Text)
+  {- Strictness: m,
+     Unfolding: ((Foundation._Deep_Space_jpg5,
+                  Foundation.biblioteca_jpg4)) -}
+aee9a5c39f77ba5d920899eeebf1a19f
+  biblioteca_jpg4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "9FsoIXCj"#) -}
+d4c7a89cce14d6a1671f4226b486e2e1
+  biblioteca_jpg5 :: [Data.Text.Internal.Text]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Data.Text.Internal.Text
+                   Foundation.biblioteca_jpg6
+                   (GHC.Types.[] @ Data.Text.Internal.Text)) -}
+478c9de2409aefe0374291d2b504ba71
+  biblioteca_jpg6 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        Foundation.biblioteca_jpg7 of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+a9c18547b218c21c6aeaa5a32b59ec57
+  biblioteca_jpg7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds1 { (#,#) ipv ipv1 ->
+                 Foundation.biblioteca_jpg_$s$wouter
+                   ipv
+                   0#
+                   Foundation.biblioteca_jpg8
+                   4#
+                   ipv1 }) -}
+f8e8c1efd92cf7dadfc9b0d7ad62fec0
+  biblioteca_jpg8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "biblioteca.jpg"#) -}
+b92c886b614ccb421a89dfc5b834f55c
+  biblioteca_jpg_$s$wouter ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Char]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.MutableByteArray# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 5, Strictness: <S,U><S,U><S,1*U><L,U><L,U> -}
 4a25a659fda7b01fb06ce98e056fb6ff
   cadastromusica_css :: Yesod.Static.StaticRoute
   {- Strictness: m,
