@@ -141,7 +141,7 @@ getAlbumR = do
              (widget, enctype) <- generateFormPost formAlbuns
              defaultLayout $ do
              addStylesheet $ StaticR cadastrosimples_css
-             widgetFormCadastroSimples AlbumR enctype widget "Novo álbum"
+             widgetFormCadastroAlbum AlbumR enctype widget "Novo álbum"
 
 getAlbumIdR :: AlbunsId -> Handler Html
 getAlbumIdR aid = do

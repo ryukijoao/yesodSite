@@ -1,0 +1,14 @@
+<head>
+    <title>
+        Music Library (Versão Inicial)
+        
+<body>
+    <div class="container">
+        <img src=@{StaticR album_jpg}>
+        <form id="form_simples" method=post action=@{x} enctype=#{enctype}>
+            <h2>#{y}
+            ^{widget}
+            <input type="submit" value="Salvar" class="salvar">
+            <br>
+            <div class="rodape">
+                <a href=@{MenuR}>Menu
