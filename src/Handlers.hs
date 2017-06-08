@@ -127,11 +127,16 @@ getArtistaLstR = do
              defaultLayout $ do 
              [whamlet|
                  <h1> Artistas cadastrados:
-                 $forall Entity vid vertente <- listaA
-                     <a href=@{AristasIdR vid}> #{artistasNome vertente} 
+                 $forall Entity vid artista <- listaA
+                     <a href=@{ArtistaIdR vid}> #{artistasNome artista} 
                      <form method=post action=@{ArtistaIdR vid}> 
                          <input type="submit" value="Deletar"><br>
-
+             |] 
+             toWidget [lucius|
+                form  { display:inline; }
+                input { background-color: #ecc; border:0;}
+             |]
+             
 getMusicaR :: Handler Html
 getMusicaR = do
              (widget, enctype) <- generateFormPost formMusicas
