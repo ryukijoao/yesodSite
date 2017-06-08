@@ -158,8 +158,7 @@ getMusicaLstR = do
                 form  { display:inline; }
                 input { background-color: #ecc; border:0;}
              |]
-
-             
+    
 getMusicaR :: Handler Html
 getMusicaR = do
              (widget, enctype) <- generateFormPost formMusicas
@@ -173,6 +172,24 @@ getMusicaIdR mid = do
              defaultLayout [whamlet| 
                  <h1> Música #{musicasNome musica}
              |]             
+
+getAlbumLstR :: Handler Html
+getAlbumLstR = do
+             listaA <- runDB $ selectList [] [Asc AlbunsNome]
+             defaultLayout $ do 
+             addStylesheet $ StaticR listagemsimples_css
+             [whamlet|
+                <div class="container">
+                    <h1> Álbuns cadastrados:
+                    $forall Entity vid album <- listaA
+                        <a href=@{AlbumIdR vid}> #{albunsNome album} 
+                        <form method=post action=@{AlbumIdR vid}> 
+                            <input type="submit" value="Deletar"><br>
+             |] 
+             toWidget [lucius|
+                form  { display:inline; }
+                input { background-color: #ecc; border:0;}
+             |] 
 
 getAlbumR :: Handler Html
 getAlbumR = do

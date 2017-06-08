@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 19:26:46.223226 UTC
+2017-06-08 19:43:15.533828 UTC
 
 interface main@main:Application [orphan module] 8002
-  interface hash: 1e459a8d10e1048a2ba7d597437d4220
-  ABI hash: d9223f38542c2bf7d11bea34611de720
-  export-list hash: 8b03b9bda2c1a607353f5372d42f449e
-  orphan hash: c4af945abf8e5c8dbf02c1872075e8b3
+  interface hash: 2ae17c1ebee43a9aaa271210ab51b61b
+  ABI hash: 62a5e7e6c053d99b744d546fa159caf4
+  export-list hash: c7e71e6f837244f6dcd7fd59bd6f6b66
+  orphan hash: e80c1450a57f5f4eab03be10a806be5f
   flag hash: cea58010d6f822e09f76168887728323
   sig of: Nothing
   used TH splices: True
@@ -241,84 +241,86 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HhuV3U7exg79Uml
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  Foundation 0b280f4674d0d5c741cac530c34921d3
-  exports: 7f3426960171b9d38715a28ba08c618d
-  AdminR f98b66f69cc0a9502b8b5dbbf84f661f
-  AlbumIdR 26c0579746314410836243a40020aa02
-  AlbumMusR e4fbb38c4d18aade0ebd884977a7e372
-  AlbumR ebd51a26062b8ed8f4dea7e7ce526f5b
-  ArtistaIdR 4cbf9bfcfcd248df73b1655992c2adb2
-  ArtistaLstR 4f38bd6e0ff6565c2543baa036675c44
-  ArtistaR 34e20148b2c2c58cc439df4fa6fefd55
-  CadastroR 2fd863dd291d9e6c0ff3e1af87f31992
-  DeptoR f7d8f593458f38303953f46ac134ea30
-  HelloR 2adeb4598e1dc7e647873cf45b896b6c
-  HomeR c2260b0d2c11b332207933e38bc0fb5a
-  ListarR a9db5acc409fa6e9354ed45b174ea259
-  LoginR 321d6f62c3f6ff64090d9b99b6b8a18d
-  LogoutR a6d827f1868f7b5b547bcc533a1048fd
-  MenuR 356a21bdc100a44eb2aba6d4b457bbe6
-  MusicaIdR 4db1935a1e951121280e0a1a0a6c465f
-  MusicaLstR 96362942f1756d7bfe4a64a77d9ddd14
-  MusicaR d25a2b5c985b768812344b38924f3061
-  Pag1R 592e031efb06f90b1780a1d07ef84698
-  Pag2R 1997358619ba904a515a199a4a63c66f
-  Pag3R 4f49e111b4cd8df60da7f4ebe43dd916
-  Pag4R 6d8ecf56b66332bab743567c9746d1ac
-  PessoaR 519bee8d7ba879641af75a12a8a0d2af
-  Sitio 05ce9dec0d9fb7a9fa52926688e47418
-  StaticR 92557f82f81e1bb48426ce906a0e8333
-  TesteR 366d470982c40896d916942b93af1830
-  UsuarioR 0dafe9aef687e4b1cd233cf80540ffb3
-  VertenteIdR 27b1f5f3a5e6b68bfe09fb78fdb06b28
-  VertenteLstR 6ca76deb4db1337e70fc0614750d18e1
-  VertenteR df2f52a966da1e4c0cd29e1c238195be
-  getStatic 70c57ae8a2c0760807d42b1dd421d762
-  resourcesSitio 1279810ec5e96273d8b1daa127d45ceb
-import  -/  Front 40a7e8a588de6728ef7b79280019a6dc
+import  -/  Foundation 587a1df05385bfbdb92794830fd0ee2a
+  exports: 33664001d97ac59c75d2e92d9a467971
+  AdminR c4787a0b3f516620c5332a4f84f5c99c
+  AlbumIdR cfb61998ff2b9b533eef42157a10ac4e
+  AlbumLstR 8ebc76a45b7f41444f36a0f939bcef61
+  AlbumMusR 6239f0b149c26abf9e7875cf4d5e2fe0
+  AlbumR 9e745d46609bb208a8b73cca201cf1ee
+  ArtistaIdR ef8d06e4490a0b8c201a3a23be6d3423
+  ArtistaLstR 3baf92d1b79fef10d7397646db32621c
+  ArtistaR aa12575d1e185cd419bbd62d568f0824
+  CadastroR 86181bc3004bd3f9093df8dc32fde391
+  DeptoR e79a6b6d9497234cea3d356a60468ac5
+  HelloR 0e372c5672e58fb7c74ad7cce4ebf9e2
+  HomeR b3624c5683990a2b7e0b48479739f72d
+  ListarR 1aa04c1a430a2d902b1cd5517bc20a11
+  LoginR 8faf4b148822008f48c7e7c28df31159
+  LogoutR 68437cc1931b073b1b182c9f0286d3c5
+  MenuR 088c6d784ec5a842c5c09d23e666198e
+  MusicaIdR 9b622a8b32d54502f642fd2dd8bdb1e8
+  MusicaLstR 1dce5b51ce240d34d30a2dd93c86e78e
+  MusicaR 91507b1b89164a5cba619e5fde4c8bd1
+  Pag1R a5c54cc1af355d2a6280aa45a06288f5
+  Pag2R 10251e0a426a454d490acf4e8cd38572
+  Pag3R 5ffe02e8703bb0688b3c83365eb8ef3f
+  Pag4R 5608133a33bd3bfdc97aaf13d97a6c3d
+  PessoaR 1feeee4bafa525abc90b028f4df5b0b8
+  Sitio 27818f0ef025727f72d8b06a42cde803
+  StaticR f81e538d6dc1180db80e46bf364301df
+  TesteR 761fc6bf57ab294a951e447c8c4ae6f6
+  UsuarioR 39989e223615ec50d65405a88d63bd9d
+  VertenteIdR ac480faa4172812565f5f6b7582c8c37
+  VertenteLstR 618eff83415f688cd9027f6c5c7380ca
+  VertenteR 36f3cdd8c32e444bfb95c876c839e6d2
+  getStatic 683af589d175edbce4fb48dedfbccfaf
+  resourcesSitio a3e0d70c8343c509d1fc6e40b998f932
+import  -/  Front 9e872389628dbd7ac8cf6f27dfd0bf33
   exports: 1c910ed9e61e5180cd0d65bd47380aee
-  getHomeR 6cb0dc36caa7c0936ce6c616bbe561b5
-  getMenuR 8ce55a0592d49cc0c94fc8947c44a351
-  getPag1R 7bddd8c93c722fe2be665893bdd48444
-  getPag2R 3e157238cadf3284ef59143b3863c7a0
-  getPag3R 1aa313e6a7717d28c7c9560619edf5d3
-  getPag4R f74cd254ae01c0bcdfed9a79c9830029
-  getTesteR 01a53ab8f3eb0fdc5b5aaa0ba903baa4
-import  -/  Handlers eed4d59195bee8d16be12468fe15d127
-  exports: ba817b67eb834c9b8177dcadda3b79f0
-  getAlbumIdR fa0179782c685531379dda6baf0e6a8a
-  getAlbumMusR a56635a4c1e16f005a657f1e3674e5a4
-  getAlbumR 96275dfa23b4f06b3dbdd62b31aedbcf
-  getArtistaIdR 5ce7f8f90e745eafbd802aea65c1737a
-  getArtistaLstR 56527200435a35e3535b0eb188fcf0f3
-  getArtistaR 7dac79ee52723f341ad551ee238515b0
-  getCadastroR c4150006c8fb551e967eef5e88a33636
-  getDeptoR ef1bfe107fe7cb519780f831b51cadad
-  getHelloR ee7b39ece645f0e84758180aa43bb49e
-  getListarR 1e3c3ff18d17e7df3802b10b9cc73c9d
-  getMusicaIdR 32045c7bed59c5b48af69d415dacfec6
-  getMusicaLstR c999436e618942582e746a4e4826866c
-  getMusicaR f59ccc6d10b8f06669594c908bca4ac3
-  getPessoaR 9b88aeb485022728d4aabcc57d6ab630
-  getVertenteIdR 9f794da68be754c16f0792c1604e1131
-  getVertenteLstR 519dda873347f291b291b2442f04b95c
-  getVertenteR d849c56446281fd59d0b0fe440e18218
-  postAlbumMusR 74425f7113fe9a9507e4ac5c8452a308
-  postAlbumR 2fe7cf8af010fe26c924850d785976c3
-  postArtistaR 2b2be39dca0ad9c58153160cdf10dbd7
-  postCadastroR ffdd97d75d99d20a86d8df69d3235a66
-  postDeptoR 01678016b9ed654ec10bbca217562102
-  postMusicaR 549498bb7b8b50fb52e7db03dddaf316
-  postPessoaR 0c4c95935f36ce8fe764a4fdf1d7d0cb
-  postVertenteR a4c0dbeb9895451c60185a5fe55464b4
-import  -/  Usuario 2ed58acc5c1d18c67a6f66e7f17c4aaa
-  exports: de867d12f094e51352fac2d4479bb8c2
-  getAdminR b3507c69adea7cddd4221df7e85fe3d9
-  getLoginR c0f03b1dc8007a014d6101eea41e7a77
-  getUsuarioR 605a5d577fb97810295d27c06d42d7b4
-  postLoginR 0588f573d51a757f9b4ae7c0546c40fb
-  postLogoutR 1e8b88b3a157f3ef82ce6ae8e73d1c25
-  postUsuarioR 3a738b9ea45356b4478d17121b577907
+  getHomeR d7789cf7b711fc2a7d0eda23c090b830
+  getMenuR 086a7b46d9ed93ef24766655120f29d8
+  getPag1R 17ab70d9466e8053a016d6680eff597f
+  getPag2R 64f7e34b571b3f1f6a24bec54ddaf486
+  getPag3R 3aa7bc2d3a64c25c15da590acfc2fd7b
+  getPag4R 6516bbb09e96a5def4bbff8be475efca
+  getTesteR 472db30145c28ac1f87235c65f01171c
+import  -/  Handlers 53c4c8ad50b68cddc4d3e4629e614563
+  exports: 5395deff3f9d325fe43394dd35909bcd
+  getAlbumIdR fec3127c24ff34af48fc7c2ee502ecd6
+  getAlbumLstR 6cb982f3dd1218fff4b14764267d5c1d
+  getAlbumMusR b0e12b82d1ac98902fb4734d6414244d
+  getAlbumR 893da8672af571b086b4039ad8687f63
+  getArtistaIdR 4b0aeef91cf79797a0aed70cf0ac6f86
+  getArtistaLstR 832fe2aa962a15cacb0f84cdfbda032d
+  getArtistaR 453a05bf497e33076e79cf533003c611
+  getCadastroR 3f14c6785446c674f7754b57f62a21d1
+  getDeptoR 34626d8c264216ad9f48dd3e056f51d9
+  getHelloR abfb08d92f69d8f23f37effd69952460
+  getListarR 046e72020601eff90501aa4d03886adb
+  getMusicaIdR 648d71c4ae364cba38a834e6dafafb19
+  getMusicaLstR 62a7a3c054703594b9cbec44ea513742
+  getMusicaR 85497b6d1a6fc43ebcb96346d83445f0
+  getPessoaR f361347582977699c67655291ba4f217
+  getVertenteIdR bd99d256c9be08f211a6577b95df50d1
+  getVertenteLstR 4ae952113e8f674ea63782da40666a6b
+  getVertenteR 49d6339572c2b2560eef477f6cb7d065
+  postAlbumMusR 9d0ef84c3c2be4dd502ea9f215ccfbe0
+  postAlbumR a0bc1627798f94af9917177a44134528
+  postArtistaR 98792fc723c4ea9d617eb2bba8540ce6
+  postCadastroR f2436d7cd8a9cea080e7cd8776d67167
+  postDeptoR eb8c24601f898ff6bd8f40e5565fc5ea
+  postMusicaR b198900bfa2824b13ae1eba0eb1a619e
+  postPessoaR 200ae64b40610578cb90ff54ecbea0ce
+  postVertenteR cbf2d2e94044419d5652d150286d80ce
+import  -/  Usuario 506c08ee4fa60d8dc030bf4b00dc3086
+  exports: cf76a8c9a4f14a14f3880036cbd4c934
+  getAdminR e3b3a5ce7cccfb5f8893cd37c91fcca7
+  getLoginR 0d0b3fb73ae49c451262871b2c506676
+  getUsuarioR 4d53065698b9dc3d9264ec9de238dd00
+  postLoginR b38a4526fd1970ac700f582cb787e857
+  postLogoutR ab0a30061d9c4c01ffbdeb3a4662e435
+  postUsuarioR 2f6f9b391d04f71a0ce6b317b20f5bfc
 import  -/  path-pieces-0.2.1@path-pieces-0.2.1-7jYjtDsNHN0JfYriIYgB3j:Web.PathPieces 0123255d6212c65b166a375593692cdb
 import  -/  wai-3.2.1.1@wai-3.2.1.1-H6cJdoNnPqk1Ch333qtaPo:Network.Wai.Internal 597f41c5e3aba63b73bc45fb957a23c6
 import  -/  yesod-1.4.5@yesod-1.4.5-Gjjcx4wipmk9Grx3eCz8hV:Yesod 9b32a342acc9baee13df0be07e3d39c5
@@ -330,7 +332,7 @@ import  -/  yesod-core-1.4.33@yesod-core-1.4.33-8AMCPxWRGte91vFglpHrX8:Yesod.Cor
 addDependentFile "/home/user/.stack/programs/x86_64-linux/ghc-8.0.2/lib/ghc-8.0.2/include/ghcversion.h"
 addDependentFile ".stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/autogen/cabal_macros.h"
 addDependentFile "/usr/include/stdc-predef.h"
-83e1c850684f22069e6db765ce1bc54f
+8d3e0f10fd9878820e97e91958d01810
   $fYesodDispatchSitio ::
     Yesod.Core.Class.Dispatch.YesodDispatch Foundation.Sitio
   DFunId
@@ -339,7 +341,7 @@ addDependentFile "/usr/include/stdc-predef.h"
                   @ Foundation.Sitio
                   Foundation.$fYesodSitio
                   Application.$fYesodDispatchSitio_$cyesodDispatch -}
-0fde3220c6b14873a4d6eee43dee1c9e
+b7819315b9adaa99b52170584cc12b8e
   $fYesodDispatchSitio_$cyesodDispatch ::
     Yesod.Core.Types.YesodRunnerEnv Foundation.Sitio
     -> Network.Wai.Application
@@ -405,7 +407,7 @@ f3c93ad02316e1c7fc42c61eae963c85
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-ac095a621a1422c5fe757edc30942039
+29acae9e4c99e93105fe4c15a4647eef
   $w$cyesodDispatch ::
     Yesod.Core.Types.YesodRunnerEnv Foundation.Sitio
     -> Network.HTTP.Types.Method.Method

@@ -47,7 +47,7 @@ getMenuR = defaultLayout $ do
                     <ul>
                         <li><a href=@{AlbumR}>Novo álbum
                         <li><a href=@{AlbumMusR}>Adicionar música
-                        <li><a href=@{ArtistaR}>Exibir álbuns
+                        <li><a href=@{AlbumLstR}>Exibir álbuns
                     
                 <li><a>Vertentes
                     <ul>

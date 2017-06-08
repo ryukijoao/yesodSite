@@ -25,6 +25,7 @@
 /albuns                 AlbumR      GET POST
 /albuns/#AlbunsId       AlbumIdR    GET
 /albunsmusicas          AlbumMusR   GET POST
+/listaralbuns           AlbumLstR   GET
 
 /musicas                MusicaR     GET POST
 /musicas/#MusicasId     MusicaIdR   GET
