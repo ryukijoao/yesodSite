@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 16:39:33.430777 UTC
+2017-06-08 17:24:45.030957 UTC
 
 interface main@main:Usuario 8002
-  interface hash: 094619226abfe49aed24ef2477ba79bb
+  interface hash: f86578ee7b5c4b9ba728b613bf0802bc
   ABI hash: 1b483c558c963c1e9cee3cfe6804eb7c
   export-list hash: b2a451f0d5112378c05e364bd0fbf7ee
   orphan hash: 0579c23ef88e9a2a5bb39df6d8e056b6
@@ -254,8 +254,8 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 077d25a0f6419ffec5ab429291500047
-  exports: da55cf6bddb1af76da91ff6ddb294541
+import  -/  Foundation 49b550bc5fd255ad3b3d72f9fd532034
+  exports: abf0d926ff3e3cbee5d363c4b79f95cc
   Form b6c1eb8481be3a6f17f1b6f1372b8aa5
   Handler b2ca494a28597ee48d05304fe5de3e34
   LoginR d4d6c8d6bce8f413964e2a375fd38104

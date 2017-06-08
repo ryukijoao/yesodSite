@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 16:46:57.689946 UTC
+2017-06-08 17:24:39.909497 UTC
 
 interface main@main:Handlers 8002
-  interface hash: dd0d103b3b84c417241e40d9a94513b8
-  ABI hash: 6bc9f9a0bdea688b7dcc47a76d19fe56
+  interface hash: 17b4e5b49497ecfe4abbfb106c236417
+  ABI hash: d30165c587d7dfc9e6129a44261e2c2d
   export-list hash: 25d891e3eaa47b307aac404b7ba77fb9
   orphan hash: f513ec7de02c11cd6b411f0ad9c72596
   flag hash: cea58010d6f822e09f76168887728323
@@ -282,8 +282,8 @@ import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  blaze-html-0.8.1.3@blaze-html-0.8.1.3-4x5sR7CihaZBuBa398ibiy:Text.Blaze.Html 288dbf097dbd0ff17b50c3c1330477db
 import  -/  blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-7tIWNv8iALFJhJ4kVxNmNT:Text.Blaze.Internal 52ba665013f4dfa6d731e8584348806e
-import  -/  Foundation 077d25a0f6419ffec5ab429291500047
-  exports: da55cf6bddb1af76da91ff6ddb294541
+import  -/  Foundation 49b550bc5fd255ad3b3d72f9fd532034
+  exports: abf0d926ff3e3cbee5d363c4b79f95cc
   AlbumMusR c53910c3b6a482abae2e7e8ade794d7d
   AlbumR b329194c2e6a16bc4ad30451d16ea5fd
   Albuns 9bc5ef425a07775d0f02f87079bb8dc4
@@ -327,9 +327,10 @@ import  -/  Foundation 077d25a0f6419ffec5ab429291500047
   albunsNome d78a981eda6758a1fa646b270c0ac85e
   artistasNome c92880ce039a888b1b370f294146e387
   cadastromusica_css 4a25a659fda7b01fb06ce98e056fb6ff
-  cadastrosimples_css c7e3257a6dff74410091aaa99b7da481
+  cadastrosimples_css 9254c3716486fe3221c98d333b163d71
   departamentoNome f63cb7e47fee07fba9514f58216e08db
   departamentoSigla be53b1110fed0671cf69b1bea7744088
+  listagemsimples_css a74b5a84bb32ce5fdaf4da0984d00876
   musicasNome ad3f4a2dc77aef4290b39e8c95d3bcfd
   pessoaDeptoid daa5a9f863f9ce2317f224e3de5c95f5
   pessoaIdade ab037591677b9a8258253974d601466e
@@ -3221,7 +3222,7 @@ b093558791b7937fab69ade475c679c7
                                            (Yesod.Core.Types.HandlerT
                                               Foundation.Sitio GHC.Types.IO))],
                                   Yesod.Form.Types.Ints, Yesod.Form.Types.Enctype)>_N)))) -}
-7eb10d263778aed8484dfbdc822bcc4a
+6cf9ebbc9772e4aad37da5d1687b86c9
   getAlbumIdR ::
     Foundation.AlbunsId -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,U>,
@@ -3347,7 +3348,7 @@ b093558791b7937fab69ade475c679c7
                            x7
                        } in
                        let {
-                         lvl142 :: ()
+                         lvl145 :: ()
                                    -> Yesod.Core.Types.HandlerData
                                         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                                    -> GHC.Types.IO
@@ -3423,7 +3424,7 @@ b093558791b7937fab69ade475c679c7
                                                                  <Foundation.Sitio>_N)))_R)_R)_R))
                                (Sym (Yesod.Core.Types.N:WidgetT[0]
                                          <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                          lvl142
+                          lvl145
                             `cast`
                           (<()>_R
                            ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -3692,7 +3693,7 @@ f2225c76024d309134fb17012e504973
   {- Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.getAlbumIdR10) -}
-4ca1e3e6cdcf7a466c2460320c3f6de4
+fbe2918b73d1d82b2171eb7e4a2886d7
   getAlbumMusR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -3706,7 +3707,7 @@ f2225c76024d309134fb17012e504973
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-f5114cfe7e2eb5a05b9f2e6e33798582
+429f7e350ea8f8cb16d6a4ce382a09d2
   getAlbumMusR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -3729,7 +3730,7 @@ f5114cfe7e2eb5a05b9f2e6e33798582
                         s of ds8 { (#,#) ipv ipv1 ->
                  case ipv1 of wild { (,) widget enctype ->
                  let {
-                   lvl142 :: ()
+                   lvl145 :: ()
                              -> Yesod.Core.Types.HandlerData
                                   Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                              -> GHC.Types.IO
@@ -3772,7 +3773,7 @@ f5114cfe7e2eb5a05b9f2e6e33798582
                                                                <Foundation.Sitio>_N)))_R)_R)_R))
                              (Sym (Yesod.Core.Types.N:WidgetT[0]
                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                        lvl142
+                        lvl145
                           `cast`
                         (<()>_R
                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -3788,7 +3789,7 @@ f5114cfe7e2eb5a05b9f2e6e33798582
                    `cast`
                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                    ipv } }) -}
-ee21030bb8c1309de7a28a754f733464
+29a88af84f039a5007a4bab85e9e39c9
   getAlbumMusR2 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -3805,7 +3806,7 @@ ee21030bb8c1309de7a28a754f733464
                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Handlers.getAlbumMusR3 eta37) -}
-422dfec9dcb6c3f22f1265629b2d1dbc
+ff03a59ef344a0ee58f32e4646a21461
   getAlbumMusR3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -3941,7 +3942,7 @@ a2f6a54d22e994b212427fe0cd211505
                                                   <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-d33f2da14146b9a1ab7737fee9b50676
+05c8778c1a1da8c343e63ea7e78814c5
   getAlbumR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -3955,7 +3956,7 @@ d33f2da14146b9a1ab7737fee9b50676
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-dd4ca482be940853d3267def3a6d8f46
+a22156984d403a574dbdd1326f3d72c7
   getAlbumR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -3978,7 +3979,7 @@ dd4ca482be940853d3267def3a6d8f46
                         s of ds8 { (#,#) ipv ipv1 ->
                  case ipv1 of wild { (,) widget enctype ->
                  let {
-                   lvl142 :: ()
+                   lvl145 :: ()
                              -> Yesod.Core.Types.HandlerData
                                   Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                              -> GHC.Types.IO
@@ -4021,7 +4022,7 @@ dd4ca482be940853d3267def3a6d8f46
                                                                <Foundation.Sitio>_N)))_R)_R)_R))
                              (Sym (Yesod.Core.Types.N:WidgetT[0]
                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                        lvl142
+                        lvl145
                           `cast`
                         (<()>_R
                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -4069,7 +4070,7 @@ dd4ca482be940853d3267def3a6d8f46
                                                   <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-885e7201741193efa33abfd186857f89
+5e35e3f9f72a203ca7a8bb8391f25c35
   getArtistaIdR ::
     Foundation.ArtistasId -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,U>,
@@ -4195,7 +4196,7 @@ dd4ca482be940853d3267def3a6d8f46
                            x7
                        } in
                        let {
-                         lvl142 :: ()
+                         lvl145 :: ()
                                    -> Yesod.Core.Types.HandlerData
                                         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                                    -> GHC.Types.IO
@@ -4271,7 +4272,7 @@ dd4ca482be940853d3267def3a6d8f46
                                                                  <Foundation.Sitio>_N)))_R)_R)_R))
                                (Sym (Yesod.Core.Types.N:WidgetT[0]
                                          <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                          lvl142
+                          lvl145
                             `cast`
                           (<()>_R
                            ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -4427,7 +4428,7 @@ b870eca50b335fa4e62916a009c5ab9c
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.getArtistaIdR3) -}
-769afd3673eee851c08e3c86cb19224b
+fdadd129d74c10c89f4eddd8c428151c
   getArtistaLstR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -4441,7 +4442,7 @@ b870eca50b335fa4e62916a009c5ab9c
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-fc46786ab7547da4064a27d4a7e732f4
+e2263e4cdc1f23b1ec9cb78bd2fff032
   getArtistaLstR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -4453,7 +4454,7 @@ fc46786ab7547da4064a27d4a7e732f4
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Foundation.$fYesodPersistSitio1
                         @ [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
-                        Handlers.getArtistaLstR40
+                        Handlers.getArtistaLstR49
                           `cast`
                         (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
                                   <*>_N
@@ -4463,26 +4464,70 @@ fc46786ab7547da4064a27d4a7e732f4
                                       Foundation.Artistas]>_N))
                         r
                         s of ds8 { (#,#) ipv ipv1 ->
-                 let {
-                   lvl142 :: ()
-                             -> Yesod.Core.Types.HandlerData
-                                  Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
-                             -> GHC.Prim.State# GHC.Prim.RealWorld
-                             -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                   ((),
-                                    Yesod.Core.Types.GWData
-                                      (Yesod.Routes.Class.Route Foundation.Sitio)) #)
-                     {- Arity: 3 -}
-                   = \ (ds9 :: ())
-                       (eta36 :: Yesod.Core.Types.HandlerData
-                                   Foundation.Sitio
-                                   (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot]
-                       (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                     Handlers.getArtistaLstR39 ipv1 eta36 eta37
-                 } in
                  ((Foundation.$fYesodSitio_$cdefaultLayout
                      (let {
                         m2 :: Yesod.Core.Types.HandlerData
+                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                              -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                    ((),
+                                     Yesod.Core.Types.GWData
+                                       (Yesod.Routes.Class.Route Foundation.Sitio)) #)
+                          {- Arity: 2 -}
+                        = Handlers.getArtistaLstR48 ipv1
+                      } in
+                      let {
+                        lvl145 :: ()
+                                  -> Yesod.Core.Types.HandlerData
+                                       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+                                  -> GHC.Types.IO
+                                       ((),
+                                        Yesod.Core.Types.GWData
+                                          (Yesod.Routes.Class.Route Foundation.Sitio))
+                          {- Arity: 2 -}
+                        = \ (ds9 :: ())
+                            (eta36 :: Yesod.Core.Types.HandlerData
+                                        Foundation.Sitio
+                                        (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot] ->
+                          Yesod.Core.Types.$fApplicativeWidgetT3
+                            @ GHC.Types.IO
+                            @ Foundation.Sitio
+                            GHC.Base.$fMonadIO
+                            @ ()
+                            @ ()
+                            m2
+                              `cast`
+                            (Trans
+                                 (<Yesod.Core.Types.HandlerData
+                                     Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                                  ->_R Sym (GHC.Types.N:IO[0]
+                                                <((),
+                                                  Yesod.Core.Types.GWData
+                                                    (Yesod.Routes.Class.Route
+                                                       Foundation.Sitio))>_R))
+                                 (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                           <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                            Handlers.getArtistaLstR41
+                              `cast`
+                            (<()>_R
+                             ->_R Trans
+                                      (<Yesod.Core.Types.HandlerData
+                                          Foundation.Sitio
+                                          (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                                       ->_R Sym (GHC.Types.N:IO[0]
+                                                     ((,)
+                                                        <()>_R
+                                                        (Yesod.Core.Types.GWData
+                                                           (Yesod.Routes.Class.Route
+                                                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                                                        <GHC.Types.IO>_N
+                                                                        <Foundation.Sitio>_N)))_R)_R)_R))
+                                      (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                                <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                            eta36
+                      } in
+                      let {
+                        m3 :: Yesod.Core.Types.HandlerData
                                 Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                               -> GHC.Types.IO
                                    ((),
@@ -4498,7 +4543,7 @@ fc46786ab7547da4064a27d4a7e732f4
                             GHC.Base.$fMonadIO
                             @ ()
                             @ ()
-                            Handlers.getArtistaLstR34
+                            Handlers.getArtistaLstR36
                               `cast`
                             (Trans
                                  (<Yesod.Core.Types.HandlerData
@@ -4513,20 +4558,37 @@ fc46786ab7547da4064a27d4a7e732f4
                                                                    <Foundation.Sitio>_N)))_R)_R)_R))
                                  (Sym (Yesod.Core.Types.N:WidgetT[0]
                                            <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                            lvl142
+                            lvl145
                               `cast`
                             (<()>_R
-                             ->_R Trans
-                                      (<Yesod.Core.Types.HandlerData
-                                          Foundation.Sitio
-                                          (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
-                                       ->_R Sym (GHC.Types.N:IO[0]
-                                                     <((),
-                                                       Yesod.Core.Types.GWData
-                                                         (Yesod.Routes.Class.Route
-                                                            Foundation.Sitio))>_R))
-                                      (Sym (Yesod.Core.Types.N:WidgetT[0]
-                                                <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                             ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
+                                           <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
+                            eta36
+                      } in
+                      let {
+                        lvl146 :: ()
+                                  -> Yesod.Core.Types.HandlerData
+                                       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+                                  -> GHC.Types.IO
+                                       ((),
+                                        Yesod.Core.Types.GWData
+                                          (Yesod.Routes.Class.Route Foundation.Sitio))
+                          {- Arity: 2 -}
+                        = \ (ds9 :: ())
+                            (eta36 :: Yesod.Core.Types.HandlerData
+                                        Foundation.Sitio
+                                        (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot] ->
+                          Yesod.Core.Types.$fApplicativeWidgetT3
+                            @ GHC.Types.IO
+                            @ Foundation.Sitio
+                            GHC.Base.$fMonadIO
+                            @ ()
+                            @ ()
+                            m3
+                              `cast`
+                            (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                      <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
+                            Handlers.getArtistaLstR4
                             eta36
                       } in
                       (\ (eta36 :: Yesod.Core.Types.HandlerData
@@ -4537,11 +4599,26 @@ fc46786ab7547da4064a27d4a7e732f4
                          GHC.Base.$fMonadIO
                          @ ()
                          @ ()
-                         m2
-                           `cast`
-                         (Sym (Yesod.Core.Types.N:WidgetT[0]
-                                   <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
                          Handlers.getArtistaLstR2
+                           `cast`
+                         (Trans
+                              (<Yesod.Core.Types.HandlerData
+                                  Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                               ->_R Sym (GHC.Types.N:IO[0]
+                                             ((,)
+                                                <()>_R
+                                                (Yesod.Core.Types.GWData
+                                                   (Yesod.Routes.Class.Route
+                                                      (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                                                <GHC.Types.IO>_N
+                                                                <Foundation.Sitio>_N)))_R)_R)_R))
+                              (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                         lvl146
+                           `cast`
+                         (<()>_R
+                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
+                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
                          eta36)
                         `cast`
                       (Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -4553,30 +4630,61 @@ fc46786ab7547da4064a27d4a7e732f4
                    `cast`
                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                    ipv }) -}
-c34631dea87971f0fe86dae536ec83fb
+f04c6be7dded90d692655704d71aa022
   getArtistaLstR10 ::
-    [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
-                   Handlers.getArtistaLstR17
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
                    Handlers.getArtistaLstR11) -}
-f92c3d4d67f1a961bbb91b688d0ec723
+7bc4d003d56934b34b0f0689fa6a841f
   getArtistaLstR11 ::
+    Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.getArtistaLstR24
+                     `cast`
+                   (Trans
+                        (forall (s :: <*>_N).
+                         <Data.Text.Internal.Builder.Buffer s
+                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
+                        (Trans
+                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
+                             (Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0])))))
+                   Handlers.getArtistaLstR12
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+9f8e85decbb516dc26a1453e688af43a
+  getArtistaLstR12 ::
     [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
-                   Handlers.getArtistaLstR12
+                   Handlers.getArtistaLstR19
+                   Handlers.getArtistaLstR13) -}
+a4ca2c496de87fa1f5e9b24ec742bfd0
+  getArtistaLstR13 ::
+    [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.getArtistaLstR14
                    (GHC.Types.[]
                       @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
-b8b2cf8144774bf9e7e4197b8dedda2d
-  getArtistaLstR12 ::
+1dd459efaf8e1abee6874a43ff31e116
+  getArtistaLstR14 ::
     Text.Internal.Css.Attr Text.Internal.Css.Resolved
   {- Strictness: m,
      Unfolding: (Text.Internal.Css.Attr
                    @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR15
+                   Handlers.getArtistaLstR17
                      `cast`
                    (Trans
                         (forall (s :: <*>_N).
@@ -4587,7 +4695,7 @@ b8b2cf8144774bf9e7e4197b8dedda2d
                         (Trans
                              (Sym (Data.Text.Internal.Builder.N:Builder[0]))
                              (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))
-                   Handlers.getArtistaLstR13
+                   Handlers.getArtistaLstR15
                      `cast`
                    (Trans
                         (forall (s :: <*>_N).
@@ -4598,33 +4706,7 @@ b8b2cf8144774bf9e7e4197b8dedda2d
                         (Trans
                              (Sym (Data.Text.Internal.Builder.N:Builder[0]))
                              (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))) -}
-6bc59d282ae0b474fd417c7cf8b7229f
-  getArtistaLstR13 ::
-    (Data.Text.Internal.Builder.Buffer s
-     -> GHC.ST.ST s [Data.Text.Internal.Text])
-    -> Data.Text.Internal.Builder.Buffer s
-    -> GHC.Prim.State# s
-    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
-  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
-     Unfolding: InlineRule (3, True, False)
-                (\ @ s
-                   (eta36 :: Data.Text.Internal.Builder.Buffer s
-                             -> GHC.ST.ST s [Data.Text.Internal.Text])
-                   (eta37 :: Data.Text.Internal.Builder.Buffer s)
-                   (eta38 :: GHC.Prim.State# s)[OneShot] ->
-                 ((Text.Internal.Css.fromText Handlers.getArtistaLstR14)
-                    `cast`
-                  (Data.Text.Internal.Builder.N:Builder[0])
-                    @ s
-                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> eta36 buf)
-                    eta37)
-                   `cast`
-                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
-                   eta38) -}
-08ab3f48656a0d7cc2389443ca4839d0
-  getArtistaLstR14 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "0"#) -}
-1922448e621bdcfbf8ad926516f8647f
+660f4c27f7bc5c93f22429a72b357244
   getArtistaLstR15 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
@@ -4647,39 +4729,11 @@ b8b2cf8144774bf9e7e4197b8dedda2d
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-e8ce9c60eeabd838091ac8ee689a45e0
+b9994eea05431f4f41e33d27d42bb826
   getArtistaLstR16 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "border"#) -}
-41225b041dafbfaf078f02280531a4ee
+  {- Unfolding: (Data.Text.Show.unpackCString# "0"#) -}
+73ac735530fa5a9041be0aefe908e199
   getArtistaLstR17 ::
-    Text.Internal.Css.Attr Text.Internal.Css.Resolved
-  {- Strictness: m,
-     Unfolding: (Text.Internal.Css.Attr
-                   @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR20
-                     `cast`
-                   (Trans
-                        (forall (s :: <*>_N).
-                         <Data.Text.Internal.Builder.Buffer s
-                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
-                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
-                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
-                        (Trans
-                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
-                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))
-                   Handlers.getArtistaLstR18
-                     `cast`
-                   (Trans
-                        (forall (s :: <*>_N).
-                         <Data.Text.Internal.Builder.Buffer s
-                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
-                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
-                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
-                        (Trans
-                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
-                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))) -}
-f6e6e4612d3b15f57b0cb90455e2ae29
-  getArtistaLstR18 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
     -> Data.Text.Internal.Builder.Buffer s
@@ -4692,7 +4746,7 @@ f6e6e4612d3b15f57b0cb90455e2ae29
                              -> GHC.ST.ST s [Data.Text.Internal.Text])
                    (eta37 :: Data.Text.Internal.Builder.Buffer s)
                    (eta38 :: GHC.Prim.State# s)[OneShot] ->
-                 ((Text.Internal.Css.fromText Handlers.getArtistaLstR19)
+                 ((Text.Internal.Css.fromText Handlers.getArtistaLstR18)
                     `cast`
                   (Data.Text.Internal.Builder.N:Builder[0])
                     @ s
@@ -4701,15 +4755,55 @@ f6e6e4612d3b15f57b0cb90455e2ae29
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-170b0fe2dfa108b85d2d06c38b670b09
-  getArtistaLstR19 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "#ecc"#) -}
-d2f7505d6aa503c2b0ad1f91ec5c82dc
+5ffac355782fa6b3c2f256cc8326f60c
+  getArtistaLstR18 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "border"#) -}
+7457750cbc6b943dbf9fb4ef7ab8337d
+  getArtistaLstR19 ::
+    Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.getArtistaLstR22
+                     `cast`
+                   (Trans
+                        (forall (s :: <*>_N).
+                         <Data.Text.Internal.Builder.Buffer s
+                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
+                        (Trans
+                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
+                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))
+                   Handlers.getArtistaLstR20
+                     `cast`
+                   (Trans
+                        (forall (s :: <*>_N).
+                         <Data.Text.Internal.Builder.Buffer s
+                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
+                        (Trans
+                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
+                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))) -}
+012c8225af5359202acd3a3026d8eeae
   getArtistaLstR2 ::
-    () -> Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
-  {- Arity: 1,
-     Unfolding: (\ (ds8 :: ()) -> Handlers.getArtistaLstR3) -}
-f5cbef8845b740ebc845db791364a713
+    Yesod.Core.Types.HandlerData
+      Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Yesod.Core.Types.GWData
+             (Yesod.Routes.Class.Route
+                (Yesod.Core.Class.Handler.HandlerSite
+                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))) #)
+  {- Arity: 2, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (eta36 :: Yesod.Core.Types.HandlerData
+                               Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                   (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Handlers.getArtistaLstR3 eta37) -}
+53353682602d2f769e3ed165ed75862b
   getArtistaLstR20 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
@@ -4732,11 +4826,10 @@ f5cbef8845b740ebc845db791364a713
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-cd7fec9d48b6566e5a9c569365429254
+93fa647c4962d428f4f4f208d6cf642d
   getArtistaLstR21 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString#
-                   "background-color"#) -}
-4f679c8d72831092ced4a3cca38066ab
+  {- Unfolding: (Data.Text.Show.unpackCString# "#ecc"#) -}
+0c6067e3cb4af8c6ec2e4c4e579fc010
   getArtistaLstR22 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
@@ -4759,79 +4852,12 @@ cd7fec9d48b6566e5a9c569365429254
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-b9b22a62ec90bf68f5fa7a7e51d3e841
+fa2f25f46022a2687ebbd1880d0b7648
   getArtistaLstR23 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "input"#) -}
-75fffdafd9804e4052d464ad338c41f7
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "background-color"#) -}
+a82ca043ae23444bf7d4baa55bd176d3
   getArtistaLstR24 ::
-    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
-  {- Strictness: m1,
-     Unfolding: (Text.Internal.Css.TopBlock
-                   @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR25) -}
-53e5f7820a7d740712447b953bfdfdd1
-  getArtistaLstR25 ::
-    Text.Internal.Css.Block Text.Internal.Css.Resolved
-  {- Strictness: m,
-     Unfolding: (Text.Internal.Css.Block
-                   @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR32
-                     `cast`
-                   (Trans
-                        (forall (s :: <*>_N).
-                         <Data.Text.Internal.Builder.Buffer s
-                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
-                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
-                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
-                        (Trans
-                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
-                             (Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0])))))
-                   Handlers.getArtistaLstR26
-                   GHC.Tuple.()
-                     `cast`
-                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
-                   GHC.Tuple.()
-                     `cast`
-                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
-d180676db6f44cb86d390cccb1cef332
-  getArtistaLstR26 ::
-    [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
-                   Handlers.getArtistaLstR27
-                   (GHC.Types.[]
-                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
-aa0efd09a9780167837f04eaf568dece
-  getArtistaLstR27 ::
-    Text.Internal.Css.Attr Text.Internal.Css.Resolved
-  {- Strictness: m,
-     Unfolding: (Text.Internal.Css.Attr
-                   @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR30
-                     `cast`
-                   (Trans
-                        (forall (s :: <*>_N).
-                         <Data.Text.Internal.Builder.Buffer s
-                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
-                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
-                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
-                        (Trans
-                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
-                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))
-                   Handlers.getArtistaLstR28
-                     `cast`
-                   (Trans
-                        (forall (s :: <*>_N).
-                         <Data.Text.Internal.Builder.Buffer s
-                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
-                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
-                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
-                        (Trans
-                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
-                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))) -}
-0f53af0a2159f14ab6adf71cd739906b
-  getArtistaLstR28 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
     -> Data.Text.Internal.Builder.Buffer s
@@ -4844,7 +4870,7 @@ aa0efd09a9780167837f04eaf568dece
                              -> GHC.ST.ST s [Data.Text.Internal.Text])
                    (eta37 :: Data.Text.Internal.Builder.Buffer s)
                    (eta38 :: GHC.Prim.State# s)[OneShot] ->
-                 ((Text.Internal.Css.fromText Handlers.getArtistaLstR29)
+                 ((Text.Internal.Css.fromText Handlers.getArtistaLstR25)
                     `cast`
                   (Data.Text.Internal.Builder.N:Builder[0])
                     @ s
@@ -4853,54 +4879,178 @@ aa0efd09a9780167837f04eaf568dece
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-91447ee0695458d191d03512c8949006
-  getArtistaLstR29 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "inline"#) -}
-d6827d58c485d973cb9d26271726b784
+fff2e00687890688f61c418ddcffed1e
+  getArtistaLstR25 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "input"#) -}
+691d23b98b86c62db44eff8e8269ddc2
+  getArtistaLstR26 ::
+    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
+  {- Strictness: m1,
+     Unfolding: (Text.Internal.Css.TopBlock
+                   @ Text.Internal.Css.Resolved
+                   Handlers.getArtistaLstR27) -}
+4e4740588ecd9d0befb213371d667ae8
+  getArtistaLstR27 ::
+    Text.Internal.Css.Block Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Block
+                   @ Text.Internal.Css.Resolved
+                   Handlers.getArtistaLstR34
+                     `cast`
+                   (Trans
+                        (forall (s :: <*>_N).
+                         <Data.Text.Internal.Builder.Buffer s
+                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
+                        (Trans
+                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
+                             (Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0])))))
+                   Handlers.getArtistaLstR28
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
+                   GHC.Tuple.()
+                     `cast`
+                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
+11a7a3cd20626b4760fefb482a02637e
+  getArtistaLstR28 ::
+    [Text.Internal.Css.Attr Text.Internal.Css.Resolved]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved)
+                   Handlers.getArtistaLstR29
+                   (GHC.Types.[]
+                      @ (Text.Internal.Css.Attr Text.Internal.Css.Resolved))) -}
+9e8f75e98b98363deeca2f8fbcca2d7b
+  getArtistaLstR29 ::
+    Text.Internal.Css.Attr Text.Internal.Css.Resolved
+  {- Strictness: m,
+     Unfolding: (Text.Internal.Css.Attr
+                   @ Text.Internal.Css.Resolved
+                   Handlers.getArtistaLstR32
+                     `cast`
+                   (Trans
+                        (forall (s :: <*>_N).
+                         <Data.Text.Internal.Builder.Buffer s
+                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
+                        (Trans
+                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
+                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))
+                   Handlers.getArtistaLstR30
+                     `cast`
+                   (Trans
+                        (forall (s :: <*>_N).
+                         <Data.Text.Internal.Builder.Buffer s
+                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
+                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
+                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
+                        (Trans
+                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
+                             (Sub (Sym (Text.Internal.Css.D:R:StrResolved[0])))))) -}
+ddf81c1ad3a084a83758d4b9e4ff1bfb
   getArtistaLstR3 ::
-    Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
-  {- Unfolding: (Yesod.Core.Widget.$fToWidgetHeadsite(->)1_$ctoWidget
-                   @ (Yesod.Routes.Class.Route Foundation.Sitio
-                      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                      -> Data.Text.Internal.Text)
-                   @ Foundation.Sitio
-                   (GHC.Types.Eq#
-                      @ *
-                      @ *
-                      @ (Yesod.Routes.Class.Route Foundation.Sitio
-                         -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                         -> Data.Text.Internal.Text)
-                      @ (Yesod.Routes.Class.Route Foundation.Sitio
-                         -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                         -> Data.Text.Internal.Text)
-                      @~ <Yesod.Routes.Class.Route Foundation.Sitio
-                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                          -> Data.Text.Internal.Text>_N)
-                     `cast`
-                   (Sym (Data.Type.Equality.N:~[0] <*>_N) <Yesod.Routes.Class.Route
-                                                             Foundation.Sitio
-                                                           -> [(Data.Text.Internal.Text,
-                                                                Data.Text.Internal.Text)]
-                                                           -> Data.Text.Internal.Text>_N <Yesod.Routes.Class.Route
-                                                                                            Foundation.Sitio
-                                                                                          -> [(Data.Text.Internal.Text,
-                                                                                               Data.Text.Internal.Text)]
-                                                                                          -> Data.Text.Internal.Text>_N)
-                   @ (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)
-                   (Handlers.$s$fMonadWidgetWidgetT @ Foundation.Sitio)
-                   (GHC.Types.Eq#
-                      @ *
-                      @ *
-                      @ Foundation.Sitio
-                      @ Foundation.Sitio
-                      @~ <Foundation.Sitio>_N)
-                     `cast`
-                   (Sym (Data.Type.Equality.N:~[0]
-                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
-                                              <GHC.Types.IO>_N
-                                              <Foundation.Sitio>_N)) <Foundation.Sitio>_N)
-                   Handlers.getArtistaLstR4) -}
-480119152c1cb7dac5df8c8a7386cb3e
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Yesod.Core.Types.GWData
+             (Yesod.Routes.Class.Route
+                (Yesod.Core.Class.Handler.HandlerSite
+                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    (GHC.Tuple.(),
+                     Yesod.Core.Types.GWData
+                       @ (Yesod.Routes.Class.Route
+                            (Yesod.Core.Class.Handler.HandlerSite
+                               (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))
+                       (Yesod.Core.Types.$fApplicativeWidgetT2
+                          @ (Yesod.Routes.Class.Route
+                               (Yesod.Core.Class.Handler.HandlerSite
+                                  (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO))))
+                         `cast`
+                       (Sym (Yesod.Core.Types.N:Body[0]
+                                 <Yesod.Routes.Class.Route
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.WidgetT
+                                          Foundation.Sitio GHC.Types.IO))>_R))
+                       (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                         `cast`
+                       (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                       (GHC.Base.id
+                          @ [Yesod.Core.Types.Script
+                               (Yesod.Routes.Class.Route
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))])
+                         `cast`
+                       (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                 <Yesod.Core.Types.Script
+                                    (Yesod.Routes.Class.Route
+                                       (Yesod.Core.Class.Handler.HandlerSite
+                                          (Yesod.Core.Types.WidgetT
+                                             Foundation.Sitio GHC.Types.IO)))>_R))
+                       (GHC.Types.:
+                          @ (Yesod.Core.Types.Stylesheet
+                               (Yesod.Routes.Class.Route
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO))))
+                          (Yesod.Core.Types.Stylesheet
+                             @ (Yesod.Routes.Class.Route
+                                  (Yesod.Core.Class.Handler.HandlerSite
+                                     (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))
+                             (Yesod.Core.Types.Local
+                                @ (Yesod.Routes.Class.Route
+                                     (Yesod.Core.Class.Handler.HandlerSite
+                                        (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))
+                                (Foundation.StaticR
+                                   Foundation.listagemsimples_css1
+                                     `cast`
+                                   (Sym (Yesod.Static.D:R:RouteStatic0[0])))
+                                  `cast`
+                                (Trans
+                                     (Sym (Foundation.D:R:RouteSitio0[0]))
+                                     (Yesod.Routes.Class.Route
+                                        (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)))_R))
+                             (GHC.Types.[]
+                                @ (Data.Text.Internal.Text, Data.Text.Internal.Text))))
+                         `cast`
+                       (Sym (Yesod.Core.Types.N:UniqueList[0]
+                                 <Yesod.Core.Types.Stylesheet
+                                    (Yesod.Routes.Class.Route
+                                       (Yesod.Core.Class.Handler.HandlerSite
+                                          (Yesod.Core.Types.WidgetT
+                                             Foundation.Sitio GHC.Types.IO)))>_R))
+                       (Data.Map.Base.Tip
+                          @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                          @ ((Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO))
+                              -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                              -> Data.Text.Internal.Text)
+                             -> Data.Text.Internal.Builder.Builder))
+                       (GHC.Base.Nothing
+                          @ ((Yesod.Routes.Class.Route
+                                (Yesod.Core.Class.Handler.HandlerSite
+                                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO))
+                              -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                              -> Data.Text.Internal.Text)
+                             -> Text.Julius.Javascript))
+                       (Yesod.Core.Types.$fApplicativeWidgetT2
+                          @ (Yesod.Routes.Class.Route
+                               (Yesod.Core.Class.Handler.HandlerSite
+                                  (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO))))
+                         `cast`
+                       (Sym (Yesod.Core.Types.N:Head[0]
+                                 <Yesod.Routes.Class.Route
+                                    (Yesod.Core.Class.Handler.HandlerSite
+                                       (Yesod.Core.Types.WidgetT
+                                          Foundation.Sitio GHC.Types.IO))>_R))) #)) -}
+a99ecbb27ea8a8c907fe12cda4b85f53
   getArtistaLstR30 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
@@ -4923,10 +5073,10 @@ d6827d58c485d973cb9d26271726b784
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-73a85afa5a3e521be7a4504cda70cda7
+e3aa8239770ece27d475159836176d2b
   getArtistaLstR31 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "display"#) -}
-0decc492c58ec77f373126c9b732cc15
+  {- Unfolding: (Data.Text.Show.unpackCString# "inline"#) -}
+0ce1591f9d7b738a0b95505fc94a1c96
   getArtistaLstR32 ::
     (Data.Text.Internal.Builder.Buffer s
      -> GHC.ST.ST s [Data.Text.Internal.Text])
@@ -4949,11 +5099,37 @@ d6827d58c485d973cb9d26271726b784
                    `cast`
                  (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
                    eta38) -}
-fdd395b58747223840c16358748cd3f1
+9d094e96cbe4e3340ab72a80d4a7c9fb
   getArtistaLstR33 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "form"#) -}
-00e494ab89777e33bb67f42a494e76a4
+  {- Unfolding: (Data.Text.Show.unpackCString# "display"#) -}
+4ff037b2c81f0efe19b6ac3dbf10d65a
   getArtistaLstR34 ::
+    (Data.Text.Internal.Builder.Buffer s
+     -> GHC.ST.ST s [Data.Text.Internal.Text])
+    -> Data.Text.Internal.Builder.Buffer s
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, [Data.Text.Internal.Text] #)
+  {- Arity: 3, Strictness: <L,1*C1(C1(U(U,U)))><L,U(U,U,U,U)><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   (eta36 :: Data.Text.Internal.Builder.Buffer s
+                             -> GHC.ST.ST s [Data.Text.Internal.Text])
+                   (eta37 :: Data.Text.Internal.Builder.Buffer s)
+                   (eta38 :: GHC.Prim.State# s)[OneShot] ->
+                 ((Text.Internal.Css.fromText Handlers.getArtistaLstR35)
+                    `cast`
+                  (Data.Text.Internal.Builder.N:Builder[0])
+                    @ s
+                    (\ (buf :: Data.Text.Internal.Builder.Buffer s) -> eta36 buf)
+                    eta37)
+                   `cast`
+                 (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R)
+                   eta38) -}
+d5ef65f9bd6f37a648c6352c93c25559
+  getArtistaLstR35 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "form"#) -}
+54739793f8b6e2cbd24f5d24533629aa
+  getArtistaLstR36 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -4968,9 +5144,9 @@ fdd395b58747223840c16358748cd3f1
                 (\ (eta36 :: Yesod.Core.Types.HandlerData
                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
                    (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 Handlers.getArtistaLstR35 eta37) -}
-17827f73b94e74d6aef3d304914b642a
-  getArtistaLstR35 ::
+                 Handlers.getArtistaLstR37 eta37) -}
+be45772552645a5730796990ea1251ec
+  getArtistaLstR37 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           ((),
@@ -5030,21 +5206,124 @@ fdd395b58747223840c16358748cd3f1
                         (Yesod.Routes.Class.Route
                            (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
                                      <GHC.Types.IO>_N <Foundation.Sitio>_N)))_R)_R) #)) -}
-198048d0c6597206a542c0e5eee644ec
-  getArtistaLstR36 :: Text.Blaze.Internal.ChoiceString
+0ad259bc868fa783d0bb916ad11eb5ac
+  getArtistaLstR38 :: Text.Blaze.Internal.ChoiceString
   {- Strictness: m5,
      Unfolding: (Text.Blaze.Internal.PreEscaped
-                   Handlers.getArtistaLstR37) -}
-c24b97b5e91bbaf1876d7b4f8bec2474
-  getArtistaLstR37 :: Text.Blaze.Internal.ChoiceString
+                   Handlers.getArtistaLstR39) -}
+541901e692f9ded304bc40bceeba8aca
+  getArtistaLstR39 :: Text.Blaze.Internal.ChoiceString
   {- Strictness: m3,
-     Unfolding: (Text.Blaze.Internal.Text Handlers.getArtistaLstR38) -}
-5278ed3f8c75526a7b55bb18796be091
-  getArtistaLstR38 :: Data.Text.Internal.Text
+     Unfolding: (Text.Blaze.Internal.Text Handlers.getArtistaLstR40) -}
+e6c8052128660f492a04bbfd9515e66e
+  getArtistaLstR4 ::
+    () -> Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: (\ (ds8 :: ()) -> Handlers.getArtistaLstR5) -}
+0d4e02748edfc7652d542adda1d69836
+  getArtistaLstR40 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   "<h1> Artistas cadastrados:</h1>\n"#) -}
-51e5d793411c6bef52fe80c664d78cfd
-  getArtistaLstR39 ::
+                   "<div class=\"container\"><h1> Artistas cadastrados</h1>\n"#) -}
+3349da58a16352db57de695e643a8c97
+  getArtistaLstR41 ::
+    ()
+    -> Yesod.Core.Types.HandlerData
+         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Yesod.Core.Types.GWData
+             (Yesod.Routes.Class.Route
+                (Yesod.Core.Class.Handler.HandlerSite
+                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))) #)
+  {- Arity: 3,
+     Unfolding: (\ (ds8 :: ())
+                   (eta36 :: Yesod.Core.Types.HandlerData
+                               Foundation.Sitio
+                               (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot]
+                   (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# eta37, Handlers.getArtistaLstR42 #)) -}
+5ec149c78574fca99b1eb4f80b90a5f0
+  getArtistaLstR42 ::
+    ((),
+     Yesod.Core.Types.GWData
+       (Yesod.Routes.Class.Route
+          (Yesod.Core.Class.Handler.HandlerSite
+             (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO))))
+  {- Unfolding: ((GHC.Tuple.(),
+                  Handlers.getArtistaLstR43
+                    `cast`
+                  (Yesod.Core.Types.GWData
+                     (Yesod.Routes.Class.Route
+                        (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                  <GHC.Types.IO>_N <Foundation.Sitio>_N)))_R)_R)) -}
+7d4116d7e48d841b98c2abd70259b2f6
+  getArtistaLstR43 ::
+    Yesod.Core.Types.GWData (Yesod.Routes.Class.Route Foundation.Sitio)
+  {- Unfolding: (Yesod.Core.Types.GWData
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio)
+                   Handlers.getArtistaLstR44
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Body[0]
+                             <Yesod.Routes.Class.Route Foundation.Sitio>_R))
+                   (GHC.Base.Nothing @ Yesod.Core.Types.Title)
+                     `cast`
+                   (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Script
+                           (Yesod.Routes.Class.Route Foundation.Sitio)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Script
+                                (Yesod.Routes.Class.Route Foundation.Sitio)>_R))
+                   (GHC.Base.id
+                      @ [Yesod.Core.Types.Stylesheet
+                           (Yesod.Routes.Class.Route Foundation.Sitio)])
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:UniqueList[0]
+                             <Yesod.Core.Types.Stylesheet
+                                (Yesod.Routes.Class.Route Foundation.Sitio)>_R))
+                   (Data.Map.Base.Tip
+                      @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                      @ ((Yesod.Routes.Class.Route Foundation.Sitio
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Data.Text.Internal.Builder.Builder))
+                   (GHC.Base.Nothing
+                      @ ((Yesod.Routes.Class.Route Foundation.Sitio
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text)
+                         -> Text.Julius.Javascript))
+                   (Yesod.Core.Types.$fApplicativeWidgetT2
+                      @ (Yesod.Routes.Class.Route Foundation.Sitio))
+                     `cast`
+                   (Sym (Yesod.Core.Types.N:Head[0]
+                             <Yesod.Routes.Class.Route Foundation.Sitio>_R))) -}
+227fd23ca98c7856e204383d747f4ffd
+  getArtistaLstR44 ::
+    (Yesod.Routes.Class.Route Foundation.Sitio
+     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+     -> Data.Text.Internal.Text)
+    -> Text.Blaze.Html.Html
+  {- Arity: 1,
+     Unfolding: (\ (ds8 :: Yesod.Routes.Class.Route Foundation.Sitio
+                           -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                           -> Data.Text.Internal.Text) ->
+                 Handlers.getArtistaLstR_eta1) -}
+419e1c6264de6ecb80705f2cfcbaf20a
+  getArtistaLstR45 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.PreEscaped
+                   Handlers.getArtistaLstR46) -}
+6879153d92de3c9cdafe00ca69591049
+  getArtistaLstR46 :: Text.Blaze.Internal.ChoiceString
+  {- Strictness: m3,
+     Unfolding: (Text.Blaze.Internal.Text Handlers.getArtistaLstR47) -}
+b5a3d87cd11ab69c2d88a11ffbe6ef9e
+  getArtistaLstR47 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "</div>\n"#) -}
+02b4fed467e80428e9da6033f2d80265
+  getArtistaLstR48 ::
     [Database.Persist.Class.PersistEntity.Entity Foundation.Artistas]
     -> Yesod.Core.Types.HandlerData
          Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -5054,19 +5333,8 @@ c24b97b5e91bbaf1876d7b4f8bec2474
            Yesod.Core.Types.GWData
              (Yesod.Routes.Class.Route Foundation.Sitio)) #)
   {- Arity: 3, Strictness: <S,1*U><L,U><S,U> -}
-11dee5887b5d9de70a44dde1ed30bc16
-  getArtistaLstR4 ::
-    (Yesod.Routes.Class.Route Foundation.Sitio
-     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-     -> Data.Text.Internal.Text)
-    -> Text.Internal.Css.Css
-  {- Arity: 1,
-     Unfolding: (\ (_render :: Yesod.Routes.Class.Route Foundation.Sitio
-                               -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                               -> Data.Text.Internal.Text) ->
-                 Handlers.getArtistaLstR5) -}
-588e8972f344856aa6bf44ae7b3bc9e6
-  getArtistaLstR40 ::
+a26b0bb3f5952d69fe68f89af293d454
+  getArtistaLstR49 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     -> Yesod.Core.Types.HandlerT
          Foundation.Sitio
@@ -5153,65 +5421,95 @@ c24b97b5e91bbaf1876d7b4f8bec2474
                                 <GHC.Types.IO>_N
                                 <[Database.Persist.Class.PersistEntity.Entity
                                     Foundation.Artistas]>_N)))) -}
-976d6aeca56b5d1ef2031a1613e56c2a
-  getArtistaLstR5 :: Text.Internal.Css.Css
+49bcc2c4c346ed0a641f519945bc3e32
+  getArtistaLstR5 ::
+    Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
+  {- Unfolding: (Yesod.Core.Widget.$fToWidgetHeadsite(->)1_$ctoWidget
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio
+                      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                      -> Data.Text.Internal.Text)
+                   @ Foundation.Sitio
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ (Yesod.Routes.Class.Route Foundation.Sitio
+                         -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                         -> Data.Text.Internal.Text)
+                      @ (Yesod.Routes.Class.Route Foundation.Sitio
+                         -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                         -> Data.Text.Internal.Text)
+                      @~ <Yesod.Routes.Class.Route Foundation.Sitio
+                          -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                          -> Data.Text.Internal.Text>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0] <*>_N) <Yesod.Routes.Class.Route
+                                                             Foundation.Sitio
+                                                           -> [(Data.Text.Internal.Text,
+                                                                Data.Text.Internal.Text)]
+                                                           -> Data.Text.Internal.Text>_N <Yesod.Routes.Class.Route
+                                                                                            Foundation.Sitio
+                                                                                          -> [(Data.Text.Internal.Text,
+                                                                                               Data.Text.Internal.Text)]
+                                                                                          -> Data.Text.Internal.Text>_N)
+                   @ (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)
+                   (Handlers.$s$fMonadWidgetWidgetT @ Foundation.Sitio)
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ Foundation.Sitio
+                      @ Foundation.Sitio
+                      @~ <Foundation.Sitio>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                              <GHC.Types.IO>_N
+                                              <Foundation.Sitio>_N)) <Foundation.Sitio>_N)
+                   Handlers.getArtistaLstR6) -}
+e4ac0768337478b8c4b99d883101508c
+  getArtistaLstR6 ::
+    (Yesod.Routes.Class.Route Foundation.Sitio
+     -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+     -> Data.Text.Internal.Text)
+    -> Text.Internal.Css.Css
+  {- Arity: 1,
+     Unfolding: (\ (_render :: Yesod.Routes.Class.Route Foundation.Sitio
+                               -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                               -> Data.Text.Internal.Text) ->
+                 Handlers.getArtistaLstR7) -}
+3ca00622fbbe4d9e0ba1508c3b27a526
+  getArtistaLstR7 :: Text.Internal.Css.Css
   {- Strictness: m2,
      Unfolding: (Text.Internal.Css.CssNoWhitespace
-                   Handlers.getArtistaLstR6) -}
-05357cbdddcda763bc00c307f89d3bd6
-  getArtistaLstR6 ::
+                   Handlers.getArtistaLstR8) -}
+27ad0ce3406940306bdecb70466f8b94
+  getArtistaLstR8 ::
     [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
-                   Handlers.getArtistaLstR24
-                   Handlers.getArtistaLstR7) -}
-109f954164db61120b6734601c5c7694
-  getArtistaLstR7 ::
+                   Handlers.getArtistaLstR26
+                   Handlers.getArtistaLstR9) -}
+3d182ab8381f8ade05c4db1f4f32b1fd
+  getArtistaLstR9 ::
     [Text.Internal.Css.TopLevel Text.Internal.Css.Resolved]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved)
-                   Handlers.getArtistaLstR8
+                   Handlers.getArtistaLstR10
                    (GHC.Types.[]
                       @ (Text.Internal.Css.TopLevel Text.Internal.Css.Resolved))) -}
-e79120ad176747d8034115b2f59c0d51
-  getArtistaLstR8 ::
-    Text.Internal.Css.TopLevel Text.Internal.Css.Resolved
-  {- Strictness: m1,
-     Unfolding: (Text.Internal.Css.TopBlock
-                   @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR9) -}
-3e64d5b9c665f5051a0b74cfffcced71
-  getArtistaLstR9 ::
-    Text.Internal.Css.Block Text.Internal.Css.Resolved
-  {- Strictness: m,
-     Unfolding: (Text.Internal.Css.Block
-                   @ Text.Internal.Css.Resolved
-                   Handlers.getArtistaLstR22
-                     `cast`
-                   (Trans
-                        (forall (s :: <*>_N).
-                         <Data.Text.Internal.Builder.Buffer s
-                          -> GHC.ST.ST s [Data.Text.Internal.Text]>_R
-                         ->_R <Data.Text.Internal.Builder.Buffer s>_R
-                         ->_R Sym (GHC.ST.N:ST[0] <s>_N <[Data.Text.Internal.Text]>_R))
-                        (Trans
-                             (Sym (Data.Text.Internal.Builder.N:Builder[0]))
-                             (Sub (Sym (Text.Internal.Css.D:R:SelectorResolved[0])))))
-                   Handlers.getArtistaLstR10
-                   GHC.Tuple.()
-                     `cast`
-                   (Sub (Sym (Text.Internal.Css.D:R:ChildBlocksResolved[0])))
-                   GHC.Tuple.()
-                     `cast`
-                   (Sub (Sym (Text.Internal.Css.D:R:MixinsResolved[0])))) -}
-c95595b609c8844e5f534641feebbb30
+3d08cee02818e4ef18eabd343d9c4365
   getArtistaLstR_eta :: Text.Blaze.Html.Html
   {- Strictness: m5,
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
-                   Handlers.getArtistaLstR36) -}
+                   Handlers.getArtistaLstR38) -}
+c3e869733bfe88974b52ed8434e99a76
+  getArtistaLstR_eta1 :: Text.Blaze.Html.Html
+  {- Strictness: m5,
+     Unfolding: (Text.Blaze.Internal.Content
+                   @ ()
+                   Handlers.getArtistaLstR45) -}
 812e497d750f9b7fb67797db470ed599
   getArtistaLstR_m1 ::
     Control.Monad.Trans.Reader.ReaderT
@@ -5241,7 +5539,7 @@ c95595b609c8844e5f534641feebbb30
                       @ (Database.Persist.Class.PersistEntity.Filter
                            Foundation.Artistas))
                    Handlers.art5) -}
-5799e0a61aa2131210c670d050c2fe5d
+237e161fe55810575f7e2a294a5788c9
   getArtistaR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -5255,7 +5553,7 @@ c95595b609c8844e5f534641feebbb30
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-b33ab0c4ea74b3b618ebd326914521f9
+3f2bb34f85c8e78a751c8da7a59cc5d7
   getArtistaR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -5278,7 +5576,7 @@ b33ab0c4ea74b3b618ebd326914521f9
                         s of ds8 { (#,#) ipv ipv1 ->
                  case ipv1 of wild { (,) widget enctype ->
                  let {
-                   lvl142 :: ()
+                   lvl145 :: ()
                              -> Yesod.Core.Types.HandlerData
                                   Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                              -> GHC.Types.IO
@@ -5321,7 +5619,7 @@ b33ab0c4ea74b3b618ebd326914521f9
                                                                <Foundation.Sitio>_N)))_R)_R)_R))
                              (Sym (Yesod.Core.Types.N:WidgetT[0]
                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                        lvl142
+                        lvl145
                           `cast`
                         (<()>_R
                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -5912,7 +6210,7 @@ d20558d4657669979f5c89d7a4efbff7
                              (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
                                   <GHC.Types.IO>_N <Foundation.Sitio>_N)
                              <Foundation.SitioMessage>_N))) -}
-a8b55f9eab0f3d1a509b8addf8824644
+359ac0249c1dfedfb0bf7de56f300f30
   getListarR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -5926,7 +6224,7 @@ a8b55f9eab0f3d1a509b8addf8824644
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-3cf3ee737439c02c0e2948d4331edcc1
+c1f51180fe0beedf109457816ac195ff
   getListarR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -5949,7 +6247,7 @@ a8b55f9eab0f3d1a509b8addf8824644
                         r
                         s of ds8 { (#,#) ipv ipv1 ->
                  let {
-                   lvl142 :: ()
+                   lvl145 :: ()
                              -> Yesod.Core.Types.HandlerData
                                   Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                              -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -5998,7 +6296,7 @@ a8b55f9eab0f3d1a509b8addf8824644
                                                                    <Foundation.Sitio>_N)))_R)_R)_R))
                                  (Sym (Yesod.Core.Types.N:WidgetT[0]
                                            <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                            lvl142
+                            lvl145
                               `cast`
                             (<()>_R
                              ->_R Trans
@@ -6026,7 +6324,7 @@ a8b55f9eab0f3d1a509b8addf8824644
                            `cast`
                          (Sym (Yesod.Core.Types.N:WidgetT[0]
                                    <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
-                         Handlers.getArtistaLstR2
+                         Handlers.getArtistaLstR4
                          eta36)
                         `cast`
                       (Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -6312,7 +6610,7 @@ b7b63ed16202f1a868e8020efa9931b2
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.Filter Foundation.Pessoa))
                    Handlers.getListarR9) -}
-926e39816fa34df0131f0db6611ac269
+9587bad69c2f60a8cb538f17675cb27e
   getMusicaIdR ::
     Foundation.MusicasId -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,U>,
@@ -6438,7 +6736,7 @@ b7b63ed16202f1a868e8020efa9931b2
                            x7
                        } in
                        let {
-                         lvl142 :: ()
+                         lvl145 :: ()
                                    -> Yesod.Core.Types.HandlerData
                                         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                                    -> GHC.Types.IO
@@ -6514,7 +6812,7 @@ b7b63ed16202f1a868e8020efa9931b2
                                                                  <Foundation.Sitio>_N)))_R)_R)_R))
                                (Sym (Yesod.Core.Types.N:WidgetT[0]
                                          <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                          lvl142
+                          lvl145
                             `cast`
                           (<()>_R
                            ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -6671,7 +6969,7 @@ c1968b26f7fbdd79f1a4b61c3d770b59
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.getMusicaIdR3) -}
-c6eead82d265ecf2838c2b0a4f33b01f
+ae85e45d77ed2526dde53a8f168fd36c
   getMusicaR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -6685,7 +6983,7 @@ c6eead82d265ecf2838c2b0a4f33b01f
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-916fedf26ae94798addc4f1973e20b78
+6f9b43d1798e6b058ce5aa38ecaf1979
   getMusicaR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -6708,7 +7006,7 @@ c6eead82d265ecf2838c2b0a4f33b01f
                         s of ds8 { (#,#) ipv ipv1 ->
                  case ipv1 of wild { (,) widget enctype ->
                  let {
-                   lvl142 :: ()
+                   lvl145 :: ()
                              -> Yesod.Core.Types.HandlerData
                                   Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                              -> GHC.Types.IO
@@ -6751,7 +7049,7 @@ c6eead82d265ecf2838c2b0a4f33b01f
                                                                <Foundation.Sitio>_N)))_R)_R)_R))
                              (Sym (Yesod.Core.Types.N:WidgetT[0]
                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                        lvl142
+                        lvl145
                           `cast`
                         (<()>_R
                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -6924,7 +7222,7 @@ c6eead82d265ecf2838c2b0a4f33b01f
   getPessoaR ::
     Foundation.PessoaId -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,U> -}
-85045762c33438b9411d3efdb17450ad
+8d1a930e79f477aa5bcbb580038947a3
   getVertenteIdR ::
     Foundation.VertentesId -> Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 1, Strictness: <L,U>,
@@ -7050,7 +7348,7 @@ c6eead82d265ecf2838c2b0a4f33b01f
                            x7
                        } in
                        let {
-                         lvl142 :: ()
+                         lvl145 :: ()
                                    -> Yesod.Core.Types.HandlerData
                                         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                                    -> GHC.Types.IO
@@ -7126,7 +7424,7 @@ c6eead82d265ecf2838c2b0a4f33b01f
                                                                  <Foundation.Sitio>_N)))_R)_R)_R))
                                (Sym (Yesod.Core.Types.N:WidgetT[0]
                                          <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                          lvl142
+                          lvl145
                             `cast`
                           (<()>_R
                            ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -7282,7 +7580,7 @@ f11840c17e7142cf472d6d5bbb5f5e1e
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.getVertenteIdR3) -}
-7fcbe89d04db8990bd1e08c28d34f627
+cc568aba28b26de438c8c188ea76c487
   getVertenteLstR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -7296,7 +7594,7 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-6e3b79cb323a50605102da0cafebe24c
+7a3b0d83e2ec0ff3d0253f86fd131c30
   getVertenteLstR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -7309,7 +7607,7 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                  case Foundation.$fYesodPersistSitio1
                         @ [Database.Persist.Class.PersistEntity.Entity
                              Foundation.Vertentes]
-                        Handlers.getVertenteLstR10
+                        Handlers.getVertenteLstR5
                           `cast`
                         (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
                                   <*>_N
@@ -7319,26 +7617,70 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                                       Foundation.Vertentes]>_N))
                         r
                         s of ds8 { (#,#) ipv ipv1 ->
-                 let {
-                   lvl142 :: ()
-                             -> Yesod.Core.Types.HandlerData
-                                  Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
-                             -> GHC.Prim.State# GHC.Prim.RealWorld
-                             -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-                                   ((),
-                                    Yesod.Core.Types.GWData
-                                      (Yesod.Routes.Class.Route Foundation.Sitio)) #)
-                     {- Arity: 3 -}
-                   = \ (ds9 :: ())
-                       (eta36 :: Yesod.Core.Types.HandlerData
-                                   Foundation.Sitio
-                                   (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot]
-                       (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                     Handlers.getVertenteLstR9 ipv1 eta36 eta37
-                 } in
                  ((Foundation.$fYesodSitio_$cdefaultLayout
                      (let {
                         m2 :: Yesod.Core.Types.HandlerData
+                                Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                              -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                    ((),
+                                     Yesod.Core.Types.GWData
+                                       (Yesod.Routes.Class.Route Foundation.Sitio)) #)
+                          {- Arity: 2 -}
+                        = Handlers.getVertenteLstR4 ipv1
+                      } in
+                      let {
+                        lvl145 :: ()
+                                  -> Yesod.Core.Types.HandlerData
+                                       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+                                  -> GHC.Types.IO
+                                       ((),
+                                        Yesod.Core.Types.GWData
+                                          (Yesod.Routes.Class.Route Foundation.Sitio))
+                          {- Arity: 2 -}
+                        = \ (ds9 :: ())
+                            (eta36 :: Yesod.Core.Types.HandlerData
+                                        Foundation.Sitio
+                                        (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot] ->
+                          Yesod.Core.Types.$fApplicativeWidgetT3
+                            @ GHC.Types.IO
+                            @ Foundation.Sitio
+                            GHC.Base.$fMonadIO
+                            @ ()
+                            @ ()
+                            m2
+                              `cast`
+                            (Trans
+                                 (<Yesod.Core.Types.HandlerData
+                                     Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                                  ->_R Sym (GHC.Types.N:IO[0]
+                                                <((),
+                                                  Yesod.Core.Types.GWData
+                                                    (Yesod.Routes.Class.Route
+                                                       Foundation.Sitio))>_R))
+                                 (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                           <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                            Handlers.getArtistaLstR41
+                              `cast`
+                            (<()>_R
+                             ->_R Trans
+                                      (<Yesod.Core.Types.HandlerData
+                                          Foundation.Sitio
+                                          (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                                       ->_R Sym (GHC.Types.N:IO[0]
+                                                     ((,)
+                                                        <()>_R
+                                                        (Yesod.Core.Types.GWData
+                                                           (Yesod.Routes.Class.Route
+                                                              (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                                                        <GHC.Types.IO>_N
+                                                                        <Foundation.Sitio>_N)))_R)_R)_R))
+                                      (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                                <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                            eta36
+                      } in
+                      let {
+                        m3 :: Yesod.Core.Types.HandlerData
                                 Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                               -> GHC.Types.IO
                                    ((),
@@ -7354,7 +7696,7 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                             GHC.Base.$fMonadIO
                             @ ()
                             @ ()
-                            Handlers.getVertenteLstR4
+                            Handlers.getArtistaLstR36
                               `cast`
                             (Trans
                                  (<Yesod.Core.Types.HandlerData
@@ -7369,20 +7711,37 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                                                                    <Foundation.Sitio>_N)))_R)_R)_R))
                                  (Sym (Yesod.Core.Types.N:WidgetT[0]
                                            <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                            lvl142
+                            lvl145
                               `cast`
                             (<()>_R
-                             ->_R Trans
-                                      (<Yesod.Core.Types.HandlerData
-                                          Foundation.Sitio
-                                          (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
-                                       ->_R Sym (GHC.Types.N:IO[0]
-                                                     <((),
-                                                       Yesod.Core.Types.GWData
-                                                         (Yesod.Routes.Class.Route
-                                                            Foundation.Sitio))>_R))
-                                      (Sym (Yesod.Core.Types.N:WidgetT[0]
-                                                <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                             ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
+                                           <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
+                            eta36
+                      } in
+                      let {
+                        lvl146 :: ()
+                                  -> Yesod.Core.Types.HandlerData
+                                       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+                                  -> GHC.Types.IO
+                                       ((),
+                                        Yesod.Core.Types.GWData
+                                          (Yesod.Routes.Class.Route Foundation.Sitio))
+                          {- Arity: 2 -}
+                        = \ (ds9 :: ())
+                            (eta36 :: Yesod.Core.Types.HandlerData
+                                        Foundation.Sitio
+                                        (Yesod.Core.Types.MonadRoute GHC.Types.IO))[OneShot] ->
+                          Yesod.Core.Types.$fApplicativeWidgetT3
+                            @ GHC.Types.IO
+                            @ Foundation.Sitio
+                            GHC.Base.$fMonadIO
+                            @ ()
+                            @ ()
+                            m3
+                              `cast`
+                            (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                      <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
+                            Handlers.getVertenteLstR2
                             eta36
                       } in
                       (\ (eta36 :: Yesod.Core.Types.HandlerData
@@ -7393,11 +7752,26 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                          GHC.Base.$fMonadIO
                          @ ()
                          @ ()
-                         m2
+                         Handlers.getArtistaLstR2
                            `cast`
-                         (Sym (Yesod.Core.Types.N:WidgetT[0]
-                                   <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
-                         Handlers.getVertenteLstR2
+                         (Trans
+                              (<Yesod.Core.Types.HandlerData
+                                  Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                               ->_R Sym (GHC.Types.N:IO[0]
+                                             ((,)
+                                                <()>_R
+                                                (Yesod.Core.Types.GWData
+                                                   (Yesod.Routes.Class.Route
+                                                      (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                                                <GHC.Types.IO>_N
+                                                                <Foundation.Sitio>_N)))_R)_R)_R))
+                              (Sym (Yesod.Core.Types.N:WidgetT[0]
+                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
+                         lvl146
+                           `cast`
+                         (<()>_R
+                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
+                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N))
                          eta36)
                         `cast`
                       (Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -7409,8 +7783,57 @@ f11840c17e7142cf472d6d5bbb5f5e1e
                    `cast`
                  (GHC.Types.N:IO[0] <Text.Blaze.Html.Html>_R)
                    ipv }) -}
-dba05843ab8559474a15bb61c8946987
-  getVertenteLstR10 ::
+87e4ec1cb647671b875a17a3b5213972
+  getVertenteLstR2 ::
+    () -> Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: (\ (ds8 :: ()) -> Handlers.getVertenteLstR3) -}
+61f1ab83b087264a0fc69da418120fcf
+  getVertenteLstR3 ::
+    Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
+  {- Unfolding: (Yesod.Core.Widget.$fToWidgetHeadsite(->)1_$ctoWidget
+                   @ (Yesod.Routes.Class.Route Foundation.Sitio
+                      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
+                      -> Data.Text.Internal.Text)
+                   @ Foundation.Sitio
+                   Handlers.$stoWidget4
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0] <*>_N) <Yesod.Routes.Class.Route
+                                                             Foundation.Sitio
+                                                           -> [(Data.Text.Internal.Text,
+                                                                Data.Text.Internal.Text)]
+                                                           -> Data.Text.Internal.Text>_N <Yesod.Routes.Class.Route
+                                                                                            Foundation.Sitio
+                                                                                          -> [(Data.Text.Internal.Text,
+                                                                                               Data.Text.Internal.Text)]
+                                                                                          -> Data.Text.Internal.Text>_N)
+                   @ (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)
+                   (Handlers.$s$fMonadWidgetWidgetT @ Foundation.Sitio)
+                   (GHC.Types.Eq#
+                      @ *
+                      @ *
+                      @ Foundation.Sitio
+                      @ Foundation.Sitio
+                      @~ <Foundation.Sitio>_N)
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
+                                              <GHC.Types.IO>_N
+                                              <Foundation.Sitio>_N)) <Foundation.Sitio>_N)
+                   Handlers.getArtistaLstR6) -}
+75b5c361972a171b7f475bda86cefd91
+  getVertenteLstR4 ::
+    [Database.Persist.Class.PersistEntity.Entity Foundation.Vertentes]
+    -> Yesod.Core.Types.HandlerData
+         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           Yesod.Core.Types.GWData
+             (Yesod.Routes.Class.Route Foundation.Sitio)) #)
+  {- Arity: 3, Strictness: <S,1*U><L,U><S,U> -}
+ffed4d828942897cb0c9d8a77eb9248c
+  getVertenteLstR5 ::
     Database.Persist.Sql.Types.Internal.SqlBackend
     -> Yesod.Core.Types.HandlerT
          Foundation.Sitio
@@ -7498,40 +7921,40 @@ dba05843ab8559474a15bb61c8946987
                                 <GHC.Types.IO>_N
                                 <[Database.Persist.Class.PersistEntity.Entity
                                     Foundation.Vertentes]>_N)))) -}
-0565bc312e765bc89428bfc8e41a2a2e
-  getVertenteLstR11 ::
+f3cb2be184ffb82319815e32ac3f043c
+  getVertenteLstR6 ::
     [Database.Persist.Class.PersistEntity.SelectOpt
        Foundation.Vertentes]
   {- HasNoCafRefs,
      Unfolding: (GHC.Types.:
                    @ (Database.Persist.Class.PersistEntity.SelectOpt
                         Foundation.Vertentes)
-                   Handlers.getVertenteLstR12
+                   Handlers.getVertenteLstR7
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.SelectOpt
                            Foundation.Vertentes))) -}
-80e65908f2336fc79e769ca596144f4e
-  getVertenteLstR12 ::
+bf49b2225c6a670b62ebe85aaf653f5c
+  getVertenteLstR7 ::
     Database.Persist.Class.PersistEntity.SelectOpt Foundation.Vertentes
   {- HasNoCafRefs,
      Unfolding: (Database.Persist.Class.PersistEntity.Asc
                    @ Foundation.Vertentes
                    @ Data.Text.Internal.Text
-                   Handlers.getVertenteLstR13
+                   Handlers.getVertenteLstR8
                      `cast`
                    (Sym (Foundation.D:R:EntityFieldVertentestyp0[0]) <Data.Text.Internal.Text>_N)) -}
-11cc62e28ee16115e1853c49d54aae2d
-  getVertenteLstR13 ::
+66e932114ce3e57700835ba7d029373b
+  getVertenteLstR8 ::
     Foundation.R:EntityFieldVertentestyp Data.Text.Internal.Text
   {- HasNoCafRefs,
      Unfolding: (Foundation.VertentesNome
                    @ Data.Text.Internal.Text
-                   Handlers.getVertenteLstR14
+                   Handlers.getVertenteLstR9
                      `cast`
                    (Sym (Data.Type.Equality.N:~[0]
                              <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
-fb12f1bcd4c265321d5b3a4c0ebcd069
-  getVertenteLstR14 ::
+aca2f5e8cf36db08331b725db3b0924a
+  getVertenteLstR9 ::
     Data.Text.Internal.Text GHC.Types.~~ Data.Text.Internal.Text
   {- HasNoCafRefs,
      Unfolding: (GHC.Types.Eq#
@@ -7540,153 +7963,7 @@ fb12f1bcd4c265321d5b3a4c0ebcd069
                    @ Data.Text.Internal.Text
                    @ Data.Text.Internal.Text
                    @~ <Data.Text.Internal.Text>_N) -}
-2d4ff21e0726006f65978fe63de65e92
-  getVertenteLstR2 ::
-    () -> Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
-  {- Arity: 1,
-     Unfolding: (\ (ds8 :: ()) -> Handlers.getVertenteLstR3) -}
-f83fdd9774e79470da658dcd49730af3
-  getVertenteLstR3 ::
-    Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO ()
-  {- Unfolding: (Yesod.Core.Widget.$fToWidgetHeadsite(->)1_$ctoWidget
-                   @ (Yesod.Routes.Class.Route Foundation.Sitio
-                      -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                      -> Data.Text.Internal.Text)
-                   @ Foundation.Sitio
-                   Handlers.$stoWidget4
-                     `cast`
-                   (Sym (Data.Type.Equality.N:~[0] <*>_N) <Yesod.Routes.Class.Route
-                                                             Foundation.Sitio
-                                                           -> [(Data.Text.Internal.Text,
-                                                                Data.Text.Internal.Text)]
-                                                           -> Data.Text.Internal.Text>_N <Yesod.Routes.Class.Route
-                                                                                            Foundation.Sitio
-                                                                                          -> [(Data.Text.Internal.Text,
-                                                                                               Data.Text.Internal.Text)]
-                                                                                          -> Data.Text.Internal.Text>_N)
-                   @ (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)
-                   (Handlers.$s$fMonadWidgetWidgetT @ Foundation.Sitio)
-                   (GHC.Types.Eq#
-                      @ *
-                      @ *
-                      @ Foundation.Sitio
-                      @ Foundation.Sitio
-                      @~ <Foundation.Sitio>_N)
-                     `cast`
-                   (Sym (Data.Type.Equality.N:~[0]
-                             <*>_N) (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
-                                              <GHC.Types.IO>_N
-                                              <Foundation.Sitio>_N)) <Foundation.Sitio>_N)
-                   Handlers.getArtistaLstR4) -}
-10d038b43b7b3f99bb1d041668eed13d
-  getVertenteLstR4 ::
-    Yesod.Core.Types.HandlerData
-      Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          ((),
-           Yesod.Core.Types.GWData
-             (Yesod.Routes.Class.Route
-                (Yesod.Core.Class.Handler.HandlerSite
-                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))) #)
-  {- Arity: 2, Strictness: <L,A>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (eta36 :: Yesod.Core.Types.HandlerData
-                               Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO))
-                   (eta37 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 Handlers.getVertenteLstR5 eta37) -}
-d7f75c3db3ca63adde73ad48102d31e6
-  getVertenteLstR5 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          ((),
-           Yesod.Core.Types.GWData
-             (Yesod.Routes.Class.Route
-                (Yesod.Core.Class.Handler.HandlerSite
-                   (Yesod.Core.Types.WidgetT Foundation.Sitio GHC.Types.IO)))) #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 (# s,
-                    (GHC.Tuple.(),
-                     (Yesod.Core.Types.GWData
-                        @ (Yesod.Routes.Class.Route Foundation.Sitio)
-                        (\ (ds8 :: Yesod.Routes.Class.Route Foundation.Sitio
-                                   -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                                   -> Data.Text.Internal.Text) ->
-                         Handlers.getVertenteLstR_eta)
-                          `cast`
-                        (Sym (Yesod.Core.Types.N:Body[0]
-                                  <Yesod.Routes.Class.Route Foundation.Sitio>_R))
-                        (GHC.Base.Nothing @ Yesod.Core.Types.Title)
-                          `cast`
-                        (Sym (Data.Monoid.N:Last[0]) <Yesod.Core.Types.Title>_N)
-                        (GHC.Base.id
-                           @ [Yesod.Core.Types.Script
-                                (Yesod.Routes.Class.Route Foundation.Sitio)])
-                          `cast`
-                        (Sym (Yesod.Core.Types.N:UniqueList[0]
-                                  <Yesod.Core.Types.Script
-                                     (Yesod.Routes.Class.Route Foundation.Sitio)>_R))
-                        (GHC.Base.id
-                           @ [Yesod.Core.Types.Stylesheet
-                                (Yesod.Routes.Class.Route Foundation.Sitio)])
-                          `cast`
-                        (Sym (Yesod.Core.Types.N:UniqueList[0]
-                                  <Yesod.Core.Types.Stylesheet
-                                     (Yesod.Routes.Class.Route Foundation.Sitio)>_R))
-                        (Data.Map.Base.Tip
-                           @ (GHC.Base.Maybe Data.Text.Internal.Text)
-                           @ ((Yesod.Routes.Class.Route Foundation.Sitio
-                               -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                               -> Data.Text.Internal.Text)
-                              -> Data.Text.Internal.Builder.Builder))
-                        (GHC.Base.Nothing
-                           @ ((Yesod.Routes.Class.Route Foundation.Sitio
-                               -> [(Data.Text.Internal.Text, Data.Text.Internal.Text)]
-                               -> Data.Text.Internal.Text)
-                              -> Text.Julius.Javascript))
-                        (Yesod.Core.Types.$fApplicativeWidgetT2
-                           @ (Yesod.Routes.Class.Route Foundation.Sitio))
-                          `cast`
-                        (Sym (Yesod.Core.Types.N:Head[0]
-                                  <Yesod.Routes.Class.Route Foundation.Sitio>_R)))
-                       `cast`
-                     (Yesod.Core.Types.GWData
-                        (Yesod.Routes.Class.Route
-                           (Sym (Yesod.Core.Class.Handler.D:R:HandlerSiteWidgetT[0]
-                                     <GHC.Types.IO>_N <Foundation.Sitio>_N)))_R)_R) #)) -}
-289d6ef8ddbbe6bc13915ab647737533
-  getVertenteLstR6 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m5,
-     Unfolding: (Text.Blaze.Internal.PreEscaped
-                   Handlers.getVertenteLstR7) -}
-37e7e0dd6951b2cfdcf1061e7524ed03
-  getVertenteLstR7 :: Text.Blaze.Internal.ChoiceString
-  {- Strictness: m3,
-     Unfolding: (Text.Blaze.Internal.Text Handlers.getVertenteLstR8) -}
-d47fd3a26c6c784dabaeb687216e7542
-  getVertenteLstR8 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString#
-                   "<h1> Vertentes cadastradas:</h1>\n"#) -}
-41b2bfb41e53af0a864a35f31854492b
-  getVertenteLstR9 ::
-    [Database.Persist.Class.PersistEntity.Entity Foundation.Vertentes]
-    -> Yesod.Core.Types.HandlerData
-         Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          ((),
-           Yesod.Core.Types.GWData
-             (Yesod.Routes.Class.Route Foundation.Sitio)) #)
-  {- Arity: 3, Strictness: <S,1*U><L,U><S,U> -}
-09e3c079f593c5ee74bd09a397505ede
-  getVertenteLstR_eta :: Text.Blaze.Html.Html
-  {- Strictness: m5,
-     Unfolding: (Text.Blaze.Internal.Content
-                   @ ()
-                   Handlers.getVertenteLstR6) -}
-efd51fb4fadb7c428480cf34ccdf1e0b
+5d0edc346d3875331bf33758ccf8fc84
   getVertenteLstR_m1 ::
     Control.Monad.Trans.Reader.ReaderT
       Database.Persist.Sql.Types.Internal.SqlBackend
@@ -7715,8 +7992,8 @@ efd51fb4fadb7c428480cf34ccdf1e0b
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.Filter
                            Foundation.Vertentes))
-                   Handlers.getVertenteLstR11) -}
-8cfb75348aa6360e695c8b9623ddad1a
+                   Handlers.getVertenteLstR6) -}
+1ca7ad8c9cea4e428752abc8f7155021
   getVertenteR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -7730,7 +8007,7 @@ efd51fb4fadb7c428480cf34ccdf1e0b
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-9d17df0c88c3aa9c8c37efc61e5a3ece
+ca92c098fd357727b9e202e9937f606d
   getVertenteR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -7753,7 +8030,7 @@ efd51fb4fadb7c428480cf34ccdf1e0b
                         s of ds8 { (#,#) ipv ipv1 ->
                  case ipv1 of wild { (,) widget enctype ->
                  let {
-                   lvl142 :: ()
+                   lvl145 :: ()
                              -> Yesod.Core.Types.HandlerData
                                   Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
                              -> GHC.Types.IO
@@ -7796,7 +8073,7 @@ efd51fb4fadb7c428480cf34ccdf1e0b
                                                                <Foundation.Sitio>_N)))_R)_R)_R))
                              (Sym (Yesod.Core.Types.N:WidgetT[0]
                                        <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                        lvl142
+                        lvl145
                           `cast`
                         (<()>_R
                          ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -8534,7 +8811,7 @@ eadb9dba5d338cd707af4aec747c5ef8
   {- Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.postAlbumMusR7) -}
-4061649a80cb29b7f3dd648e9dd1571d
+3ec3989485e9a24510357834cddffa94
   postAlbumR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -8548,7 +8825,7 @@ eadb9dba5d338cd707af4aec747c5ef8
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-dfd1af9ff3eb59ef5a8e66eed3a6432f
+2fea6b388ba938cb4d0aac2816d62c4e
   postAlbumR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -8698,7 +8975,7 @@ dfd1af9ff3eb59ef5a8e66eed3a6432f
                                x7
                            } in
                            let {
-                             lvl142 :: ()
+                             lvl145 :: ()
                                        -> Yesod.Core.Types.HandlerData
                                             Foundation.Sitio
                                             (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -8777,7 +9054,7 @@ dfd1af9ff3eb59ef5a8e66eed3a6432f
                                                                      <Foundation.Sitio>_N)))_R)_R)_R))
                                    (Sym (Yesod.Core.Types.N:WidgetT[0]
                                              <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                              lvl142
+                              lvl145
                                 `cast`
                               (<()>_R
                                ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -8971,7 +9248,7 @@ c6cb0554b3fbfe41c82a57a5b387c1dd
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.postAlbumR6) -}
-a0822de431ebd4dc0ff172d2da8eab89
+816755ceea7e52d4997a8dd6ac458eae
   postArtistaR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -8985,7 +9262,7 @@ a0822de431ebd4dc0ff172d2da8eab89
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-3244ab646c2909da9b2eee1a65158b09
+b9a01e315b37e5fb6b16cb64469070c2
   postArtistaR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9135,7 +9412,7 @@ a0822de431ebd4dc0ff172d2da8eab89
                                x7
                            } in
                            let {
-                             lvl142 :: ()
+                             lvl145 :: ()
                                        -> Yesod.Core.Types.HandlerData
                                             Foundation.Sitio
                                             (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9214,7 +9491,7 @@ a0822de431ebd4dc0ff172d2da8eab89
                                                                      <Foundation.Sitio>_N)))_R)_R)_R))
                                    (Sym (Yesod.Core.Types.N:WidgetT[0]
                                              <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                              lvl142
+                              lvl145
                                 `cast`
                               (<()>_R
                                ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -9305,7 +9582,7 @@ e1c240c87e259986ccca45b0fd1985fc
                                                   <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-a83443a210089f2161518f82518f5eca
+dfb0eefa417ee35e921a507feadafa08
   postCadastroR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -9319,7 +9596,7 @@ a83443a210089f2161518f82518f5eca
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-de7be9855f69f9cd7679f08625790e93
+a489502712e4cac7ec3335214ad1ef1b
   postCadastroR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9470,7 +9747,7 @@ de7be9855f69f9cd7679f08625790e93
                                x7
                            } in
                            let {
-                             lvl142 :: ()
+                             lvl145 :: ()
                                        -> Yesod.Core.Types.HandlerData
                                             Foundation.Sitio
                                             (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9549,7 +9826,7 @@ de7be9855f69f9cd7679f08625790e93
                                                                      <Foundation.Sitio>_N)))_R)_R)_R))
                                    (Sym (Yesod.Core.Types.N:WidgetT[0]
                                              <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                              lvl142
+                              lvl145
                                 `cast`
                               (<()>_R
                                ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -9746,7 +10023,7 @@ ab885329880b5a9881890cf82b7bb67c
      Unfolding: (Text.Blaze.Internal.Content
                    @ ()
                    Handlers.postCadastroR6) -}
-7b7b45dd15c79a093e52f7e4a08140ab
+ce3902c525e845697f7876d5cb5ce3c2
   postDeptoR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -9760,7 +10037,7 @@ ab885329880b5a9881890cf82b7bb67c
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-97ab3f15260ec75feebb86fc56735876
+fcb5ee6ec9716ce2523986878161b891
   postDeptoR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9912,7 +10189,7 @@ ab885329880b5a9881890cf82b7bb67c
                                x7
                            } in
                            let {
-                             lvl142 :: ()
+                             lvl145 :: ()
                                        -> Yesod.Core.Types.HandlerData
                                             Foundation.Sitio
                                             (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -9991,7 +10268,7 @@ ab885329880b5a9881890cf82b7bb67c
                                                                      <Foundation.Sitio>_N)))_R)_R)_R))
                                    (Sym (Yesod.Core.Types.N:WidgetT[0]
                                              <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                              lvl142
+                              lvl145
                                 `cast`
                               (<()>_R
                                ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -10092,7 +10369,7 @@ b6eefc4bfcfc05a327ea3b327171e6f5
                                                   <GHC.Types.IO>_N <Foundation.Sitio>_N))
                                         <GHC.Types.IO>_N
                                         <()>_N)_N)_N))) -}
-5a8e88f7761d423e60ceb6d7a5589c9d
+04d61b8867afb1abae1581aa035d76ea
   postMusicaR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -10106,7 +10383,7 @@ b6eefc4bfcfc05a327ea3b327171e6f5
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-d91487bb6722262c21f0041410f7cc0e
+db6802842110466d478fa3af2e339bb8
   postMusicaR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -10257,7 +10534,7 @@ d91487bb6722262c21f0041410f7cc0e
                                x7
                            } in
                            let {
-                             lvl142 :: ()
+                             lvl145 :: ()
                                        -> Yesod.Core.Types.HandlerData
                                             Foundation.Sitio
                                             (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -10336,7 +10613,7 @@ d91487bb6722262c21f0041410f7cc0e
                                                                      <Foundation.Sitio>_N)))_R)_R)_R))
                                    (Sym (Yesod.Core.Types.N:WidgetT[0]
                                              <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                              lvl142
+                              lvl145
                                 `cast`
                               (<()>_R
                                ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -10500,7 +10777,7 @@ f5ad03f1c879db93a6f64431dc135515
                                   <GHC.Types.IO>_N <Foundation.Sitio>_N)
                              <Yesod.Routes.Class.Route Foundation.Sitio>_N))
                    Foundation.ListarR `cast` (Sym (Foundation.D:R:RouteSitio0[0]))) -}
-96fb5141b2ddf240983a7dfb59c1cd30
+1477d31e81e35b3392b2ad0877775243
   postVertenteR :: Foundation.Handler Text.Blaze.Html.Html
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -10514,7 +10791,7 @@ f5ad03f1c879db93a6f64431dc135515
                                <Foundation.Sitio>_N
                                <GHC.Types.IO>_N
                                <Text.Blaze.Html.Html>_N))) -}
-f72bac2f0699c456ad9bc7cf9c81bc28
+a709e7aab68500df1b43f6fe798a35a4
   postVertenteR1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -10665,7 +10942,7 @@ f72bac2f0699c456ad9bc7cf9c81bc28
                                x7
                            } in
                            let {
-                             lvl142 :: ()
+                             lvl145 :: ()
                                        -> Yesod.Core.Types.HandlerData
                                             Foundation.Sitio
                                             (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -10744,7 +11021,7 @@ f72bac2f0699c456ad9bc7cf9c81bc28
                                                                      <Foundation.Sitio>_N)))_R)_R)_R))
                                    (Sym (Yesod.Core.Types.N:WidgetT[0]
                                              <Foundation.Sitio>_N <GHC.Types.IO>_N <()>_N)))
-                              lvl142
+                              lvl145
                                 `cast`
                               (<()>_R
                                ->_R Sym (Yesod.Core.Types.N:WidgetT[0]
@@ -10962,7 +11239,7 @@ d83a254184154103e28f98ef8b5b2fc4
                                 <Yesod.Form.Fields.OptionList
                                    (Database.Persist.Class.PersistEntity.Key
                                       Foundation.Vertentes)>_N)))) -}
-ab9edb321b8ffad1df8fedca2dc52a53
+b43afb458fee54729c6f340dadd25812
   vts1 ::
     Yesod.Core.Types.HandlerData
       Foundation.Sitio (Yesod.Core.Types.MonadRoute GHC.Types.IO)
@@ -11032,7 +11309,7 @@ ae7b3f6563f90b3ca3b10ea70cde2cb0
                   Database.Persist.Class.PersistEntity.entityKey
                     @ Foundation.Vertentes
                     ent)) -}
-c95cbffaccd60ee2550d82e6e1700e28
+cca49f2947b949738f7715e533d08478
   vts3 ::
     Yesod.Persist.Core.YesodPersistBackend Foundation.Sitio
     -> Yesod.Core.Types.HandlerT
@@ -11122,7 +11399,7 @@ c95cbffaccd60ee2550d82e6e1700e28
                                 <GHC.Types.IO>_N
                                 <[Database.Persist.Class.PersistEntity.Entity
                                     Foundation.Vertentes]>_N)))) -}
-52e75bf295f2162b9a23dbbdb0c519f8
+a6105b47764669645533961c04bce3cd
   vts4 ::
     Control.Monad.Trans.Reader.ReaderT
       Database.Persist.Sql.Types.Internal.SqlBackend
@@ -11152,7 +11429,7 @@ c95cbffaccd60ee2550d82e6e1700e28
                    (GHC.Types.[]
                       @ (Database.Persist.Class.PersistEntity.Filter
                            Foundation.Vertentes))
-                   Handlers.getVertenteLstR11) -}
+                   Handlers.getVertenteLstR6) -}
 b88615146c2e1556ac94034396cf7494
   vts5 ::
     (Database.Persist.Class.PersistEntity.PersistEntity

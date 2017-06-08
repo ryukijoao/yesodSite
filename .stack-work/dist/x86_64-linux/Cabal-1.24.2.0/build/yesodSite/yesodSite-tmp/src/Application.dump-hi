@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 16:47:01.645329 UTC
+2017-06-08 17:24:48.058103 UTC
 
 interface main@main:Application [orphan module] 8002
-  interface hash: dce1180d64afc61ba6c43fa8c2b00d61
+  interface hash: 067c7450af6fd743da75d949432719f0
   ABI hash: 04b7b74d8f4b7e401026a5f6d1d9b88f
   export-list hash: ab314e3efdae7d8cf41ee7d4d2cdf7ea
   orphan hash: ea4cfa99b851a985f1f03fda6fdc9204
@@ -241,8 +241,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-HhuV3U7exg79Uml
                          zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
-import  -/  Foundation 077d25a0f6419ffec5ab429291500047
-  exports: da55cf6bddb1af76da91ff6ddb294541
+import  -/  Foundation 49b550bc5fd255ad3b3d72f9fd532034
+  exports: abf0d926ff3e3cbee5d363c4b79f95cc
   AdminR 5db73353ec15db7c3f76ce4fe8296a12
   AlbumIdR b3d975c51fdf802f772387f130058719
   AlbumMusR c53910c3b6a482abae2e7e8ade794d7d
@@ -283,32 +283,32 @@ import  -/  Front 9bf0ddafbc6793e30e9b3a37b8ec9ee2
   getPag3R 36684025111321aedc000b626fbc017e
   getPag4R c5cba6d60205358f03b4a3421b09ce64
   getTesteR 0328b0139d9090db22ac503eb82e8c72
-import  -/  Handlers 6bc9f9a0bdea688b7dcc47a76d19fe56
+import  -/  Handlers d30165c587d7dfc9e6129a44261e2c2d
   exports: 25d891e3eaa47b307aac404b7ba77fb9
-  getAlbumIdR 7eb10d263778aed8484dfbdc822bcc4a
-  getAlbumMusR 4ca1e3e6cdcf7a466c2460320c3f6de4
-  getAlbumR d33f2da14146b9a1ab7737fee9b50676
-  getArtistaIdR 885e7201741193efa33abfd186857f89
-  getArtistaLstR 769afd3673eee851c08e3c86cb19224b
-  getArtistaR 5799e0a61aa2131210c670d050c2fe5d
+  getAlbumIdR 6cf9ebbc9772e4aad37da5d1687b86c9
+  getAlbumMusR fbe2918b73d1d82b2171eb7e4a2886d7
+  getAlbumR 05c8778c1a1da8c343e63ea7e78814c5
+  getArtistaIdR 5e35e3f9f72a203ca7a8bb8391f25c35
+  getArtistaLstR fdadd129d74c10c89f4eddd8c428151c
+  getArtistaR 237e161fe55810575f7e2a294a5788c9
   getCadastroR b260c3ee9a27cf863f8c0e843ea8699c
   getDeptoR aba5c64bcb27ab5eebc5b7562b2fe312
   getHelloR 06ae61b2434dff8969ac3306b0f7bf18
-  getListarR a8b55f9eab0f3d1a509b8addf8824644
-  getMusicaIdR 926e39816fa34df0131f0db6611ac269
-  getMusicaR c6eead82d265ecf2838c2b0a4f33b01f
+  getListarR 359ac0249c1dfedfb0bf7de56f300f30
+  getMusicaIdR 9587bad69c2f60a8cb538f17675cb27e
+  getMusicaR ae85e45d77ed2526dde53a8f168fd36c
   getPessoaR 12731c9e982adbd6091c55417721693d
-  getVertenteIdR 85045762c33438b9411d3efdb17450ad
-  getVertenteLstR 7fcbe89d04db8990bd1e08c28d34f627
-  getVertenteR 8cfb75348aa6360e695c8b9623ddad1a
+  getVertenteIdR 8d1a930e79f477aa5bcbb580038947a3
+  getVertenteLstR cc568aba28b26de438c8c188ea76c487
+  getVertenteR 1ca7ad8c9cea4e428752abc8f7155021
   postAlbumMusR 311f69db6bbf295531311746052bf5e0
-  postAlbumR 4061649a80cb29b7f3dd648e9dd1571d
-  postArtistaR a0822de431ebd4dc0ff172d2da8eab89
-  postCadastroR a83443a210089f2161518f82518f5eca
-  postDeptoR 7b7b45dd15c79a093e52f7e4a08140ab
-  postMusicaR 5a8e88f7761d423e60ceb6d7a5589c9d
+  postAlbumR 3ec3989485e9a24510357834cddffa94
+  postArtistaR 816755ceea7e52d4997a8dd6ac458eae
+  postCadastroR dfb0eefa417ee35e921a507feadafa08
+  postDeptoR ce3902c525e845697f7876d5cb5ce3c2
+  postMusicaR 04d61b8867afb1abae1581aa035d76ea
   postPessoaR 76b8863f117c1b23d7158d1bb93eafcd
-  postVertenteR 96fb5141b2ddf240983a7dfb59c1cd30
+  postVertenteR 1477d31e81e35b3392b2ad0877775243
 import  -/  Usuario 1b483c558c963c1e9cee3cfe6804eb7c
   exports: b2a451f0d5112378c05e364bd0fbf7ee
   getAdminR 6ba5e606add79913871ae26093e46bf7

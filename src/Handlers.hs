@@ -95,12 +95,14 @@ getVertenteLstR :: Handler Html
 getVertenteLstR = do
              listaV <- runDB $ selectList [] [Asc VertentesNome]
              defaultLayout $ do 
+             addStylesheet $ StaticR listagemsimples_css
              [whamlet|
-                 <h1> Vertentes cadastradas:
-                 $forall Entity vid vertente <- listaV
-                     <a href=@{VertenteIdR vid}> #{vertentesNome vertente} 
-                     <form method=post action=@{VertenteIdR vid}> 
-                         <input type="submit" value="Deletar"><br>
+                <div class="container">
+                    <h1> Artistas cadastrados
+                    $forall Entity vid vertente <- listaV
+                        <a href=@{VertenteIdR vid}> #{vertentesNome vertente} 
+                        <form method=post action=@{VertenteIdR vid}> 
+                            <input type="submit" value="Deletar"><br>
              |] 
              toWidget [lucius|
                 form  { display:inline; }
@@ -125,12 +127,14 @@ getArtistaLstR :: Handler Html
 getArtistaLstR = do
              listaA <- runDB $ selectList [] [Asc ArtistasNome]
              defaultLayout $ do 
+             addStylesheet $ StaticR listagemsimples_css
              [whamlet|
-                 <h1> Artistas cadastrados:
-                 $forall Entity vid artista <- listaA
-                     <a href=@{ArtistaIdR vid}> #{artistasNome artista} 
-                     <form method=post action=@{ArtistaIdR vid}> 
-                         <input type="submit" value="Deletar"><br>
+                <div class="container">
+                    <h1> Artistas cadastrados
+                    $forall Entity vid artista <- listaA
+                        <a href=@{ArtistaIdR vid}> #{artistasNome artista} 
+                        <form method=post action=@{ArtistaIdR vid}> 
+                            <input type="submit" value="Deletar"><br>
              |] 
              toWidget [lucius|
                 form  { display:inline; }

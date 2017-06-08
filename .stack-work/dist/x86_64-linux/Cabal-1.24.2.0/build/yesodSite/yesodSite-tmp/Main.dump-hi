@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-06-08 16:47:02.533599 UTC
+2017-06-08 17:19:31.224481 UTC
 
 interface main@main:Main 8002
-  interface hash: 3b1fc33d405017db625ed4ab92a524ef
+  interface hash: 7a1a67451b7b9f12f7f3a56ccca1a57d
   ABI hash: df7a96facfece1cfa2027b5bba75fc39
   export-list hash: aa244451b4ca805ef845bab29a2b1e5e
   orphan hash: b3800a9dc0dfa8d51aa55715fd5423fd
@@ -248,8 +248,8 @@ import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 import  -/  Application 04b7b74d8f4b7e401026a5f6d1d9b88f
   exports: ab314e3efdae7d8cf41ee7d4d2cdf7ea
-import  -/  Foundation 077d25a0f6419ffec5ab429291500047
-  exports: da55cf6bddb1af76da91ff6ddb294541
+import  -/  Foundation 52bb8e262958a0120fe0dc2513d091f4
+  exports: abf0d926ff3e3cbee5d363c4b79f95cc
   Sitio 5bdc2acb91ad0a880e06b3284ac112b3
   migrateAll e72de080066d97e17a98bfa7e731a103
 import  -/  monad-logger-0.3.22@monad-logger-0.3.22-Ff8c9txl6qcL0x0EY6ih77:Control.Monad.Logger c186132138b23c0e4c9839f4d7247bee
